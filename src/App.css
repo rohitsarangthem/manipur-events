@@ -1,0 +1,2785 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #111111;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+
+/* =========================
+   NAVBAR STARTS
+========================= */
+
+/* =================================
+   MOBILE MENU BUTTON
+================================= */
+
+.mobile-menu-btn {
+  display: none;
+
+  width: 40px;
+  height: 40px;
+
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-direction: column;
+  gap: 5px;
+}
+
+.mobile-menu-btn span {
+  display: block;
+
+  width: 22px;
+  height: 2px;
+
+  background: #111111;
+
+  border-radius: 10px;
+
+  transform-origin: center;
+}
+
+
+/* =================================
+   MOBILE MENU
+================================= */
+
+.mobile-menu {
+  display: none;
+
+  position: absolute;
+
+  top: 72px;
+  left: 0;
+
+  width: 100%;
+
+  height: 0;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  background: #ffffff;
+
+  border-bottom: 1px solid #eeeeee;
+
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+}
+
+.mobile-nav-links {
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 25px 20px 30px;
+}
+
+.mobile-nav-links a {
+  padding: 15px 0;
+
+  color: #222222;
+
+  font-size: 17px;
+  font-weight: 500;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.mobile-nav-links a:last-child {
+  border-bottom: none;
+}
+
+.mobile-nav-links a:hover {
+  color: #d4145a;
+}
+
+.mobile-signup {
+  margin-top: 10px;
+
+  padding: 13px 20px !important;
+
+  background: #d4145a;
+
+  color: #ffffff !important;
+
+  text-align: center;
+
+  border-radius: 8px;
+}
+
+/* =================================
+   MOBILE
+================================= */
+
+@media (max-width: 600px) {
+
+  .navbar {
+    height: 64px;
+    padding: 0 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .login-link {
+    display: none;
+  }
+
+  .signup-btn {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .mobile-menu {
+    display: block;
+
+    top: 64px;
+  }
+
+  .navbar-logo {
+    font-size: 20px;
+  }
+
+}
+
+
+/* =================================
+   HERO SECTION - STARTS
+================================= */
+
+.hero {
+  width: 100%;
+  padding: 100px 60px 110px;
+  background: #f8f8fa;
+  text-align: center;
+  background-image: url('/Others/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+/* Overlay */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.693);
+  height: 565px;
+}
+
+/* Keep content above overlay */
+.hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-small-title {
+  margin-bottom: 18px;
+  color: #d4145a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: white;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #d4145a;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin: 25px auto 35px;
+  color: #eeecec;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Search */
+
+.hero-search {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  padding: 7px;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.search-icon {
+  padding-left: 15px;
+
+  font-size: 18px;
+}
+
+.hero-search input {
+  flex: 1;
+
+  height: 48px;
+
+  padding: 0 15px;
+
+  border: none;
+  outline: none;
+
+  font-size: 15px;
+
+  color: #333333;
+}
+
+.hero-search button {
+  height: 48px;
+
+  padding: 0 25px;
+
+  border: none;
+
+  background: #d4145a;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.hero-search button:hover {
+  background: #b90f4d;
+}
+
+/* =================================
+   HERO SECTION - Tablet Mode
+================================= */
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 80px 30px 90px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+  .hero::before {
+  /* content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.693); */
+  height: 439px;
+}
+
+}
+
+/* =================================
+   HERO SECTION - Tablet Mode
+================================= */
+
+/* =================================
+   HERO SECTION - MOBILE
+================================= */
+
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 65px 20px 70px;
+  }
+
+  .hero-small-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    margin-top: 20px;
+
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-search {
+    padding: 6px;
+
+    border-radius: 10px;
+  }
+
+  .hero-search input {
+    min-width: 0;
+
+    font-size: 14px;
+  }
+
+  .hero-search button {
+    padding: 0 16px;
+  }
+
+}
+
+/* =================================
+   HERO SECTION - MOBILE
+================================= */
+
+
+
+/* =================================
+   HERO SECTION - ENDS
+================================= */
+
+
+
+/* =========================================
+   LATEST EVENTS - STARTS
+========================================= */
+
+.latest-events {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #ffffff;
+}
+
+
+/* Section Heading */
+
+.section-heading {
+  max-width: 1300px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.section-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 38px;
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.view-all {
+  color: #d4145a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   EVENTS GRID
+========================================= */
+
+.events-grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.event-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 16px;
+
+  box-shadow:
+    0 8px 30px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* =========================================
+   EVENT IMAGE
+========================================= */
+
+.event-image-wrapper {
+  position: relative;
+
+  width: 100%;
+
+  height: 230px;
+
+  overflow: hidden;
+}
+
+.event-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.5s ease;
+}
+
+.event-card:hover .event-image {
+  transform: scale(1.05);
+}
+
+
+/* Category */
+
+.event-category {
+  position: absolute;
+
+  left: 15px;
+  bottom: 15px;
+
+  padding: 6px 10px;
+
+  background: #ffffff;
+
+  color: #d4145a;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================
+   EVENT CONTENT
+========================================= */
+
+.event-content {
+  padding: 22px;
+}
+
+.event-title {
+  margin: 0 0 10px;
+
+  color: #111111;
+
+  font-size: 21px;
+  font-weight: 700;
+
+  line-height: 1.2;
+}
+
+.event-description {
+  margin: 0 0 18px;
+
+  color: #777777;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+
+  display: -webkit-box;
+  /* -webkit-line-clamp: 2; */
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   EVENT INFO
+========================================= */
+
+.event-info {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 9px;
+
+  color: #555555;
+
+  font-size: 13px;
+}
+
+.event-info-icon {
+  width: 22px;
+}
+
+
+/* =========================================
+   EVENT BOTTOM
+========================================= */
+
+.event-bottom {
+  margin-top: 20px;
+  padding-top: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #eeeeee;
+}
+
+
+/* Price */
+
+.event-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.event-price span {
+  color: #999999;
+
+  font-size: 11px;
+}
+
+.event-price strong {
+  margin-top: 3px;
+
+  color: #111111;
+
+  font-size: 19px;
+}
+
+
+/* =========================================
+   TICKET QUANTITY
+========================================= */
+
+.ticket-quantity {
+  display: flex;
+  align-items: center;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.ticket-quantity button {
+  width: 32px;
+  height: 32px;
+
+  border: none;
+
+  background: #f7f7f7;
+
+  font-size: 17px;
+
+  cursor: pointer;
+}
+
+.ticket-quantity button:hover {
+  background: #eeeeee;
+}
+
+.ticket-quantity span {
+  min-width: 32px;
+
+  text-align: center;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   VIEW EVENT BUTTON
+========================================= */
+
+.view-event-btn {
+  width: 100%;
+
+  margin-top: 18px;
+
+  padding: 12px;
+
+  border: none;
+
+  background: #d4145a;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: background 0.2s ease;
+}
+
+.view-event-btn:hover {
+  background: #b90f4d;
+}
+
+
+/* =========================================
+   EVENTS - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .latest-events {
+    padding: 70px 30px;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   EVENTS - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .latest-events {
+    padding: 60px 20px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .section-label {
+    font-size: 10px;
+  }
+
+  .view-all {
+    margin-top: 20px;
+
+    white-space: nowrap;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+  .event-image-wrapper {
+    height: 220px;
+  }
+
+  .event-content {
+    padding: 18px;
+  }
+
+  .event-title {
+    font-size: 20px;
+  }
+
+}
+
+/* =========================================
+   LATEST EVENTS - ENDS
+========================================= */
+
+
+/* =========================================
+   FEATURED CONCERT - Starts
+========================================= */
+
+.featured-concert {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #ffffff;
+}
+
+.featured-inner {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.05fr 3fr;
+
+  min-height: 480px;
+
+  overflow: hidden;
+
+  background: #111111;
+
+  border-radius: 20px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.featured-image-wrapper {
+  position: relative;
+
+  min-height: 480px;
+
+  overflow: hidden;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.6s ease;
+}
+
+.featured-inner:hover .featured-image {
+  transform: scale(1.04);
+}
+
+
+/* Badge */
+
+.featured-badge {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  padding: 8px 13px;
+
+  background: #d4145a;
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.featured-content {
+  padding: 55px 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-label {
+  margin: 0 0 14px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.featured-content h2 {
+  margin: 0;
+
+  max-width: 500px;
+
+  color: #ffffff;
+
+  font-size: 42px;
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.featured-description {
+  max-width: 500px;
+
+  margin: 22px 0 30px;
+
+  color: #b7b7b7;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   EVENT DETAILS
+========================================= */
+
+.featured-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+.featured-detail {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.detail-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #202020;
+
+  border: 1px solid #333333;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+.featured-detail div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.featured-detail small {
+  color: #858585;
+
+  font-size: 11px;
+}
+
+.featured-detail strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.featured-bottom {
+  margin-top: 35px;
+  padding-top: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #2d2d2d;
+}
+
+
+/* Price */
+
+.featured-price {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.featured-price small {
+  color: #858585;
+
+  font-size: 11px;
+}
+
+.featured-price strong {
+  color: #ffffff;
+
+  font-size: 24px;
+}
+
+
+/* Button */
+
+.featured-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 22px;
+
+  border: none;
+
+  background: #d4145a;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.featured-btn span {
+  font-size: 17px;
+
+  transition: transform 0.2s ease;
+}
+
+.featured-btn:hover {
+  background: #b90f4d;
+
+  transform: translateY(-2px);
+}
+
+.featured-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   FEATURED CONCERT - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .featured-concert {
+    padding: 70px 30px;
+  }
+
+  .featured-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-content {
+    padding: 40px 30px;
+  }
+
+  .featured-content h2 {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =========================================
+   FEATURED CONCERT - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .featured-concert {
+    padding: 60px 20px;
+  }
+
+  .featured-inner {
+    display: block;
+
+    border-radius: 16px;
+  }
+
+
+  /* Image */
+
+  .featured-image-wrapper {
+    height: 250px;
+
+    min-height: 250px;
+  }
+
+
+  /* Content */
+
+  .featured-content {
+    padding: 30px 22px;
+  }
+
+  .featured-content h2 {
+    font-size: 30px;
+
+    line-height: 1.15;
+  }
+
+  .featured-description {
+    font-size: 13px;
+
+    margin: 18px 0 25px;
+  }
+
+
+  /* Details */
+
+  .featured-details {
+    gap: 14px;
+  }
+
+
+  /* Bottom */
+
+  .featured-bottom {
+    margin-top: 28px;
+
+    padding-top: 20px;
+
+    align-items: flex-end;
+  }
+
+  .featured-price strong {
+    font-size: 21px;
+  }
+
+  .featured-btn {
+    padding: 12px 17px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================
+   FEATURED CONCERT - Ends
+========================================= */
+
+
+
+/* =========================================
+   MUSIC GENRES - STARTS
+========================================= */
+
+.music-genres {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #f8f8fa;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.genres-heading {
+  max-width: 1300px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.genres-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.genres-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 38px;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.genres-view-all {
+  color: #d4145a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.genres-view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.genres-grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   GENRE CARD
+========================================= */
+
+.genre-card {
+  position: relative;
+
+  height: 230px;
+
+  overflow: hidden;
+
+  display: block;
+
+  border-radius: 15px;
+
+  text-decoration: none;
+
+  background: #111111;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.genre-image {
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 0.6s ease;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.genre-overlay {
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.05)
+    );
+
+  transition:
+    background 0.3s ease;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.genre-content {
+  position: absolute;
+
+  left: 20px;
+
+  bottom: 20px;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.genre-content h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 22px;
+
+  font-weight: 700;
+}
+
+.genre-content span {
+  color: #dddddd;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.genre-card:hover .genre-image {
+  transform: scale(1.08);
+}
+
+.genre-card:hover .genre-overlay {
+  background:
+    linear-gradient(
+      to top,
+      rgba(212, 20, 90, 0.8),
+      rgba(0, 0, 0, 0.15)
+    );
+}
+
+.genre-card:hover .genre-content h3 {
+  transform: translateY(-2px);
+}
+
+.genre-content h3 {
+  transition:
+    transform 0.3s ease;
+}
+
+
+/* =========================================
+   MUSIC GENRES - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .music-genres {
+    padding: 70px 30px;
+  }
+
+  .genres-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MUSIC GENRES - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .music-genres {
+    padding: 60px 20px;
+  }
+
+  .genres-heading {
+    margin-bottom: 25px;
+  }
+
+  .genres-heading h2 {
+    font-size: 30px;
+  }
+
+  .genres-label {
+    font-size: 10px;
+  }
+
+  .genres-view-all {
+    font-size: 12px;
+  }
+
+  .genres-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+  }
+
+  .genre-card {
+    height: 170px;
+
+    border-radius: 12px;
+  }
+
+  .genre-content {
+    left: 14px;
+
+    bottom: 14px;
+  }
+
+  .genre-content h3 {
+    font-size: 18px;
+  }
+
+  .genre-content span {
+    font-size: 10px;
+  }
+
+}
+
+/* =========================================
+   MUSIC GENRES - ENDS
+========================================= */
+
+
+/* =========================================
+   POPULAR ARTISTS - STARTS
+========================================= */
+
+.popular-artists {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.artists-heading {
+  max-width: 1300px;
+
+  margin: 0 auto 40px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.artists-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.artists-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 38px;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.artists-view-all {
+  color: #d4145a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.artists-view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   ARTIST GRID
+========================================= */
+
+.artists-grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 35px 25px;
+}
+
+
+/* =========================================
+   ARTIST CARD
+========================================= */
+
+.artist-card {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #111111;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   ARTIST IMAGE
+========================================= */
+
+.artist-image-wrapper {
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #eeeeee;
+  border: 4px solid #ffffff;
+  box-shadow:0 8px 25px rgba(0, 0, 0, 0.10);
+  transition:
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+.artist-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+/* =========================================
+   ARTIST INFO
+========================================= */
+
+.artist-info {
+  margin-top: 18px;
+}
+
+.artist-info h3 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.artist-info p {
+  margin: 6px 0 5px;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+.artist-info span {
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.artist-card:hover .artist-image-wrapper {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+.artist-card:hover .artist-image {
+  transform: scale(1.07);
+}
+
+.artist-card:hover .artist-info h3 {
+  color: #d4145a;
+}
+
+
+/* =========================================
+   POPULAR ARTISTS - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .popular-artists {
+    padding: 70px 30px;
+  }
+
+  .artists-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px 15px;
+  }
+
+  .artist-image-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+}
+
+/* =========================================
+   POPULAR ARTISTS - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .popular-artists {
+    padding: 60px 20px;
+  }
+
+  .artists-heading {
+    margin-bottom: 30px;
+  }
+
+  .artists-heading h2 {
+    font-size: 30px;
+  }
+
+  .artists-label {
+    font-size: 10px;
+  }
+
+  .artists-view-all {
+    font-size: 12px;
+  }
+
+
+  .artists-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px 15px;
+  }
+
+
+  .artist-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  .artist-info {
+    margin-top: 14px;
+  }
+
+  .artist-info h3 {
+    font-size: 15px;
+  }
+
+  .artist-info p {
+    font-size: 11px;
+  }
+
+  .artist-info span {
+    font-size: 10px;
+  }
+
+}
+
+/* =========================================
+   POPULAR ARTISTS - ENDS
+========================================= */
+
+
+/* =========================================
+   UPCOMING EVENTS - STARTS
+========================================= */
+
+.upcoming-events {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #f8f8fa;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.upcoming-heading {
+  max-width: 1300px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.upcoming-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.upcoming-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 38px;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.upcoming-view-all {
+  color: #d4145a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.upcoming-view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   EVENT LIST
+========================================= */
+
+.upcoming-list {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.upcoming-card {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    150px
+    1fr
+    160px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.upcoming-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.upcoming-date {
+  width: 70px;
+  height: 75px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f8f8fa;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 10px;
+}
+
+.upcoming-date span {
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.upcoming-date strong {
+  margin-top: 3px;
+
+  color: #111111;
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.upcoming-image-wrapper {
+  width: 150px;
+
+  height: 100px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.upcoming-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.upcoming-card:hover .upcoming-image {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.upcoming-info {
+  min-width: 0;
+}
+
+.upcoming-category {
+  color: #d4145a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.upcoming-info h3 {
+  margin: 7px 0 10px;
+
+  color: #111111;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+.upcoming-meta {
+  display: flex;
+
+  gap: 20px;
+
+  color: #666666;
+
+  font-size: 12px;
+}
+
+.upcoming-location {
+  margin-top: 7px;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.upcoming-action {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 12px;
+}
+
+.upcoming-price {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.upcoming-price small {
+  color: #999999;
+
+  font-size: 10px;
+}
+
+.upcoming-price strong {
+  margin-top: 2px;
+
+  color: #111111;
+
+  font-size: 19px;
+}
+
+.upcoming-btn {
+  padding: 10px 15px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease;
+}
+
+.upcoming-btn:hover {
+  background: #b90f4d;
+}
+
+
+/* =========================================
+   UPCOMING EVENTS - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .upcoming-events {
+    padding: 70px 30px;
+  }
+
+  .upcoming-card {
+    grid-template-columns:
+      70px
+      130px
+      1fr
+      130px;
+
+    gap: 18px;
+  }
+
+  .upcoming-image-wrapper {
+    width: 130px;
+    height: 90px;
+  }
+
+  .upcoming-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+}
+
+
+/* =========================================
+   UPCOMING EVENTS - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .upcoming-events {
+    padding: 60px 20px;
+  }
+
+  .upcoming-heading {
+    margin-bottom: 25px;
+  }
+
+  .upcoming-heading h2 {
+    font-size: 30px;
+  }
+
+  .upcoming-label {
+    font-size: 10px;
+  }
+
+  .upcoming-view-all {
+    font-size: 12px;
+  }
+
+
+  .upcoming-list {
+    gap: 15px;
+  }
+
+
+  .upcoming-card {
+    grid-template-columns: 55px 1fr;
+
+    gap: 15px;
+
+    padding: 14px;
+  }
+
+
+  /* Date */
+
+  .upcoming-date {
+    width: 55px;
+    height: 65px;
+  }
+
+  .upcoming-date span {
+    font-size: 9px;
+  }
+
+  .upcoming-date strong {
+    font-size: 23px;
+  }
+
+
+  /* Image */
+
+  .upcoming-image-wrapper {
+    width: 100%;
+    height: 100px;
+
+    border-radius: 9px;
+  }
+
+
+  /* Information */
+
+  .upcoming-info {
+    grid-column: 1 / -1;
+  }
+
+  .upcoming-info h3 {
+    font-size: 18px;
+  }
+
+  .upcoming-meta {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+
+  /* Action */
+
+  .upcoming-action {
+    grid-column: 1 / -1;
+
+    padding-top: 12px;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #eeeeee;
+  }
+
+  .upcoming-price {
+    align-items: flex-start;
+  }
+
+  .upcoming-btn {
+    padding: 10px 14px;
+  }
+
+}
+
+/* =========================================
+   UPCOMING EVENTS - ENDS
+========================================= */
+
+
+/* =========================================
+   FOOTER - STARTS
+========================================= */
+
+.site-footer {
+  position: relative;
+
+  width: 100%;
+
+  overflow: hidden;
+
+  background: #080808;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   ANIMATED BACKGROUND
+========================================= */
+
+.footer-background {
+  position: absolute;
+
+  inset: 0;
+
+  overflow: hidden;
+
+  pointer-events: none;
+}
+
+
+/* Purple / pink glow */
+
+.footer-glow {
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  border-radius: 50%;
+
+  filter: blur(100px);
+
+  opacity: 0.18;
+}
+
+
+/* First glow */
+
+.footer-glow-one {
+  top: 20%;
+
+  left: 20%;
+
+  background: #d4145a;
+}
+
+
+/* Second glow */
+
+.footer-glow-two {
+  right: 10%;
+
+  bottom: -20%;
+
+  background: #6c2bd9;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.footer-grid {
+  position: absolute;
+
+  left: -10%;
+
+  bottom: -200px;
+
+  width: 120%;
+
+  height: 450px;
+
+  opacity: 0.12;
+
+  transform: perspective(500px) rotateX(65deg);
+
+  transform-origin: bottom;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.15) 1px,
+      transparent 1px
+    );
+
+  background-size:
+    50px 50px;
+}
+
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.footer-container {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 100px 60px 30px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.footer-cta {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  padding-bottom: 90px;
+}
+
+.footer-eyebrow {
+  margin: 0 0 18px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.footer-cta h2 {
+  max-width: 750px;
+
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 52px;
+
+  line-height: 1.05;
+
+  letter-spacing: -2px;
+}
+
+.footer-cta h2 span {
+  color: #d4145a;
+}
+
+.footer-cta-text {
+  max-width: 550px;
+
+  margin: 20px 0 30px;
+
+  color: #999999;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   CTA BUTTON
+========================================= */
+
+.footer-cta-button {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 13px 22px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.25s ease,
+    transform 0.25s ease;
+}
+
+.footer-cta-button span {
+  font-size: 17px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.footer-cta-button:hover {
+  background: #b90f4d;
+
+  transform: translateY(-3px);
+}
+
+.footer-cta-button:hover span {
+  transform: translateX(5px);
+}
+
+
+/* =========================================
+   WHY BOOK WITH US - STARTS
+========================================= */
+
+.why-book {
+  width: 100%;
+
+  padding: 100px 60px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.why-book-heading {
+  max-width: 700px;
+
+  margin: 0 auto 55px;
+
+  text-align: center;
+}
+
+.why-book-label {
+  margin: 0 0 10px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.why-book-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 42px;
+
+  font-weight: 750;
+
+  letter-spacing: -1.5px;
+}
+
+.why-book-subtitle {
+  max-width: 550px;
+
+  margin: 15px auto 0;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   BENEFITS GRID
+========================================= */
+
+.benefits-grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   BENEFIT CARD
+========================================= */
+
+.benefit-card {
+  position: relative;
+
+  min-height: 240px;
+
+  padding: 28px;
+
+  overflow: hidden;
+
+  background: #f8f8fa;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 16px;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.benefit-card:hover {
+  transform: translateY(-6px);
+
+  border-color: #f0c1d2;
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.benefit-icon {
+  width: 52px;
+  height: 52px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 25px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 12px;
+
+  font-size: 23px;
+
+  box-shadow:
+    0 5px 15px rgba(0, 0, 0, 0.05);
+
+  transition:
+    transform 0.3s ease;
+}
+
+.benefit-card:hover .benefit-icon {
+  transform: scale(1.08) rotate(-3deg);
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.benefit-content {
+  position: relative;
+
+  z-index: 2;
+}
+
+.benefit-content h3 {
+  margin: 0 0 10px;
+
+  color: #111111;
+
+  font-size: 18px;
+
+  font-weight: 700;
+}
+
+.benefit-content p {
+  max-width: 250px;
+
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 12px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   NUMBER
+========================================= */
+
+.benefit-number {
+  position: absolute;
+
+  right: 18px;
+
+  bottom: 10px;
+
+  color: rgba(212, 20, 90, 0.08);
+
+  font-size: 70px;
+
+  font-weight: 800;
+
+  line-height: 1;
+
+  user-select: none;
+}
+
+
+/* =========================================
+   HOVER ACCENT
+========================================= */
+
+.benefit-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+
+  bottom: 0;
+
+  width: 0;
+
+  height: 3px;
+
+  background: #d4145a;
+
+  transition:
+    width 0.4s ease;
+}
+
+.benefit-card:hover::after {
+  width: 100%;
+}
+
+/* =========================================
+   WHY BOOK WITH US - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .why-book {
+    padding: 80px 30px;
+  }
+
+  .why-book-heading h2 {
+    font-size: 38px;
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 18px;
+  }
+
+}
+
+
+/* =========================================
+   WHY BOOK WITH US - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .why-book {
+    padding: 70px 20px;
+  }
+
+
+  /* Heading */
+
+  .why-book-heading {
+    margin-bottom: 35px;
+  }
+
+  .why-book-label {
+    font-size: 9px;
+
+    letter-spacing: 1.7px;
+  }
+
+  .why-book-heading h2 {
+    font-size: 30px;
+
+    letter-spacing: -0.8px;
+  }
+
+  .why-book-subtitle {
+    margin-top: 12px;
+
+    font-size: 13px;
+  }
+
+
+  /* Grid */
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+
+    gap: 12px;
+  }
+
+
+  /* Card */
+
+  .benefit-card {
+    min-height: auto;
+
+    padding: 22px;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 18px;
+  }
+
+
+  /* Icon */
+
+  .benefit-icon {
+    flex-shrink: 0;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 0;
+
+    font-size: 21px;
+  }
+
+
+  /* Content */
+
+  .benefit-content h3 {
+    margin-bottom: 6px;
+
+    font-size: 16px;
+  }
+
+  .benefit-content p {
+    max-width: none;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+  }
+
+
+  /* Number */
+
+  .benefit-number {
+    right: 12px;
+
+    bottom: 5px;
+
+    font-size: 50px;
+  }
+
+}
+
+/* =========================================
+   WHY BOOK WITH US - ENDS
+========================================= */
