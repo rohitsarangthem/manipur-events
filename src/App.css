@@ -174,2023 +174,6 @@ button {
 
 }
 
-
-/* =================================
-   HERO SECTION - STARTS
-================================= */
-
-.hero {
-  width: 100%;
-  padding: 100px 60px 110px;
-  background: #f8f8fa;
-  text-align: center;
-  background-image: url('/Others/banner.jpg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-
-}
-/* Overlay */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.693);
-  height: 565px;
-}
-
-/* Keep content above overlay */
-.hero > * {
-  position: relative;
-  z-index: 1;
-}
-
-.hero-content {
-  max-width: 850px;
-  margin: 0 auto;
-}
-
-.hero-small-title {
-  margin-bottom: 18px;
-  color: #d4145a;
-  font-size: 13px;
-  font-weight: 700;
-  letter-spacing: 2px;
-}
-
-.hero h1 {
-  margin: 0;
-  color: white;
-  font-size: 64px;
-  line-height: 1.05;
-  font-weight: 800;
-  letter-spacing: -2px;
-}
-
-.hero h1 span {
-  color: #d4145a;
-}
-
-.hero-description {
-  max-width: 600px;
-  margin: 25px auto 35px;
-  color: #eeecec;
-  font-size: 17px;
-  line-height: 1.7;
-}
-
-/* Search */
-
-.hero-search {
-  max-width: 650px;
-
-  margin: 0 auto;
-
-  padding: 7px;
-
-  display: flex;
-  align-items: center;
-
-  background: #ffffff;
-
-  border: 1px solid #eeeeee;
-
-  border-radius: 12px;
-
-  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
-}
-
-.search-icon {
-  padding-left: 15px;
-
-  font-size: 18px;
-}
-
-.hero-search input {
-  flex: 1;
-
-  height: 48px;
-
-  padding: 0 15px;
-
-  border: none;
-  outline: none;
-
-  font-size: 15px;
-
-  color: #333333;
-}
-
-.hero-search button {
-  height: 48px;
-
-  padding: 0 25px;
-
-  border: none;
-
-  background: #d4145a;
-  color: #ffffff;
-
-  border-radius: 8px;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-.hero-search button:hover {
-  background: #b90f4d;
-}
-
-/* =================================
-   HERO SECTION - Tablet Mode
-================================= */
-@media (max-width: 900px) {
-
-  .hero {
-    padding: 80px 30px 90px;
-  }
-
-  .hero h1 {
-    font-size: 52px;
-  }
-
-  .hero-description {
-    font-size: 16px;
-  }
-  .hero::before {
-  /* content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.693); */
-  height: 439px;
-}
-
-}
-
-/* =================================
-   HERO SECTION - Tablet Mode
-================================= */
-
-/* =================================
-   HERO SECTION - MOBILE
-================================= */
-
-
-@media (max-width: 600px) {
-
-  .hero {
-    padding: 65px 20px 70px;
-  }
-
-  .hero-small-title {
-    font-size: 11px;
-    letter-spacing: 1.5px;
-  }
-
-  .hero h1 {
-    font-size: 42px;
-    line-height: 1.1;
-    letter-spacing: -1px;
-  }
-
-  .hero-description {
-    margin-top: 20px;
-
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .hero-search {
-    padding: 6px;
-
-    border-radius: 10px;
-  }
-
-  .hero-search input {
-    min-width: 0;
-
-    font-size: 14px;
-  }
-
-  .hero-search button {
-    padding: 0 16px;
-  }
-
-}
-
-/* =================================
-   HERO SECTION - MOBILE
-================================= */
-
-
-
-/* =================================
-   HERO SECTION - ENDS
-================================= */
-
-
-
-/* =========================================
-   LATEST EVENTS - STARTS
-========================================= */
-
-.latest-events {
-  width: 100%;
-
-  padding: 90px 60px;
-
-  background: #ffffff;
-}
-
-
-/* Section Heading */
-
-.section-heading {
-  max-width: 1300px;
-
-  margin: 0 auto 35px;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.section-label {
-  margin: 0 0 8px;
-
-  color: #d4145a;
-
-  font-size: 12px;
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-.section-heading h2 {
-  margin: 0;
-
-  color: #111111;
-
-  font-size: 38px;
-  font-weight: 750;
-
-  letter-spacing: -1px;
-}
-
-.view-all {
-  color: #d4145a;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  text-decoration: none;
-}
-
-.view-all:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================================
-   EVENTS GRID
-========================================= */
-
-.events-grid {
-  max-width: 1300px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(3, 1fr);
-
-  gap: 25px;
-}
-
-
-/* =========================================
-   EVENT CARD
-========================================= */
-
-.event-card {
-  overflow: hidden;
-
-  background: #ffffff;
-
-  border: 1px solid #eeeeee;
-
-  border-radius: 16px;
-
-  box-shadow:
-    0 8px 30px rgba(0, 0, 0, 0.05);
-
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-}
-
-.event-card:hover {
-  transform: translateY(-5px);
-
-  box-shadow:
-    0 15px 40px rgba(0, 0, 0, 0.10);
-}
-
-
-/* =========================================
-   EVENT IMAGE
-========================================= */
-
-.event-image-wrapper {
-  position: relative;
-
-  width: 100%;
-
-  height: 230px;
-
-  overflow: hidden;
-}
-
-.event-image {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  transition: transform 0.5s ease;
-}
-
-.event-card:hover .event-image {
-  transform: scale(1.05);
-}
-
-
-/* Category */
-
-.event-category {
-  position: absolute;
-
-  left: 15px;
-  bottom: 15px;
-
-  padding: 6px 10px;
-
-  background: #ffffff;
-
-  color: #d4145a;
-
-  border-radius: 6px;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 0.5px;
-}
-
-
-/* =========================================
-   EVENT CONTENT
-========================================= */
-
-.event-content {
-  padding: 22px;
-}
-
-.event-title {
-  margin: 0 0 10px;
-
-  color: #111111;
-
-  font-size: 21px;
-  font-weight: 700;
-
-  line-height: 1.2;
-}
-
-.event-description {
-  margin: 0 0 18px;
-
-  color: #777777;
-
-  font-size: 13px;
-
-  line-height: 1.6;
-
-  display: -webkit-box;
-  /* -webkit-line-clamp: 2; */
-  -webkit-box-orient: vertical;
-
-  overflow: hidden;
-}
-
-
-/* =========================================
-   EVENT INFO
-========================================= */
-
-.event-info {
-  display: flex;
-  align-items: center;
-
-  gap: 8px;
-
-  margin-bottom: 9px;
-
-  color: #555555;
-
-  font-size: 13px;
-}
-
-.event-info-icon {
-  width: 22px;
-}
-
-
-/* =========================================
-   EVENT BOTTOM
-========================================= */
-
-.event-bottom {
-  margin-top: 20px;
-  padding-top: 18px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  border-top: 1px solid #eeeeee;
-}
-
-
-/* Price */
-
-.event-price {
-  display: flex;
-  flex-direction: column;
-}
-
-.event-price span {
-  color: #999999;
-
-  font-size: 11px;
-}
-
-.event-price strong {
-  margin-top: 3px;
-
-  color: #111111;
-
-  font-size: 19px;
-}
-
-
-/* =========================================
-   TICKET QUANTITY
-========================================= */
-
-.ticket-quantity {
-  display: flex;
-  align-items: center;
-
-  border: 1px solid #dddddd;
-
-  border-radius: 8px;
-
-  overflow: hidden;
-}
-
-.ticket-quantity button {
-  width: 32px;
-  height: 32px;
-
-  border: none;
-
-  background: #f7f7f7;
-
-  font-size: 17px;
-
-  cursor: pointer;
-}
-
-.ticket-quantity button:hover {
-  background: #eeeeee;
-}
-
-.ticket-quantity span {
-  min-width: 32px;
-
-  text-align: center;
-
-  font-size: 14px;
-  font-weight: 600;
-}
-
-
-/* =========================================
-   VIEW EVENT BUTTON
-========================================= */
-
-.view-event-btn {
-  width: 100%;
-
-  margin-top: 18px;
-
-  padding: 12px;
-
-  border: none;
-
-  background: #d4145a;
-  color: #ffffff;
-
-  border-radius: 8px;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition: background 0.2s ease;
-}
-
-.view-event-btn:hover {
-  background: #b90f4d;
-}
-
-
-/* =========================================
-   EVENTS - TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-
-  .latest-events {
-    padding: 70px 30px;
-  }
-
-  .events-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-/* =========================================
-   EVENTS - MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .latest-events {
-    padding: 60px 20px;
-  }
-
-  .section-heading {
-    align-items: flex-start;
-  }
-
-  .section-heading h2 {
-    font-size: 30px;
-  }
-
-  .section-label {
-    font-size: 10px;
-  }
-
-  .view-all {
-    margin-top: 20px;
-
-    white-space: nowrap;
-  }
-
-  .events-grid {
-    grid-template-columns: 1fr;
-
-    gap: 20px;
-  }
-
-  .event-image-wrapper {
-    height: 220px;
-  }
-
-  .event-content {
-    padding: 18px;
-  }
-
-  .event-title {
-    font-size: 20px;
-  }
-
-}
-
-/* =========================================
-   LATEST EVENTS - ENDS
-========================================= */
-
-
-/* =========================================
-   FEATURED CONCERT - Starts
-========================================= */
-
-.featured-concert {
-  width: 100%;
-
-  padding: 90px 60px;
-
-  background: #ffffff;
-}
-
-.featured-inner {
-  max-width: 1300px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: 1.05fr 3fr;
-
-  min-height: 480px;
-
-  overflow: hidden;
-
-  background: #111111;
-
-  border-radius: 20px;
-
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
-}
-
-
-/* =========================================
-   IMAGE
-========================================= */
-
-.featured-image-wrapper {
-  position: relative;
-
-  min-height: 480px;
-
-  overflow: hidden;
-}
-
-.featured-image {
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  transition: transform 0.6s ease;
-}
-
-.featured-inner:hover .featured-image {
-  transform: scale(1.04);
-}
-
-
-/* Badge */
-
-.featured-badge {
-  position: absolute;
-
-  top: 25px;
-  left: 25px;
-
-  padding: 8px 13px;
-
-  background: #d4145a;
-  color: #ffffff;
-
-  border-radius: 6px;
-
-  font-size: 10px;
-  font-weight: 700;
-
-  letter-spacing: 1px;
-}
-
-
-/* =========================================
-   CONTENT
-========================================= */
-
-.featured-content {
-  padding: 55px 50px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.featured-label {
-  margin: 0 0 14px;
-
-  color: #d4145a;
-
-  font-size: 11px;
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-.featured-content h2 {
-  margin: 0;
-
-  max-width: 500px;
-
-  color: #ffffff;
-
-  font-size: 42px;
-  line-height: 1.1;
-
-  letter-spacing: -1px;
-}
-
-.featured-description {
-  max-width: 500px;
-
-  margin: 22px 0 30px;
-
-  color: #b7b7b7;
-
-  font-size: 14px;
-
-  line-height: 1.7;
-}
-
-
-/* =========================================
-   EVENT DETAILS
-========================================= */
-
-.featured-details {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 17px;
-}
-
-.featured-detail {
-  display: flex;
-
-  align-items: center;
-
-  gap: 13px;
-}
-
-.detail-icon {
-  width: 38px;
-  height: 38px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: center;
-
-  background: #202020;
-
-  border: 1px solid #333333;
-
-  border-radius: 8px;
-
-  font-size: 16px;
-}
-
-.featured-detail div {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 3px;
-}
-
-.featured-detail small {
-  color: #858585;
-
-  font-size: 11px;
-}
-
-.featured-detail strong {
-  color: #ffffff;
-
-  font-size: 13px;
-  font-weight: 500;
-}
-
-
-/* =========================================
-   BOTTOM
-========================================= */
-
-.featured-bottom {
-  margin-top: 35px;
-  padding-top: 25px;
-
-  display: flex;
-
-  align-items: center;
-  justify-content: space-between;
-
-  border-top: 1px solid #2d2d2d;
-}
-
-
-/* Price */
-
-.featured-price {
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 4px;
-}
-
-.featured-price small {
-  color: #858585;
-
-  font-size: 11px;
-}
-
-.featured-price strong {
-  color: #ffffff;
-
-  font-size: 24px;
-}
-
-
-/* Button */
-
-.featured-btn {
-  display: flex;
-
-  align-items: center;
-
-  gap: 10px;
-
-  padding: 13px 22px;
-
-  border: none;
-
-  background: #d4145a;
-  color: #ffffff;
-
-  border-radius: 8px;
-
-  font-size: 13px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  transition:
-    background 0.2s ease,
-    transform 0.2s ease;
-}
-
-.featured-btn span {
-  font-size: 17px;
-
-  transition: transform 0.2s ease;
-}
-
-.featured-btn:hover {
-  background: #b90f4d;
-
-  transform: translateY(-2px);
-}
-
-.featured-btn:hover span {
-  transform: translateX(4px);
-}
-
-/* =========================================
-   FEATURED CONCERT - TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-
-  .featured-concert {
-    padding: 70px 30px;
-  }
-
-  .featured-inner {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .featured-content {
-    padding: 40px 30px;
-  }
-
-  .featured-content h2 {
-    font-size: 34px;
-  }
-
-}
-
-
-/* =========================================
-   FEATURED CONCERT - MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .featured-concert {
-    padding: 60px 20px;
-  }
-
-  .featured-inner {
-    display: block;
-
-    border-radius: 16px;
-  }
-
-
-  /* Image */
-
-  .featured-image-wrapper {
-    height: 250px;
-
-    min-height: 250px;
-  }
-
-
-  /* Content */
-
-  .featured-content {
-    padding: 30px 22px;
-  }
-
-  .featured-content h2 {
-    font-size: 30px;
-
-    line-height: 1.15;
-  }
-
-  .featured-description {
-    font-size: 13px;
-
-    margin: 18px 0 25px;
-  }
-
-
-  /* Details */
-
-  .featured-details {
-    gap: 14px;
-  }
-
-
-  /* Bottom */
-
-  .featured-bottom {
-    margin-top: 28px;
-
-    padding-top: 20px;
-
-    align-items: flex-end;
-  }
-
-  .featured-price strong {
-    font-size: 21px;
-  }
-
-  .featured-btn {
-    padding: 12px 17px;
-
-    font-size: 12px;
-  }
-
-}
-
-
-/* =========================================
-   FEATURED CONCERT - Ends
-========================================= */
-
-
-
-/* =========================================
-   MUSIC GENRES - STARTS
-========================================= */
-
-.music-genres {
-  width: 100%;
-
-  padding: 90px 60px;
-
-  background: #f8f8fa;
-}
-
-
-/* =========================================
-   HEADING
-========================================= */
-
-.genres-heading {
-  max-width: 1300px;
-
-  margin: 0 auto 35px;
-
-  display: flex;
-
-  align-items: flex-end;
-  justify-content: space-between;
-}
-
-.genres-label {
-  margin: 0 0 8px;
-
-  color: #d4145a;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-.genres-heading h2 {
-  margin: 0;
-
-  color: #111111;
-
-  font-size: 38px;
-
-  font-weight: 750;
-
-  letter-spacing: -1px;
-}
-
-.genres-view-all {
-  color: #d4145a;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  text-decoration: none;
-}
-
-.genres-view-all:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================================
-   GRID
-========================================= */
-
-.genres-grid {
-  max-width: 1300px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 20px;
-}
-
-
-/* =========================================
-   GENRE CARD
-========================================= */
-
-.genre-card {
-  position: relative;
-
-  height: 230px;
-
-  overflow: hidden;
-
-  display: block;
-
-  border-radius: 15px;
-
-  text-decoration: none;
-
-  background: #111111;
-}
-
-
-/* =========================================
-   IMAGE
-========================================= */
-
-.genre-image {
-  width: 100%;
-
-  height: 100%;
-
-  object-fit: cover;
-
-  display: block;
-
-  transition:
-    transform 0.6s ease;
-}
-
-
-/* =========================================
-   OVERLAY
-========================================= */
-
-.genre-overlay {
-  position: absolute;
-
-  inset: 0;
-
-  background:
-    linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.8),
-      rgba(0, 0, 0, 0.05)
-    );
-
-  transition:
-    background 0.3s ease;
-}
-
-
-/* =========================================
-   CONTENT
-========================================= */
-
-.genre-content {
-  position: absolute;
-
-  left: 20px;
-
-  bottom: 20px;
-
-  z-index: 2;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 5px;
-}
-
-.genre-content h3 {
-  margin: 0;
-
-  color: #ffffff;
-
-  font-size: 22px;
-
-  font-weight: 700;
-}
-
-.genre-content span {
-  color: #dddddd;
-
-  font-size: 12px;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.genre-card:hover .genre-image {
-  transform: scale(1.08);
-}
-
-.genre-card:hover .genre-overlay {
-  background:
-    linear-gradient(
-      to top,
-      rgba(212, 20, 90, 0.8),
-      rgba(0, 0, 0, 0.15)
-    );
-}
-
-.genre-card:hover .genre-content h3 {
-  transform: translateY(-2px);
-}
-
-.genre-content h3 {
-  transition:
-    transform 0.3s ease;
-}
-
-
-/* =========================================
-   MUSIC GENRES - TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-
-  .music-genres {
-    padding: 70px 30px;
-  }
-
-  .genres-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-
-/* =========================================
-   MUSIC GENRES - MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .music-genres {
-    padding: 60px 20px;
-  }
-
-  .genres-heading {
-    margin-bottom: 25px;
-  }
-
-  .genres-heading h2 {
-    font-size: 30px;
-  }
-
-  .genres-label {
-    font-size: 10px;
-  }
-
-  .genres-view-all {
-    font-size: 12px;
-  }
-
-  .genres-grid {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 12px;
-  }
-
-  .genre-card {
-    height: 170px;
-
-    border-radius: 12px;
-  }
-
-  .genre-content {
-    left: 14px;
-
-    bottom: 14px;
-  }
-
-  .genre-content h3 {
-    font-size: 18px;
-  }
-
-  .genre-content span {
-    font-size: 10px;
-  }
-
-}
-
-/* =========================================
-   MUSIC GENRES - ENDS
-========================================= */
-
-
-/* =========================================
-   POPULAR ARTISTS - STARTS
-========================================= */
-
-.popular-artists {
-  width: 100%;
-
-  padding: 90px 60px;
-
-  background: #ffffff;
-}
-
-
-/* =========================================
-   HEADING
-========================================= */
-
-.artists-heading {
-  max-width: 1300px;
-
-  margin: 0 auto 40px;
-
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: space-between;
-}
-
-.artists-label {
-  margin: 0 0 8px;
-
-  color: #d4145a;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-.artists-heading h2 {
-  margin: 0;
-
-  color: #111111;
-
-  font-size: 38px;
-
-  font-weight: 750;
-
-  letter-spacing: -1px;
-}
-
-.artists-view-all {
-  color: #d4145a;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  text-decoration: none;
-}
-
-.artists-view-all:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================================
-   ARTIST GRID
-========================================= */
-
-.artists-grid {
-  max-width: 1300px;
-
-  margin: 0 auto;
-
-  display: grid;
-
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 35px 25px;
-}
-
-
-/* =========================================
-   ARTIST CARD
-========================================= */
-
-.artist-card {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-
-  text-align: center;
-
-  color: #111111;
-
-  text-decoration: none;
-}
-
-
-/* =========================================
-   ARTIST IMAGE
-========================================= */
-
-.artist-image-wrapper {
-  width: 170px;
-  height: 170px;
-  overflow: hidden;
-  border-radius: 50%;
-  background: #eeeeee;
-  border: 4px solid #ffffff;
-  box-shadow:0 8px 25px rgba(0, 0, 0, 0.10);
-  transition:
-  transform 0.3s ease,
-  box-shadow 0.3s ease;
-}
-
-.artist-image {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  transition:
-    transform 0.5s ease;
-}
-
-
-/* =========================================
-   ARTIST INFO
-========================================= */
-
-.artist-info {
-  margin-top: 18px;
-}
-
-.artist-info h3 {
-  margin: 0;
-
-  color: #111111;
-
-  font-size: 17px;
-
-  font-weight: 700;
-
-  line-height: 1.3;
-}
-
-.artist-info p {
-  margin: 6px 0 5px;
-
-  color: #777777;
-
-  font-size: 12px;
-}
-
-.artist-info span {
-  color: #d4145a;
-
-  font-size: 11px;
-
-  font-weight: 600;
-}
-
-
-/* =========================================
-   HOVER
-========================================= */
-
-.artist-card:hover .artist-image-wrapper {
-  transform: translateY(-6px);
-
-  box-shadow:
-    0 15px 35px rgba(0, 0, 0, 0.16);
-}
-
-.artist-card:hover .artist-image {
-  transform: scale(1.07);
-}
-
-.artist-card:hover .artist-info h3 {
-  color: #d4145a;
-}
-
-
-/* =========================================
-   POPULAR ARTISTS - TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-
-  .popular-artists {
-    padding: 70px 30px;
-  }
-
-  .artists-grid {
-    grid-template-columns: repeat(4, 1fr);
-
-    gap: 25px 15px;
-  }
-
-  .artist-image-wrapper {
-    width: 140px;
-    height: 140px;
-  }
-
-}
-
-/* =========================================
-   POPULAR ARTISTS - MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .popular-artists {
-    padding: 60px 20px;
-  }
-
-  .artists-heading {
-    margin-bottom: 30px;
-  }
-
-  .artists-heading h2 {
-    font-size: 30px;
-  }
-
-  .artists-label {
-    font-size: 10px;
-  }
-
-  .artists-view-all {
-    font-size: 12px;
-  }
-
-
-  .artists-grid {
-    grid-template-columns: repeat(2, 1fr);
-
-    gap: 35px 15px;
-  }
-
-
-  .artist-image-wrapper {
-    width: 120px;
-    height: 120px;
-  }
-
-
-  .artist-info {
-    margin-top: 14px;
-  }
-
-  .artist-info h3 {
-    font-size: 15px;
-  }
-
-  .artist-info p {
-    font-size: 11px;
-  }
-
-  .artist-info span {
-    font-size: 10px;
-  }
-
-}
-
-/* =========================================
-   POPULAR ARTISTS - ENDS
-========================================= */
-
-
-/* =========================================
-   UPCOMING EVENTS - STARTS
-========================================= */
-
-.upcoming-events {
-  width: 100%;
-
-  padding: 90px 60px;
-
-  background: #f8f8fa;
-}
-
-
-/* =========================================
-   HEADING
-========================================= */
-
-.upcoming-heading {
-  max-width: 1300px;
-
-  margin: 0 auto 35px;
-
-  display: flex;
-
-  align-items: flex-end;
-
-  justify-content: space-between;
-}
-
-.upcoming-label {
-  margin: 0 0 8px;
-
-  color: #d4145a;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 2px;
-}
-
-.upcoming-heading h2 {
-  margin: 0;
-
-  color: #111111;
-
-  font-size: 38px;
-
-  font-weight: 750;
-
-  letter-spacing: -1px;
-}
-
-.upcoming-view-all {
-  color: #d4145a;
-
-  font-size: 14px;
-
-  font-weight: 600;
-
-  text-decoration: none;
-}
-
-.upcoming-view-all:hover {
-  text-decoration: underline;
-}
-
-
-/* =========================================
-   EVENT LIST
-========================================= */
-
-.upcoming-list {
-  max-width: 1300px;
-
-  margin: 0 auto;
-
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 15px;
-}
-
-
-/* =========================================
-   EVENT CARD
-========================================= */
-
-.upcoming-card {
-  display: grid;
-
-  grid-template-columns:
-    80px
-    150px
-    1fr
-    160px;
-
-  align-items: center;
-
-  gap: 25px;
-
-  padding: 18px;
-
-  background: #ffffff;
-
-  border: 1px solid #eeeeee;
-
-  border-radius: 14px;
-
-  box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.04);
-
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease;
-}
-
-.upcoming-card:hover {
-  transform: translateY(-3px);
-
-  box-shadow:
-    0 12px 30px rgba(0, 0, 0, 0.08);
-}
-
-
-/* =========================================
-   DATE
-========================================= */
-
-.upcoming-date {
-  width: 70px;
-  height: 75px;
-
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: center;
-  justify-content: center;
-
-  background: #f8f8fa;
-
-  border: 1px solid #eeeeee;
-
-  border-radius: 10px;
-}
-
-.upcoming-date span {
-  color: #d4145a;
-
-  font-size: 11px;
-
-  font-weight: 700;
-
-  letter-spacing: 1px;
-}
-
-.upcoming-date strong {
-  margin-top: 3px;
-
-  color: #111111;
-
-  font-size: 28px;
-
-  line-height: 1;
-}
-
-
-/* =========================================
-   IMAGE
-========================================= */
-
-.upcoming-image-wrapper {
-  width: 150px;
-
-  height: 100px;
-
-  overflow: hidden;
-
-  border-radius: 10px;
-}
-
-.upcoming-image {
-  width: 100%;
-  height: 100%;
-
-  display: block;
-
-  object-fit: cover;
-
-  transition:
-    transform 0.4s ease;
-}
-
-.upcoming-card:hover .upcoming-image {
-  transform: scale(1.06);
-}
-
-
-/* =========================================
-   INFORMATION
-========================================= */
-
-.upcoming-info {
-  min-width: 0;
-}
-
-.upcoming-category {
-  color: #d4145a;
-
-  font-size: 10px;
-
-  font-weight: 700;
-
-  text-transform: uppercase;
-
-  letter-spacing: 0.8px;
-}
-
-.upcoming-info h3 {
-  margin: 7px 0 10px;
-
-  color: #111111;
-
-  font-size: 19px;
-
-  font-weight: 700;
-}
-
-.upcoming-meta {
-  display: flex;
-
-  gap: 20px;
-
-  color: #666666;
-
-  font-size: 12px;
-}
-
-.upcoming-location {
-  margin-top: 7px;
-
-  color: #777777;
-
-  font-size: 12px;
-}
-
-
-/* =========================================
-   ACTION
-========================================= */
-
-.upcoming-action {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: flex-end;
-
-  gap: 12px;
-}
-
-.upcoming-price {
-  display: flex;
-
-  flex-direction: column;
-
-  align-items: flex-end;
-}
-
-.upcoming-price small {
-  color: #999999;
-
-  font-size: 10px;
-}
-
-.upcoming-price strong {
-  margin-top: 2px;
-
-  color: #111111;
-
-  font-size: 19px;
-}
-
-.upcoming-btn {
-  padding: 10px 15px;
-
-  background: #d4145a;
-
-  color: #ffffff;
-
-  border-radius: 7px;
-
-  font-size: 11px;
-
-  font-weight: 600;
-
-  text-decoration: none;
-
-  transition:
-    background 0.2s ease;
-}
-
-.upcoming-btn:hover {
-  background: #b90f4d;
-}
-
-
-/* =========================================
-   UPCOMING EVENTS - TABLET
-========================================= */
-
-@media (max-width: 1000px) {
-
-  .upcoming-events {
-    padding: 70px 30px;
-  }
-
-  .upcoming-card {
-    grid-template-columns:
-      70px
-      130px
-      1fr
-      130px;
-
-    gap: 18px;
-  }
-
-  .upcoming-image-wrapper {
-    width: 130px;
-    height: 90px;
-  }
-
-  .upcoming-meta {
-    flex-direction: column;
-    gap: 5px;
-  }
-
-}
-
-
-/* =========================================
-   UPCOMING EVENTS - MOBILE
-========================================= */
-
-@media (max-width: 600px) {
-
-  .upcoming-events {
-    padding: 60px 20px;
-  }
-
-  .upcoming-heading {
-    margin-bottom: 25px;
-  }
-
-  .upcoming-heading h2 {
-    font-size: 30px;
-  }
-
-  .upcoming-label {
-    font-size: 10px;
-  }
-
-  .upcoming-view-all {
-    font-size: 12px;
-  }
-
-
-  .upcoming-list {
-    gap: 15px;
-  }
-
-
-  .upcoming-card {
-    grid-template-columns: 55px 1fr;
-
-    gap: 15px;
-
-    padding: 14px;
-  }
-
-
-  /* Date */
-
-  .upcoming-date {
-    width: 55px;
-    height: 65px;
-  }
-
-  .upcoming-date span {
-    font-size: 9px;
-  }
-
-  .upcoming-date strong {
-    font-size: 23px;
-  }
-
-
-  /* Image */
-
-  .upcoming-image-wrapper {
-    width: 100%;
-    height: 100px;
-
-    border-radius: 9px;
-  }
-
-
-  /* Information */
-
-  .upcoming-info {
-    grid-column: 1 / -1;
-  }
-
-  .upcoming-info h3 {
-    font-size: 18px;
-  }
-
-  .upcoming-meta {
-    flex-direction: column;
-
-    gap: 5px;
-  }
-
-
-  /* Action */
-
-  .upcoming-action {
-    grid-column: 1 / -1;
-
-    padding-top: 12px;
-
-    flex-direction: row;
-
-    align-items: center;
-
-    justify-content: space-between;
-
-    border-top: 1px solid #eeeeee;
-  }
-
-  .upcoming-price {
-    align-items: flex-start;
-  }
-
-  .upcoming-btn {
-    padding: 10px 14px;
-  }
-
-}
-
-/* =========================================
-   UPCOMING EVENTS - ENDS
-========================================= */
-
-
 /* =========================================
    FOOTER - STARTS
 ========================================= */
@@ -2311,7 +294,7 @@ button {
 
   margin: 0 auto;
 
-  padding: 100px 60px 30px;
+  padding: 100px 15px 30px;
 }
 
 
@@ -2782,4 +765,854 @@ button {
 
 /* =========================================
    WHY BOOK WITH US - ENDS
+========================================= */
+
+
+/* =========================================
+   HERO SEARCH WRAPPER - STARTS
+========================================= */
+
+.hero-search-wrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 650px;
+
+  margin: 0 auto;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.hero-search {
+  position: relative;
+
+  z-index: 5;
+
+  width: 100%;
+
+  display: flex;
+
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 12px 35px rgba(0, 0, 0, 0.08);
+
+  padding: 6px;
+}
+
+
+/* =========================================
+   SEARCH ICON
+========================================= */
+
+.search-icon {
+  width: 45px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  font-size: 17px;
+}
+
+
+/* =========================================
+   INPUT
+========================================= */
+
+.hero-search input {
+  flex: 1;
+
+  min-width: 0;
+
+  height: 45px;
+
+  padding: 0 10px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: #111111;
+
+  font-size: 13px;
+}
+
+.hero-search input::placeholder {
+  color: #999999;
+}
+
+
+/* =========================================
+   SEARCH BUTTON
+========================================= */
+
+.hero-search button {
+  height: 45px;
+
+  padding: 0 24px;
+
+  border: none;
+
+  border-radius: 8px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.hero-search button:hover {
+  background: #b90f4d;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   SUGGESTIONS DROPDOWN
+========================================= */
+
+.search-suggestions {
+  position: absolute;
+
+  z-index: 10;
+
+  top: calc(100% + 8px);
+
+  left: 0;
+
+  right: 0;
+
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.12);
+
+  animation:
+    searchDropdown 0.2s ease;
+}
+
+
+@keyframes searchDropdown {
+
+  from {
+    opacity: 0;
+
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.suggestions-heading {
+  padding: 14px 16px 8px;
+
+  color: #999999;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   SUGGESTION
+========================================= */
+
+.search-suggestion {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 12px 16px;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease;
+}
+
+.search-suggestion:hover {
+  background: #faf1f5;
+}
+
+
+/* =========================================
+   ICON
+========================================= */
+
+.suggestion-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  background: #f7f7f8;
+
+  border-radius: 9px;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.suggestion-content {
+  flex: 1;
+
+  min-width: 0;
+}
+
+.suggestion-title {
+  color: #111111;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+.suggestion-subtitle {
+  margin-top: 3px;
+
+  color: #888888;
+
+  font-size: 10px;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
+}
+
+
+/* =========================================
+   TYPE
+========================================= */
+
+.suggestion-type {
+  flex-shrink: 0;
+
+  padding: 5px 8px;
+
+  background: #fdf0f5;
+
+  color: #d4145a;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   NO RESULTS
+========================================= */
+
+.no-search-results {
+  padding: 30px 20px;
+
+  text-align: center;
+}
+
+.no-search-results div {
+  margin-bottom: 8px;
+
+  font-size: 20px;
+}
+
+.no-search-results p {
+  margin: 0;
+
+  color: #333333;
+
+  font-size: 13px;
+
+  font-weight: 600;
+}
+
+.no-search-results span {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #999999;
+
+  font-size: 10px;
+}
+
+@media (max-width: 600px) {
+
+  .hero-search-wrapper {
+    max-width: 100%;
+  }
+
+
+  .hero-search {
+    padding: 5px;
+
+    border-radius: 10px;
+  }
+
+
+  .search-icon {
+    width: 38px;
+
+    font-size: 15px;
+  }
+
+
+  .hero-search input {
+    height: 42px;
+
+    font-size: 12px;
+  }
+
+
+  .hero-search input::placeholder {
+    font-size: 11px;
+  }
+
+
+  .hero-search button {
+    height: 42px;
+
+    padding: 0 15px;
+
+    font-size: 11px;
+  }
+
+
+  .search-suggestions {
+    top: calc(100% + 6px);
+
+    border-radius: 10px;
+  }
+
+
+  .search-suggestion {
+    padding: 11px 12px;
+
+    gap: 9px;
+  }
+
+
+  .suggestion-icon {
+    width: 34px;
+    height: 34px;
+
+    font-size: 14px;
+  }
+
+
+  .suggestion-title {
+    font-size: 12px;
+  }
+
+
+  .suggestion-subtitle {
+    font-size: 9px;
+  }
+
+
+  .suggestion-type {
+    display: none;
+  }
+
+}
+
+/* =========================================
+   HERO SEARCH WRAPPER - ENDS
+========================================= */
+
+
+/* =========================================
+   EVENTS PAGE - STARTS
+========================================= */
+
+.events-page {
+  width: 100%;
+
+  background: #f8f8fa;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.events-header {
+  padding: 100px 20px 80px;
+
+  text-align: center;
+
+  background: #ffffff;
+}
+
+.events-label {
+  margin: 0 0 12px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.events-header h1 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 52px;
+
+  letter-spacing: -2px;
+}
+
+.events-header > p:last-child {
+  max-width: 550px;
+
+  margin: 18px auto 0;
+
+  color: #777777;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   EVENTS LIST
+========================================= */
+
+.events-list-section {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  padding: 80px 40px;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.events-page-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.events-page-heading p {
+  margin: 0 0 7px;
+
+  color: #d4145a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.events-page-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 34px;
+
+  letter-spacing: -1px;
+}
+
+.events-page-heading > span {
+  color: #888888;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.events-page-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, 1fr);
+
+  gap: 22px;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.event-page-card {
+  overflow: hidden;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 15px;
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.event-page-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.event-page-image {
+  position: relative;
+
+  width: 100%;
+
+  height: 230px;
+
+  overflow: hidden;
+}
+
+.event-page-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.event-page-card:hover
+.event-page-image img {
+  transform: scale(1.05);
+}
+
+
+/* CATEGORY */
+
+.event-page-category {
+  position: absolute;
+
+  left: 12px;
+
+  bottom: 12px;
+
+  padding: 6px 9px;
+
+  background: #ffffff;
+
+  color: #d4145a;
+
+  border-radius: 5px;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.event-page-content {
+  padding: 20px;
+}
+
+.event-page-content h3 {
+  margin: 0 0 9px;
+
+  color: #111111;
+
+  font-size: 20px;
+}
+
+.event-page-description {
+  min-height: 42px;
+
+  margin: 0 0 16px;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   INFO
+========================================= */
+
+.event-page-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 7px;
+
+  padding-bottom: 16px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  color: #666666;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.event-page-bottom {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  padding-top: 16px;
+}
+
+.event-page-bottom div {
+  display: flex;
+
+  flex-direction: column;
+}
+
+.event-page-bottom small {
+  color: #999999;
+
+  font-size: 9px;
+}
+
+.event-page-bottom strong {
+  margin-top: 2px;
+
+  color: #111111;
+
+  font-size: 18px;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.event-page-button {
+  padding: 10px 14px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.event-page-button:hover {
+  background: #b90f4d;
+
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 1000px) {
+
+  .events-header {
+    padding: 80px 25px 60px;
+  }
+
+  .events-header h1 {
+    font-size: 44px;
+  }
+
+  .events-list-section {
+    padding: 60px 25px;
+  }
+
+  .events-page-grid {
+    grid-template-columns:
+      repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 600px) {
+
+  .events-header {
+    padding: 65px 20px 50px;
+  }
+
+  .events-header h1 {
+    font-size: 36px;
+
+    letter-spacing: -1px;
+  }
+
+  .events-header > p:last-child {
+    font-size: 12px;
+  }
+
+
+  .events-list-section {
+    padding: 55px 20px;
+  }
+
+
+  .events-page-heading {
+    align-items: flex-end;
+
+    margin-bottom: 25px;
+  }
+
+  .events-page-heading h2 {
+    font-size: 28px;
+  }
+
+  .events-page-heading > span {
+    font-size: 10px;
+  }
+
+
+  .events-page-grid {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+
+  .event-page-image {
+    height: 200px;
+  }
+
+
+  .event-page-content {
+    padding: 17px;
+  }
+
+
+  .event-page-content h3 {
+    font-size: 18px;
+  }
+
+
+  .event-page-description {
+    font-size: 11px;
+
+    min-height: auto;
+  }
+
+
+  .event-page-bottom {
+    padding-top: 14px;
+  }
+
+}
+
+/* =========================================
+   EVENTS PAGE - ENDS
 ========================================= */

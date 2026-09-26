@@ -1,0 +1,214 @@
+/* =================================
+   HERO SECTION - STARTS
+================================= */
+
+.hero {
+  width: 100%;
+  padding: 100px 60px 110px;
+  background: #000000;
+  text-align: center;
+  /* background-image: url('/Others/banner.jpg'); */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+/* .hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.693);
+  height: 565px;
+}
+
+
+.hero > * {
+  position: relative;
+  z-index: 1;
+} */
+
+.hero-content {
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.hero-small-title {
+  margin-bottom: 18px;
+  color: #d4145a;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  margin: 0;
+  color: white;
+  font-size: 64px;
+  line-height: 1.05;
+  font-weight: 800;
+  letter-spacing: -2px;
+}
+
+.hero h1 span {
+  color: #d4145a;
+}
+
+.hero-description {
+  max-width: 600px;
+  margin: 25px auto 35px;
+  color: #eeecec;
+  font-size: 17px;
+  line-height: 1.7;
+}
+
+/* Search */
+
+.hero-search {
+  max-width: 650px;
+
+  margin: 0 auto;
+
+  padding: 7px;
+
+  display: flex;
+  align-items: center;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 12px;
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+}
+
+.search-icon {
+  padding-left: 15px;
+
+  font-size: 18px;
+}
+
+.hero-search input {
+  flex: 1;
+
+  height: 48px;
+
+  padding: 0 15px;
+
+  border: none;
+  outline: none;
+
+  font-size: 15px;
+
+  color: #333333;
+}
+
+.hero-search button {
+  height: 48px;
+
+  padding: 0 25px;
+
+  border: none;
+
+  background: #d4145a;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.hero-search button:hover {
+  background: #b90f4d;
+}
+
+/* =================================
+   HERO SECTION - Tablet Mode
+================================= */
+@media (max-width: 900px) {
+
+  .hero {
+    padding: 80px 30px 90px;
+  }
+
+  .hero h1 {
+    font-size: 52px;
+  }
+
+  .hero-description {
+    font-size: 16px;
+  }
+  .hero::before {
+  /* content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.693); */
+  height: 439px;
+}
+
+}
+
+/* =================================
+   HERO SECTION - Tablet Mode
+================================= */
+
+/* =================================
+   HERO SECTION - MOBILE
+================================= */
+
+
+@media (max-width: 600px) {
+
+  .hero {
+    padding: 65px 20px 70px;
+  }
+
+  .hero-small-title {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.1;
+    letter-spacing: -1px;
+  }
+
+  .hero-description {
+    margin-top: 20px;
+
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .hero-search {
+    padding: 6px;
+
+    border-radius: 10px;
+  }
+
+  .hero-search input {
+    min-width: 0;
+
+    font-size: 14px;
+  }
+
+  .hero-search button {
+    padding: 0 16px;
+  }
+
+}
+
+/* =================================
+   HERO SECTION - MOBILE
+================================= */
+
+
+
+/* =================================
+   HERO SECTION - ENDS
+================================= */

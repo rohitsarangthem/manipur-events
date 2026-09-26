@@ -1,0 +1,135 @@
+/* =========================================
+   LATEST EVENTS - STARTS
+========================================= */
+
+.latest-events {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #ffffff;
+}
+
+
+/* Section Heading */
+
+.section-heading {
+  max-width: 1300px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.section-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 38px;
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.view-all {
+  color: #d4145a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   EVENTS GRID
+========================================= */
+
+.events-grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 25px;
+}
+
+
+
+
+/* =========================================
+   EVENTS - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .latest-events {
+    padding: 70px 30px;
+  }
+
+  .events-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   EVENTS - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .latest-events {
+    padding: 60px 20px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+  }
+
+  .section-heading h2 {
+    font-size: 30px;
+  }
+
+  .section-label {
+    font-size: 10px;
+  }
+
+  .view-all {
+    margin-top: 20px;
+
+    white-space: nowrap;
+  }
+
+  .events-grid {
+    grid-template-columns: 1fr;
+
+    gap: 20px;
+  }
+
+}
+/* =========================================
+   LATEST EVENTS - ENDS
+========================================= */

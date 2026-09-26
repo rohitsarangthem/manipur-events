@@ -1,0 +1,455 @@
+/* =========================================
+   UPCOMING EVENTS - STARTS
+========================================= */
+
+.upcoming-events {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #f8f8fa;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.upcoming-heading {
+  max-width: 1300px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.upcoming-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.upcoming-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 38px;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.upcoming-view-all {
+  color: #d4145a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.upcoming-view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   EVENT LIST
+========================================= */
+
+.upcoming-list {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 15px;
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.upcoming-card {
+  display: grid;
+
+  grid-template-columns:
+    80px
+    150px
+    1fr
+    160px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 14px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.04);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.upcoming-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.upcoming-date {
+  width: 70px;
+  height: 75px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f8f8fa;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 10px;
+}
+
+.upcoming-date span {
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.upcoming-date strong {
+  margin-top: 3px;
+
+  color: #111111;
+
+  font-size: 28px;
+
+  line-height: 1;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.upcoming-image-wrapper {
+  width: 150px;
+
+  height: 100px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+}
+
+.upcoming-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.upcoming-card:hover .upcoming-image {
+  transform: scale(1.06);
+}
+
+
+/* =========================================
+   INFORMATION
+========================================= */
+
+.upcoming-info {
+  min-width: 0;
+}
+
+.upcoming-category {
+  color: #d4145a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.8px;
+}
+
+.upcoming-info h3 {
+  margin: 7px 0 10px;
+
+  color: #111111;
+
+  font-size: 19px;
+
+  font-weight: 700;
+}
+
+.upcoming-meta {
+  display: flex;
+
+  gap: 20px;
+
+  color: #666666;
+
+  font-size: 12px;
+}
+
+.upcoming-location {
+  margin-top: 7px;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.upcoming-action {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 12px;
+}
+
+.upcoming-price {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+}
+
+.upcoming-price small {
+  color: #999999;
+
+  font-size: 10px;
+}
+
+.upcoming-price strong {
+  margin-top: 2px;
+
+  color: #111111;
+
+  font-size: 19px;
+}
+
+.upcoming-btn {
+  padding: 10px 15px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease;
+}
+
+.upcoming-btn:hover {
+  background: #b90f4d;
+}
+
+
+/* =========================================
+   UPCOMING EVENTS - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .upcoming-events {
+    padding: 70px 30px;
+  }
+
+  .upcoming-card {
+    grid-template-columns:
+      70px
+      130px
+      1fr
+      130px;
+
+    gap: 18px;
+  }
+
+  .upcoming-image-wrapper {
+    width: 130px;
+    height: 90px;
+  }
+
+  .upcoming-meta {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+}
+
+
+/* =========================================
+   UPCOMING EVENTS - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .upcoming-events {
+    padding: 60px 20px;
+  }
+
+  .upcoming-heading {
+    margin-bottom: 25px;
+  }
+
+  .upcoming-heading h2 {
+    font-size: 30px;
+  }
+
+  .upcoming-label {
+    font-size: 10px;
+  }
+
+  .upcoming-view-all {
+    font-size: 12px;
+  }
+
+
+  .upcoming-list {
+    gap: 15px;
+  }
+
+
+  .upcoming-card {
+    grid-template-columns: 55px 1fr;
+
+    gap: 15px;
+
+    padding: 14px;
+  }
+
+
+  /* Date */
+
+  .upcoming-date {
+    width: 55px;
+    height: 65px;
+  }
+
+  .upcoming-date span {
+    font-size: 9px;
+  }
+
+  .upcoming-date strong {
+    font-size: 23px;
+  }
+
+
+  /* Image */
+
+  .upcoming-image-wrapper {
+    width: 100%;
+    height: 100px;
+
+    border-radius: 9px;
+  }
+
+
+  /* Information */
+
+  .upcoming-info {
+    grid-column: 1 / -1;
+  }
+
+  .upcoming-info h3 {
+    font-size: 18px;
+  }
+
+  .upcoming-meta {
+    flex-direction: column;
+
+    gap: 5px;
+  }
+
+
+  /* Action */
+
+  .upcoming-action {
+    grid-column: 1 / -1;
+
+    padding-top: 12px;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #eeeeee;
+  }
+
+  .upcoming-price {
+    align-items: flex-start;
+  }
+
+  .upcoming-btn {
+    padding: 10px 14px;
+  }
+
+}
+
+/* =========================================
+   UPCOMING EVENTS - ENDS
+========================================= */

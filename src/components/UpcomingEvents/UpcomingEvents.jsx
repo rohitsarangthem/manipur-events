@@ -1,3 +1,6 @@
+import './UpcomingEvents.css';
+
+
 const upcomingEvents = [
   {
     id: 1,

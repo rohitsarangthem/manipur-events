@@ -1,4 +1,4 @@
-
+import "./EventCard.css";
 
 function EventCard({ event }) {
   return (

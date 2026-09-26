@@ -1,5 +1,6 @@
-import EventCard from "./EventCard";
-import events from "../data/event";
+import EventCard from "../EventCard/EventCard";
+import events from "../../data/event";
+import "./LatestEvents.css";
 
 function LatestEvents() {
   return (

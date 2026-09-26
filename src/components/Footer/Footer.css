@@ -6,10 +6,7 @@
   display: grid;
 
   grid-template-columns:
-    2fr
-    1fr
-    1fr
-    1fr;
+    2fr 1fr 1fr 1fr;
 
   gap: 50px;
 
@@ -36,6 +33,12 @@
 
   text-decoration: none;
 }
+
+.logo-text .footer-logo {
+  font-size: 30px;
+  margin: 0px;
+}
+
 
 .footer-brand p {
   max-width: 270px;
@@ -115,6 +118,7 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
 }
 
 .newsletter-content {
@@ -266,7 +270,7 @@
 @media (max-width: 1000px) {
 
   .footer-container {
-    padding: 80px 30px 25px;
+    padding: 100px 15px 30px;
   }
 
   .footer-cta h2 {
@@ -274,9 +278,9 @@
   }
 
   .footer-links {
-    grid-template-columns: 2fr 1fr 1fr 1fr;
-
+    grid-template-columns: 2fr 2fr;
     gap: 25px;
+    grid-template-rows: 2fr 2fr;
   }
 
 }
@@ -295,213 +299,236 @@
     padding: 60px 20px;
   }
 
+  .footer-newsletter {
+    flex-direction: column;
+  }
 
-  /* =====================================
+  .newsletter-form {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .logo-text .footer-logo {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0px;
+  }
+
+  .footer-links {
+    grid-template-columns: 2fr 1fr;
+    gap: 25px;
+    grid-template-rows: 2fr 2fr;
+  }
+}
+
+
+/* =====================================
      HEADING
   ===================================== */
 
-  .upcoming-heading {
-    margin-bottom: 28px;
+.upcoming-heading {
+  margin-bottom: 28px;
 
-    align-items: flex-end;
-  }
+  align-items: flex-end;
+}
 
-  .upcoming-heading h2 {
-    font-size: 30px;
+.upcoming-heading h2 {
+  font-size: 30px;
 
-    line-height: 1.1;
-  }
+  line-height: 1.1;
+}
 
-  .upcoming-label {
-    margin-bottom: 7px;
+.upcoming-label {
+  margin-bottom: 7px;
 
-    font-size: 9px;
+  font-size: 9px;
 
-    letter-spacing: 1.7px;
-  }
+  letter-spacing: 1.7px;
+}
 
-  .upcoming-view-all {
-    font-size: 12px;
-  }
+.upcoming-view-all {
+  font-size: 12px;
+}
 
 
-  /* =====================================
+/* =====================================
      LIST
   ===================================== */
 
-  .upcoming-list {
-    gap: 18px;
-  }
+.upcoming-list {
+  gap: 18px;
+}
 
 
-  /* =====================================
+/* =====================================
      CARD
   ===================================== */
 
-  .upcoming-card {
-    display: grid;
-    grid-template-columns: 100% 1fr;
-    gap: 0;
-    padding: 12px;
-    border-radius: 14px;
-    overflow: hidden;
-  }
+.upcoming-card {
+  display: grid;
+  grid-template-columns: 100% 1fr;
+  gap: 0;
+  padding: 12px;
+  border-radius: 14px;
+  overflow: hidden;
+}
 
 
-  /* =====================================
+/* =====================================
      DATE
   ===================================== */
 
-  .upcoming-date {
-    position: absolute;
+.upcoming-date {
+  position: absolute;
 
-    z-index: 3;
+  z-index: 3;
 
-    width: 58px;
-    height: 58px;
+  width: 58px;
+  height: 58px;
 
-    margin: 10px;
+  margin: 10px;
 
-    background: rgba(255, 255, 255, 0.95);
+  background: rgba(255, 255, 255, 0.95);
 
-    border: none;
+  border: none;
 
-    border-radius: 9px;
+  border-radius: 9px;
 
-    box-shadow:
-      0 4px 12px rgba(0, 0, 0, 0.12);
-  }
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.12);
+}
 
-  .upcoming-date span {
-    font-size: 9px;
+.upcoming-date span {
+  font-size: 9px;
 
-    letter-spacing: 0.8px;
-  }
+  letter-spacing: 0.8px;
+}
 
-  .upcoming-date strong {
-    font-size: 23px;
-  }
+.upcoming-date strong {
+  font-size: 23px;
+}
 
 
-  /* =====================================
+/* =====================================
      IMAGE
   ===================================== */
 
-  .upcoming-image-wrapper {
-    width: 100%;
-    height: 400px;
-    overflow: hidden;
-    border-radius: 10px;
-    grid-column: 1;
-  }
+.upcoming-image-wrapper {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border-radius: 10px;
+  grid-column: 1;
+}
 
-  .upcoming-image {
-    width: 100%;
-    height: 100%;
+.upcoming-image {
+  width: 100%;
+  height: 100%;
 
-    object-fit: cover;
+  object-fit: cover;
 
-    display: block;
-  }
+  display: block;
+}
 
 
-  /* =====================================
+/* =====================================
      EVENT INFORMATION
   ===================================== */
 
-  .upcoming-info {
-    grid-column: 1;
+.upcoming-info {
+  grid-column: 1;
 
-    padding: 18px 4px 12px;
-  }
+  padding: 18px 4px 12px;
+}
 
-  .upcoming-category {
-    font-size: 9px;
+.upcoming-category {
+  font-size: 9px;
 
-    letter-spacing: 0.8px;
-  }
+  letter-spacing: 0.8px;
+}
 
-  .upcoming-info h3 {
-    margin: 6px 0 12px;
+.upcoming-info h3 {
+  margin: 6px 0 12px;
 
-    font-size: 19px;
+  font-size: 19px;
 
-    line-height: 1.25;
-  }
+  line-height: 1.25;
+}
 
 
-  /* =====================================
+/* =====================================
      META
   ===================================== */
 
-  .upcoming-meta {
-    display: flex;
+.upcoming-meta {
+  display: flex;
 
-    flex-direction: column;
+  flex-direction: column;
 
-    gap: 6px;
+  gap: 6px;
 
-    color: #666666;
+  color: #666666;
 
-    font-size: 11px;
-  }
+  font-size: 11px;
+}
 
-  .upcoming-location {
-    margin-top: 7px;
+.upcoming-location {
+  margin-top: 7px;
 
-    font-size: 11px;
-  }
+  font-size: 11px;
+}
 
 
-  /* =====================================
+/* =====================================
      ACTION
   ===================================== */
 
-  .upcoming-action {
-    grid-column: 1;
+.upcoming-action {
+  grid-column: 1;
 
-    width: 100%;
+  width: 100%;
 
-    padding: 14px 4px 2px;
+  padding: 14px 4px 2px;
 
-    border-top: 1px solid #eeeeee;
+  border-top: 1px solid #eeeeee;
 
-    display: flex;
+  display: flex;
 
-    flex-direction: row;
+  flex-direction: row;
 
-    align-items: center;
+  align-items: center;
 
-    justify-content: space-between;
+  justify-content: space-between;
 
-    gap: 10px;
-  }
-
-
-  .upcoming-price {
-    align-items: flex-start;
-  }
-
-  .upcoming-price small {
-    font-size: 9px;
-  }
-
-  .upcoming-price strong {
-    font-size: 18px;
-  }
-
-
-  .upcoming-btn {
-    padding: 10px 15px;
-
-    border-radius: 7px;
-
-    font-size: 11px;
-
-    white-space: nowrap;
-  }
-
+  gap: 10px;
 }
+
+
+.upcoming-price {
+  align-items: flex-start;
+}
+
+.upcoming-price small {
+  font-size: 9px;
+}
+
+.upcoming-price strong {
+  font-size: 18px;
+}
+
+
+.upcoming-btn {
+  padding: 10px 15px;
+
+  border-radius: 7px;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+
 
 /* =========================================
    FOOTER - ENDS

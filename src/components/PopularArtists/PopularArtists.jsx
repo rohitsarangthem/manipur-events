@@ -1,3 +1,7 @@
+import "./PopularArtists.css";
+
+
+
 const artists = [
   {
     id: 1,

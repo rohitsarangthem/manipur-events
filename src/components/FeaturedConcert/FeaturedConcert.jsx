@@ -1,3 +1,5 @@
+import "./FeaturedConcert.css";
+
 function FeaturedConcert() {
   return (
     <section className="featured-concert">

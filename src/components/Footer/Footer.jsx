@@ -122,12 +122,7 @@ function Footer() {
 
           <div className="footer-column footer-brand">
 
-            <a
-              href="/"
-              className="footer-logo"
-            >
-              Manipur Events
-            </a>
+            <div className="logo-text"><a href="/" className="footer-logo">Manipur Events</a></div>
 
             <p>
               Discover live music, concerts and unforgettable

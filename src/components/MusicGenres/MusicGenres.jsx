@@ -1,3 +1,5 @@
+import "./MusicGenres.css";
+
 const genres = [
   {
     id: 1,
@@ -49,7 +51,6 @@ const genres = [
   },
 ];
 
-
 function MusicGenres() {
   return (
     <section className="music-genres">
@@ -81,24 +82,24 @@ function MusicGenres() {
 
           <a
             href={`/events?genre=${genre.name.toLowerCase()}`}
-            className="genre-card"
+            className="music-genre-card"
             key={genre.id}
           >
 
-            {/* Background Image */}
+            {/* Genre Image */}
             <img
               src={genre.image}
               alt={genre.name}
-              className="genre-image"
+              className="music-genre-image"
             />
 
 
             {/* Dark Overlay */}
-            <div className="genre-overlay"></div>
+            <div className="music-genre-overlay"></div>
 
 
-            {/* Content */}
-            <div className="genre-content">
+            {/* Genre Content */}
+            <div className="music-genre-content">
 
               <h3>
                 {genre.name}
