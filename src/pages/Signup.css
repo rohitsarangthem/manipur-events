@@ -1,0 +1,454 @@
+/* =========================================
+   SIGNUP PAGE
+========================================= */
+
+.signup-page {
+  min-height: 100vh;
+
+  display: grid;
+
+  grid-template-columns: 1fr 1fr;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   LEFT VISUAL
+========================================= */
+
+.signup-visual {
+  position: relative;
+
+  min-height: 100vh;
+
+  padding: 45px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: space-between;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.65),
+      rgba(0, 0, 0, 0.9)
+    ),
+    url("/genres/pop.avif")
+    center / cover no-repeat;
+}
+
+
+/* Pink glow */
+
+.signup-visual::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  right: -250px;
+  bottom: -250px;
+
+  border-radius: 50%;
+
+  background: rgba(212, 20, 90, 0.35);
+
+  filter: blur(80px);
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   BRAND
+========================================= */
+
+.signup-brand {
+  position: relative;
+
+  z-index: 2;
+}
+
+.signup-brand a {
+  color: #ffffff;
+
+  font-size: 20px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   VISUAL CONTENT
+========================================= */
+
+.signup-visual-content {
+  position: relative;
+
+  z-index: 2;
+
+  max-width: 500px;
+}
+
+.signup-visual-content > p:first-child {
+  margin: 0 0 15px;
+
+  color: #e5005a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.signup-visual-content h1 {
+  margin: 0 0 25px;
+
+  color: #ffffff;
+
+  font-size: clamp(50px, 5vw, 78px);
+
+  line-height: 0.95;
+
+  font-weight: 800;
+
+  letter-spacing: -3px;
+}
+
+.signup-visual-content h1 span {
+  color: #e5005a;
+}
+
+.signup-visual-description {
+  max-width: 400px;
+
+  margin: 0;
+
+  color: #aaaaaa;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   FORM AREA
+========================================= */
+
+.signup-form-container {
+  min-height: 100vh;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 50px;
+
+  box-sizing: border-box;
+}
+
+.signup-form-wrapper {
+  width: 100%;
+
+  max-width: 440px;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.signup-header {
+  margin-bottom: 30px;
+}
+
+.signup-label {
+  margin: 0 0 10px;
+
+  color: #d4145a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.signup-header h2 {
+  margin: 0 0 10px;
+
+  color: #111111;
+
+  font-size: 36px;
+
+  line-height: 1.1;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.signup-header > p:last-child {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 13px;
+
+  line-height: 1.6;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.signup-field {
+  margin-bottom: 18px;
+}
+
+.signup-field label {
+  display: block;
+
+  margin-bottom: 8px;
+
+  color: #222222;
+
+  font-size: 12px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.signup-field input {
+  width: 100%;
+
+  height: 46px;
+
+  padding: 0 15px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 6px;
+
+  outline: none;
+
+  background: #ffffff;
+
+  color: #111111;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  transition: 0.25s ease;
+}
+
+.signup-field input::placeholder {
+  color: #aaaaaa;
+}
+
+.signup-field input:focus {
+  border-color: #d4145a;
+
+  box-shadow:
+    0 0 0 3px rgba(212, 20, 90, 0.08);
+}
+
+
+/* =========================================
+   TERMS
+========================================= */
+
+.signup-terms {
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 8px;
+
+  margin: 5px 0 20px;
+
+  color: #777777;
+
+  font-size: 11px;
+
+  line-height: 1.5;
+
+  cursor: pointer;
+}
+
+.signup-terms input {
+  width: 14px;
+  height: 14px;
+
+  margin-top: 1px;
+
+  accent-color: #d4145a;
+
+  flex-shrink: 0;
+}
+
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.signup-button {
+  width: 100%;
+
+  height: 48px;
+
+  border: none;
+
+  border-radius: 6px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-family: inherit;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.3s ease;
+}
+
+.signup-button:hover {
+  background: #b50f4b;
+
+  transform: translateY(-1px);
+}
+
+
+/* =========================================
+   LOGIN
+========================================= */
+
+.signup-login {
+  margin-top: 25px;
+
+  text-align: center;
+}
+
+.signup-login p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+.signup-login a {
+  margin-left: 5px;
+
+  color: #d4145a;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.signup-login a:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 900px) {
+
+  .signup-page {
+    grid-template-columns: 1fr;
+  }
+
+  .signup-visual {
+    display: none;
+  }
+
+  .signup-form-container {
+    min-height: 100vh;
+
+    padding: 40px 30px;
+  }
+
+  .signup-form-wrapper {
+    max-width: 450px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .signup-form-container {
+    padding: 30px 20px;
+  }
+
+  .signup-header {
+    margin-bottom: 25px;
+  }
+
+  .signup-header h2 {
+    font-size: 30px;
+  }
+
+  .signup-header > p:last-child {
+    font-size: 12px;
+  }
+
+  .signup-field {
+    margin-bottom: 16px;
+  }
+
+  .signup-field input {
+    height: 46px;
+  }
+
+  .signup-button {
+    height: 46px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .signup-form-container {
+    padding: 25px 16px;
+  }
+
+  .signup-header h2 {
+    font-size: 28px;
+  }
+}

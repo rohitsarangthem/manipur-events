@@ -1,0 +1,713 @@
+/* =========================================
+   ORGANIZER MY EVENTS
+========================================= */
+
+.organizer-events-page {
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 40px 50px 80px;
+
+  background: #f8f8fa;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.organizer-events-header {
+  max-width: 1300px;
+
+  margin: 0 auto 35px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.organizer-events-label {
+  margin: 0 0 7px;
+
+  color: #d4145a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.organizer-events-header h1 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 36px;
+
+  line-height: 1.1;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.organizer-events-header > div > p:last-child {
+  margin: 8px 0 0;
+
+  color: #777;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   CREATE EVENT BUTTON
+========================================= */
+
+.create-event-btn {
+  border: none;
+
+  padding: 12px 20px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  border-radius: 7px;
+
+  font-size: 12px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.create-event-btn:hover {
+  background: #b90f4d;
+
+  transform: translateY(-2px);
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.organizer-events-toolbar {
+  max-width: 1300px;
+
+  margin: 0 auto 30px;
+
+  padding: 12px 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TABS
+========================================= */
+
+.event-tabs {
+  display: flex;
+
+  align-items: center;
+
+  gap: 5px;
+}
+
+.event-tab {
+  padding: 9px 15px;
+
+  border: none;
+
+  background: transparent;
+
+  color: #777;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.event-tab:hover {
+  color: #d4145a;
+}
+
+.event-tab.active {
+  background: #d4145a;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   SORT
+========================================= */
+
+.event-sort {
+  padding: 9px 12px;
+
+  border: 1px solid #dddddd;
+
+  border-radius: 6px;
+
+  background: #ffffff;
+
+  color: #555;
+
+  font-size: 11px;
+
+  cursor: pointer;
+
+  outline: none;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.organizer-events-count {
+  max-width: 1300px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.organizer-section-label {
+  margin: 0 0 5px;
+
+  color: #d4145a;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.8px;
+}
+
+.organizer-events-count h2 {
+  margin: 0;
+
+  color: #111;
+
+  font-size: 23px;
+
+  font-weight: 700;
+}
+
+.organizer-events-count > span {
+  color: #777;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   EVENTS LIST
+========================================= */
+
+.organizer-events-list {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================================
+   EVENT CARD
+========================================= */
+
+.organizer-event-card {
+  display: grid;
+
+  grid-template-columns:
+    150px
+    minmax(220px, 1fr)
+    220px
+    120px
+    110px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 14px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.03);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.organizer-event-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.07);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.organizer-event-image {
+  width: 150px;
+
+  height: 95px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+.organizer-event-image img {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.4s ease;
+}
+
+.organizer-event-card:hover
+.organizer-event-image img {
+  transform: scale(1.05);
+}
+
+
+/* =========================================
+   EVENT INFO
+========================================= */
+
+.organizer-event-info {
+  min-width: 0;
+}
+
+.organizer-event-status-row {
+  display: flex;
+
+  align-items: center;
+
+  gap: 8px;
+
+  margin-bottom: 6px;
+}
+
+.organizer-event-status {
+  display: inline-flex;
+
+  padding: 4px 7px;
+
+  border-radius: 4px;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+}
+
+.organizer-event-status.published {
+  background: #eaf8ef;
+
+  color: #16843b;
+}
+
+.organizer-event-status.draft {
+  background: #fff4e5;
+
+  color: #c87500;
+}
+
+.organizer-event-status.ended {
+  background: #eeeeee;
+
+  color: #777777;
+}
+
+.organizer-event-category {
+  color: #d4145a;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+.organizer-event-info h3 {
+  margin: 0 0 7px;
+
+  color: #111;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.organizer-event-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+
+  color: #777;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   SALES
+========================================= */
+
+.organizer-event-sales {
+  min-width: 0;
+}
+
+.sales-heading {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 7px;
+
+  color: #777;
+
+  font-size: 9px;
+}
+
+.sales-heading strong {
+  color: #111;
+
+  font-size: 11px;
+}
+
+.sales-progress {
+  width: 100%;
+
+  height: 6px;
+
+  overflow: hidden;
+
+  background: #eeeeee;
+
+  border-radius: 10px;
+}
+
+.sales-progress-bar {
+  height: 100%;
+
+  background: #d4145a;
+
+  border-radius: inherit;
+}
+
+.sales-percentage {
+  display: block;
+
+  margin-top: 5px;
+
+  color: #999;
+
+  font-size: 8px;
+}
+
+
+/* =========================================
+   REVENUE
+========================================= */
+
+.organizer-event-revenue {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.organizer-event-revenue small {
+  color: #999;
+
+  font-size: 9px;
+}
+
+.organizer-event-revenue strong {
+  color: #111;
+
+  font-size: 16px;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.organizer-event-action {
+  display: flex;
+
+  justify-content: flex-end;
+}
+
+.manage-event-btn {
+  padding: 9px 13px;
+
+  border: none;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+
+  white-space: nowrap;
+
+  transition:
+    background 0.2s ease;
+}
+
+.manage-event-btn:hover {
+  background: #b90f4d;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .organizer-events-page {
+    padding: 35px 30px 70px;
+  }
+
+  .organizer-event-card {
+    grid-template-columns:
+      130px
+      minmax(180px, 1fr)
+      180px
+      100px;
+
+    gap: 18px;
+  }
+
+  .organizer-event-image {
+    width: 130px;
+
+    height: 85px;
+  }
+
+  .organizer-event-action {
+    grid-column: 4;
+  }
+
+  .organizer-event-revenue {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .organizer-events-page {
+    padding: 30px 20px 60px;
+  }
+
+
+  /* Header */
+
+  .organizer-events-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+  .organizer-events-header h1 {
+    font-size: 30px;
+  }
+
+  .create-event-btn {
+    width: 100%;
+  }
+
+
+  /* Toolbar */
+
+  .organizer-events-toolbar {
+    align-items: stretch;
+
+    flex-direction: column;
+
+    padding: 10px;
+  }
+
+  .event-tabs {
+    width: 100%;
+
+    overflow-x: auto;
+
+    padding-bottom: 3px;
+  }
+
+  .event-tab {
+    flex-shrink: 0;
+  }
+
+  .event-sort {
+    width: 100%;
+  }
+
+
+  /* Section */
+
+  .organizer-events-count {
+    align-items: flex-start;
+
+    margin-bottom: 15px;
+  }
+
+
+  /* Cards */
+
+  .organizer-event-card {
+    grid-template-columns: 90px 1fr;
+
+    gap: 15px;
+
+    padding: 12px;
+  }
+
+  .organizer-event-image {
+    width: 90px;
+
+    height: 75px;
+  }
+
+
+  .organizer-event-info {
+    min-width: 0;
+  }
+
+  .organizer-event-status-row {
+    flex-wrap: wrap;
+
+    gap: 5px;
+  }
+
+  .organizer-event-info h3 {
+    font-size: 14px;
+
+    line-height: 1.3;
+  }
+
+  .organizer-event-meta {
+    font-size: 9px;
+  }
+
+
+  /* Sales */
+
+  .organizer-event-sales {
+    grid-column: 1 / -1;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #eeeeee;
+  }
+
+
+  /* Revenue */
+
+  .organizer-event-revenue {
+    display: flex;
+
+    grid-column: 1;
+
+    padding-top: 5px;
+  }
+
+  .organizer-event-revenue strong {
+    font-size: 15px;
+  }
+
+
+  /* Action */
+
+  .organizer-event-action {
+    grid-column: 2;
+
+    justify-content: flex-end;
+
+    padding-top: 5px;
+  }
+
+}

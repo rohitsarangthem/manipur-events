@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar/Navbar";
 import Footer from "../components/Footer/Footer";
 import eventData from "../data/eventData";
-
+import "./Events.css";
 function Events() {
   return (
     <>

@@ -1,0 +1,264 @@
+/* =========================================
+   ORGANIZER SIDEBAR
+========================================= */
+
+.organizer-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 230px;
+
+  padding: 25px 18px;
+
+  box-sizing: border-box;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  display: flex;
+
+  flex-direction: column;
+
+  z-index: 100;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.organizer-logo {
+  padding: 0 10px;
+
+  margin-bottom: 35px;
+
+  color: #ffffff;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.organizer-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 11px;
+
+  padding: 12px;
+
+  margin-bottom: 25px;
+
+  border-radius: 9px;
+
+  background: #202020;
+}
+
+.organizer-avatar {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-size: 13px;
+
+  font-weight: 700;
+}
+
+.organizer-user div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.organizer-user strong {
+  color: #ffffff;
+
+  font-size: 12px;
+}
+
+.organizer-user span {
+  color: #999999;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   MENU
+========================================= */
+
+.organizer-menu {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.organizer-menu-label {
+  margin: 0 0 8px;
+
+  padding: 0 10px;
+
+  color: #777777;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.organizer-nav-link {
+  min-height: 36px;
+
+  padding: 0 11px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border-radius: 7px;
+
+  color: #bbbbbb;
+
+  font-size: 11px;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.organizer-nav-link span {
+  width: 14px;
+
+  text-align: center;
+
+  font-size: 11px;
+}
+
+.organizer-nav-link:hover {
+  color: #ffffff;
+
+  background: #202020;
+}
+
+.organizer-nav-link.active {
+  color: #ffffff;
+
+  background: #d4145a;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   ACCOUNT
+========================================= */
+
+.organizer-account {
+  margin-top: 28px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.organizer-logout {
+  margin-top: auto;
+}
+
+.organizer-logout button {
+  width: 100%;
+
+  min-height: 36px;
+
+  padding: 0 11px;
+
+  border: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  background: transparent;
+
+  color: #bbbbbb;
+
+  font-family: inherit;
+
+  font-size: 11px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  border-radius: 7px;
+}
+
+.organizer-logout button:hover {
+  color: #ffffff;
+
+  background: #202020;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .organizer-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: auto;
+  }
+
+}

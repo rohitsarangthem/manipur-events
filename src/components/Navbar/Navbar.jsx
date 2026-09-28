@@ -266,13 +266,13 @@ function Navbar() {
 
           {/* About */}
 
-          <Link
+          {/* <Link
             to="/about"
             ref={(el) => (menuLinksRef.current[3] = el)}
             onClick={closeMenu}
           >
             About
-          </Link>
+          </Link> */}
 
 
           {/* Login */}
