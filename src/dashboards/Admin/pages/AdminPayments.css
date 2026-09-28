@@ -1,0 +1,701 @@
+/* =========================================
+   ADMIN PAYMENTS
+========================================= */
+
+.admin-payments {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-payments-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.admin-payments-label {
+  margin: 0 0 6px;
+  color: #e0005a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.admin-payments-header h1 {
+  margin: 0;
+  color: #111;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.admin-payments-subtitle {
+  margin: 7px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.admin-payments-back {
+  padding: 9px 14px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  color: #555;
+  font-size: 11px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.admin-payments-back:hover {
+  border-color: #e0005a;
+  color: #e0005a;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.admin-payments-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.admin-payment-stat {
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+.admin-payment-stat span {
+  display: block;
+  margin-bottom: 6px;
+  color: #777;
+  font-size: 10px;
+}
+
+.admin-payment-stat strong {
+  display: block;
+  color: #111;
+  font-size: 22px;
+}
+
+.admin-payment-stat small {
+  display: block;
+  margin-top: 5px;
+  color: #1a9b5b;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.admin-payments-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.admin-payments-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-payments-toolbar p {
+  margin: 0 0 5px;
+  color: #e0005a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.admin-payments-toolbar h2 {
+  margin: 0;
+  color: #111;
+  font-size: 18px;
+}
+
+.admin-payments-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.admin-payments-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 200px;
+  height: 36px;
+  padding: 0 11px;
+  box-sizing: border-box;
+  background: #fafafa;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+}
+
+.admin-payments-search span {
+  color: #888;
+  font-size: 16px;
+}
+
+.admin-payments-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-size: 11px;
+}
+
+.admin-payments-search input::placeholder {
+  color: #aaa;
+}
+
+.admin-payments-filters select {
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  background: #fff;
+  color: #555;
+  font-size: 10px;
+  outline: none;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-payments-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-payments-table {
+  width: 100%;
+  min-width: 1000px;
+  border-collapse: collapse;
+}
+
+.admin-payments-table th {
+  padding: 14px 10px;
+  text-align: left;
+  color: #888;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-payments-table td {
+  padding: 14px 10px;
+  color: #555;
+  font-size: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-payments-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-payments-table tbody tr:hover {
+  background: #fafafa;
+}
+
+
+/* =========================================
+   TRANSACTION
+========================================= */
+
+.admin-payment-id {
+  display: block;
+  color: #222;
+  font-size: 10px;
+}
+
+.admin-payment-booking {
+  display: block;
+  margin-top: 4px;
+  color: #999;
+  font-size: 8px;
+}
+
+
+/* =========================================
+   CUSTOMER
+========================================= */
+
+.admin-payment-customer {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.admin-payment-avatar {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #fff0f5;
+  color: #e0005a;
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.admin-payment-customer strong {
+  color: #222;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   EVENT
+========================================= */
+
+.admin-payment-event {
+  color: #555;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   METHOD
+========================================= */
+
+.admin-payment-method {
+  color: #555;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   AMOUNT
+========================================= */
+
+.admin-payment-amount {
+  color: #222;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   DATE
+========================================= */
+
+.admin-payment-date {
+  color: #777;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-payment-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.admin-payment-status.successful {
+  background: #eaf8f0;
+  color: #16844a;
+}
+
+.admin-payment-status.pending {
+  background: #fff4df;
+  color: #b56a00;
+}
+
+.admin-payment-status.refunded {
+  background: #f0f0f2;
+  color: #666;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.admin-payment-action {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  color: #555;
+  font-size: 9px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-payment-action:hover {
+  border-color: #e0005a;
+  color: #e0005a;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.admin-payments-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  color: #888;
+  font-size: 9px;
+}
+
+.admin-payments-pagination div {
+  display: flex;
+  gap: 4px;
+}
+
+.admin-payments-pagination button {
+  min-width: 28px;
+  height: 28px;
+  padding: 0 7px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  background: #fff;
+  color: #555;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.admin-payments-pagination button:hover {
+  border-color: #e0005a;
+  color: #e0005a;
+}
+
+.admin-payments-pagination button.active {
+  background: #e0005a;
+  border-color: #e0005a;
+  color: #fff;
+}
+
+.admin-payments-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-payments {
+    padding: 26px;
+  }
+
+  .admin-payments-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-payments-filters {
+    width: 100%;
+  }
+
+  .admin-payments-search {
+    flex: 1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admin-payments {
+    padding: 18px;
+  }
+
+
+  /* Header */
+
+  .admin-payments-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .admin-payments-header h1 {
+    font-size: 27px;
+  }
+
+  .admin-payments-subtitle {
+    max-width: 310px;
+    line-height: 1.5;
+  }
+
+  .admin-payments-back {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+  /* Stats */
+
+  .admin-payments-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .admin-payment-stat {
+    padding: 14px;
+  }
+
+  .admin-payment-stat span {
+    font-size: 9px;
+  }
+
+  .admin-payment-stat strong {
+    font-size: 18px;
+  }
+
+
+  /* Card */
+
+  .admin-payments-card {
+    padding: 15px;
+    border-radius: 9px;
+  }
+
+
+  /* Toolbar */
+
+  .admin-payments-toolbar {
+    gap: 15px;
+  }
+
+  .admin-payments-toolbar h2 {
+    font-size: 17px;
+  }
+
+  .admin-payments-filters {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-payments-search {
+    width: 100%;
+    flex: none;
+  }
+
+  .admin-payments-filters select {
+    width: 100%;
+  }
+
+
+  /* =====================================
+     MOBILE PAYMENT CARDS
+  ===================================== */
+
+  .admin-payments-table-wrapper {
+    overflow: visible;
+  }
+
+  .admin-payments-table {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .admin-payments-table thead {
+    display: none;
+  }
+
+  .admin-payments-table,
+  .admin-payments-table tbody,
+  .admin-payments-table tr,
+  .admin-payments-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .admin-payments-table tbody {
+    margin-top: 15px;
+  }
+
+  .admin-payments-table tr {
+    margin-bottom: 12px;
+    padding: 14px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 9px;
+  }
+
+  .admin-payments-table td {
+    padding: 0;
+    border: none;
+  }
+
+
+  /* Transaction */
+
+  .admin-payments-table td:first-child {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+
+  /* Customer */
+
+  .admin-payments-table td:nth-child(2) {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+
+  /* Remaining fields */
+
+  .admin-payments-table td:nth-child(3),
+  .admin-payments-table td:nth-child(4),
+  .admin-payments-table td:nth-child(5),
+  .admin-payments-table td:nth-child(6),
+  .admin-payments-table td:nth-child(7) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .admin-payments-table td:nth-child(3)::before {
+    content: "Event";
+  }
+
+  .admin-payments-table td:nth-child(4)::before {
+    content: "Method";
+  }
+
+  .admin-payments-table td:nth-child(5)::before {
+    content: "Amount";
+  }
+
+  .admin-payments-table td:nth-child(6)::before {
+    content: "Date";
+  }
+
+  .admin-payments-table td:nth-child(7)::before {
+    content: "Status";
+  }
+
+  .admin-payments-table td:nth-child(3)::before,
+  .admin-payments-table td:nth-child(4)::before,
+  .admin-payments-table td:nth-child(5)::before,
+  .admin-payments-table td:nth-child(6)::before,
+  .admin-payments-table td:nth-child(7)::before {
+    color: #888;
+    font-size: 9px;
+    font-weight: 500;
+  }
+
+
+  /* Action */
+
+  .admin-payments-table td:last-child {
+    padding-top: 12px;
+  }
+
+  .admin-payment-action {
+    width: 100%;
+    height: 34px;
+    font-size: 10px;
+  }
+
+
+  /* Pagination */
+
+  .admin-payments-pagination {
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .admin-payments-pagination > span {
+    text-align: center;
+  }
+
+  .admin-payments-pagination div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .admin-payments {
+    padding: 14px;
+  }
+
+  .admin-payments-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-payments-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-payments-card {
+    padding: 12px;
+  }
+
+  .admin-payments-table tr {
+    padding: 12px;
+  }
+
+  .admin-payments-pagination button {
+    min-width: 26px;
+  }
+}

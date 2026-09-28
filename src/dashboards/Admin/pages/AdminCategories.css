@@ -1,0 +1,658 @@
+/* =========================================
+   ADMIN CATEGORIES
+========================================= */
+
+.admin-categories {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-categories-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.admin-categories-label {
+  margin: 0 0 6px;
+  color: #e0005a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.admin-categories-header h1 {
+  margin: 0;
+  color: #111;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.admin-categories-subtitle {
+  margin: 7px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.admin-categories-back {
+  padding: 9px 14px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  color: #555;
+  font-size: 11px;
+  text-decoration: none;
+}
+
+.admin-categories-back:hover {
+  color: #e0005a;
+  border-color: #e0005a;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.admin-categories-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.admin-category-stat {
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+.admin-category-stat span {
+  display: block;
+  margin-bottom: 6px;
+  color: #777;
+  font-size: 10px;
+}
+
+.admin-category-stat strong {
+  display: block;
+  color: #111;
+  font-size: 22px;
+}
+
+.admin-category-stat small {
+  display: block;
+  margin-top: 5px;
+  color: #888;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.admin-categories-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.admin-categories-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-categories-toolbar p {
+  margin: 0 0 5px;
+  color: #e0005a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.admin-categories-toolbar h2 {
+  margin: 0;
+  color: #111;
+  font-size: 18px;
+}
+
+.admin-categories-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.admin-categories-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 200px;
+  height: 36px;
+  padding: 0 11px;
+  box-sizing: border-box;
+  background: #fafafa;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+}
+
+.admin-categories-search span {
+  color: #888;
+  font-size: 16px;
+}
+
+.admin-categories-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-size: 11px;
+}
+
+.admin-categories-search input::placeholder {
+  color: #aaa;
+}
+
+
+/* =========================================
+   SELECT
+========================================= */
+
+.admin-categories-actions select {
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  background: #fff;
+  color: #555;
+  font-size: 10px;
+  outline: none;
+}
+
+
+/* =========================================
+   ADD CATEGORY BUTTON
+========================================= */
+
+.admin-add-category {
+  height: 36px;
+  padding: 0 14px;
+  border: 1px solid #e0005a;
+  border-radius: 6px;
+  background: #e0005a;
+  color: #fff;
+  font-size: 10px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.admin-add-category:hover {
+  background: #c90050;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-categories-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-categories-table {
+  width: 100%;
+  min-width: 850px;
+  border-collapse: collapse;
+}
+
+.admin-categories-table th {
+  padding: 14px 10px;
+  text-align: left;
+  color: #888;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-categories-table td {
+  padding: 14px 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-categories-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-categories-table tbody tr:hover {
+  background: #fafafa;
+}
+
+
+/* =========================================
+   CATEGORY NAME
+========================================= */
+
+.admin-category-name {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-category-icon {
+  width: 34px;
+  height: 34px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  background: #fff0f5;
+  color: #e0005a;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.admin-category-name strong {
+  display: block;
+  color: #222;
+  font-size: 10px;
+}
+
+.admin-category-name span {
+  display: block;
+  margin-top: 3px;
+  color: #999;
+  font-size: 8px;
+}
+
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.admin-category-description {
+  color: #777;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.admin-category-events {
+  color: #222;
+  font-size: 11px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-category-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.admin-category-status.active {
+  background: #eaf8f0;
+  color: #16844a;
+}
+
+.admin-category-status.inactive {
+  background: #f0f0f2;
+  color: #666;
+}
+
+
+/* =========================================
+   ACTION BUTTONS
+========================================= */
+
+.admin-category-buttons {
+  display: flex;
+  gap: 5px;
+}
+
+.admin-category-buttons button {
+  padding: 5px 9px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  color: #555;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.admin-category-buttons button:hover {
+  border-color: #e0005a;
+  color: #e0005a;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.admin-categories-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  color: #888;
+  font-size: 9px;
+}
+
+.admin-categories-pagination div {
+  display: flex;
+  gap: 4px;
+}
+
+.admin-categories-pagination button {
+  min-width: 28px;
+  height: 28px;
+  padding: 0 7px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  background: #fff;
+  color: #555;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.admin-categories-pagination button.active {
+  background: #e0005a;
+  border-color: #e0005a;
+  color: #fff;
+}
+
+.admin-categories-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-categories {
+    padding: 26px;
+  }
+
+  .admin-categories-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-categories-actions {
+    width: 100%;
+  }
+
+  .admin-categories-search {
+    flex: 1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admin-categories {
+    padding: 18px;
+  }
+
+
+  /* Header */
+
+  .admin-categories-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .admin-categories-header h1 {
+    font-size: 27px;
+  }
+
+  .admin-categories-subtitle {
+    max-width: 310px;
+    line-height: 1.5;
+  }
+
+  .admin-categories-back {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+  /* Stats */
+
+  .admin-categories-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .admin-category-stat {
+    padding: 14px;
+  }
+
+  .admin-category-stat strong {
+    font-size: 18px;
+  }
+
+
+  /* Card */
+
+  .admin-categories-card {
+    padding: 15px;
+  }
+
+
+  /* Toolbar */
+
+  .admin-categories-toolbar {
+    gap: 15px;
+  }
+
+  .admin-categories-toolbar h2 {
+    font-size: 17px;
+  }
+
+  .admin-categories-actions {
+    width: 100%;
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .admin-categories-search {
+    width: 100%;
+  }
+
+  .admin-categories-actions select,
+  .admin-add-category {
+    width: 100%;
+  }
+
+
+  /* =====================================
+     MOBILE CATEGORY CARDS
+  ===================================== */
+
+  .admin-categories-table-wrapper {
+    overflow: visible;
+  }
+
+  .admin-categories-table {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .admin-categories-table thead {
+    display: none;
+  }
+
+  .admin-categories-table,
+  .admin-categories-table tbody,
+  .admin-categories-table tr,
+  .admin-categories-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .admin-categories-table tbody {
+    margin-top: 15px;
+  }
+
+  .admin-categories-table tr {
+    margin-bottom: 12px;
+    padding: 14px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 9px;
+  }
+
+  .admin-categories-table td {
+    padding: 0;
+    border: none;
+  }
+
+
+  /* Category */
+
+  .admin-categories-table td:first-child {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+
+  /* Description */
+
+  .admin-categories-table td:nth-child(2) {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+
+  /* Other fields */
+
+  .admin-categories-table td:nth-child(3),
+  .admin-categories-table td:nth-child(4) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .admin-categories-table td:nth-child(3)::before {
+    content: "Events";
+  }
+
+  .admin-categories-table td:nth-child(4)::before {
+    content: "Status";
+  }
+
+  .admin-categories-table td:nth-child(3)::before,
+  .admin-categories-table td:nth-child(4)::before {
+    color: #888;
+    font-size: 9px;
+  }
+
+
+  /* Action */
+
+  .admin-categories-table td:last-child {
+    padding-top: 12px;
+  }
+
+  .admin-category-buttons {
+    width: 100%;
+  }
+
+  .admin-category-buttons button {
+    flex: 1;
+    height: 34px;
+    font-size: 10px;
+  }
+
+
+  /* Pagination */
+
+  .admin-categories-pagination {
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .admin-categories-pagination span {
+    text-align: center;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .admin-categories {
+    padding: 14px;
+  }
+
+  .admin-categories-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-categories-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-categories-card {
+    padding: 12px;
+  }
+
+  .admin-categories-table tr {
+    padding: 12px;
+  }
+}
