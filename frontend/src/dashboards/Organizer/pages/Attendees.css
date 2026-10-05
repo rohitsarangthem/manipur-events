@@ -1,0 +1,450 @@
+/* =========================================
+   ATTENDEES PAGE
+========================================= */
+
+.attendees-page {
+  width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.attendees-header {
+  margin-bottom: 28px;
+}
+
+.attendees-label {
+  margin: 0 0 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #df0757;
+}
+
+.attendees-header h1 {
+  margin: 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #111;
+}
+
+.attendees-subtitle {
+  margin: 7px 0 0;
+  color: #737373;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.attendees-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.attendee-stat-card {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+
+  padding: 20px;
+
+  background: #fff;
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+}
+
+.attendee-stat-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #fff0f5;
+  color: #df0757;
+
+  font-size: 17px;
+}
+
+.attendee-stat-card span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+.attendee-stat-card strong {
+  display: block;
+
+  color: #111;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.attendees-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 14px;
+
+  margin-bottom: 28px;
+
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+  border-radius: 10px;
+}
+
+.attendee-search {
+  width: 450px;
+
+  display: flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  height: 40px;
+
+  border: 1px solid #ddd;
+  border-radius: 7px;
+
+  background: #fff;
+}
+
+.attendee-search span {
+  font-size: 13px;
+}
+
+.attendee-search input {
+  width: 100%;
+
+  border: none;
+  outline: none;
+
+  font-size: 13px;
+}
+
+.attendee-search input::placeholder {
+  color: #999;
+}
+
+.attendee-filter {
+  height: 40px;
+
+  min-width: 140px;
+
+  padding: 0 12px;
+
+  border: 1px solid #ddd;
+  border-radius: 7px;
+
+  background: #fff;
+
+  color: #333;
+
+  font-size: 13px;
+
+  outline: none;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.attendees-section-heading {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.attendees-section-heading h2 {
+  margin: 0;
+
+  font-size: 20px;
+  color: #111;
+}
+
+.attendees-section-heading > span {
+  color: #777;
+  font-size: 12px;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.attendees-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 10px;
+}
+
+.attendees-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 1000px;
+}
+
+.attendees-table th {
+  padding: 14px;
+
+  text-align: left;
+
+  background: #fff;
+
+  border-bottom: 1px solid #e8e8e8;
+
+  color: #777;
+
+  font-size: 9px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+.attendees-table td {
+  padding: 15px 14px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  color: #555;
+
+  font-size: 12px;
+
+  vertical-align: middle;
+}
+
+.attendees-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   ATTENDEE INFO
+========================================= */
+
+.attendee-info {
+  display: flex;
+  align-items: center;
+
+  gap: 11px;
+
+  min-width: 210px;
+}
+
+.attendee-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #df0757;
+
+  color: #fff;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.attendee-info strong {
+  display: block;
+
+  color: #111;
+
+  font-size: 12px;
+}
+
+.attendee-info span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #777;
+
+  font-size: 10px;
+}
+
+.attendee-info small {
+  display: block;
+
+  margin-top: 3px;
+
+  color: #aaa;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   EVENT NAME
+========================================= */
+
+.event-name {
+  color: #111;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.attendee-status {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 5px 9px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  white-space: nowrap;
+}
+
+.attendee-status.checked-in {
+  background: #eaf8f0;
+  color: #16844a;
+}
+
+.attendee-status.not-checked-in {
+  background: #fff4df;
+  color: #b56a00;
+}
+
+
+/* =========================================
+   VIEW BUTTON
+========================================= */
+
+.attendee-view-btn {
+  border: none;
+
+  padding: 8px 14px;
+
+  border-radius: 6px;
+
+  background: #df0757;
+
+  color: #fff;
+
+  font-size: 10px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.attendee-view-btn:hover {
+  background: #c8054d;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.no-attendees {
+  padding: 40px !important;
+
+  text-align: center;
+
+  color: #888 !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .attendees-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .attendees-header h1 {
+    font-size: 28px;
+  }
+
+  .attendees-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .attendee-search {
+    width: auto;
+  }
+
+  .attendee-filter {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .attendees-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .attendees-header h1 {
+    font-size: 25px;
+  }
+
+}

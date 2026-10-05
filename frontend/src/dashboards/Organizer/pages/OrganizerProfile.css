@@ -1,0 +1,318 @@
+.organizer-profile-page {
+  width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.organizer-profile-header {
+  margin-bottom: 32px;
+}
+
+.organizer-profile-label {
+  margin: 0 0 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #e0005a;
+}
+
+.organizer-profile-header h1 {
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.15;
+  color: #111;
+}
+
+.organizer-profile-header > div > p:last-child {
+  margin: 8px 0 0;
+  color: #69707d;
+  font-size: 14px;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.organizer-profile-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+  align-items: start;
+}
+
+
+/* =========================================
+   CARD
+========================================= */
+
+.organizer-profile-card {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.organizer-card-heading {
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.organizer-card-heading p {
+  margin: 0 0 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #e0005a;
+}
+
+.organizer-card-heading h2 {
+  margin: 0;
+  font-size: 20px;
+  color: #111;
+}
+
+
+/* =========================================
+   PROFILE PICTURE
+========================================= */
+
+.organizer-profile-picture {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 24px 0;
+}
+
+.organizer-profile-avatar {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: #e0005a;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.organizer-profile-picture h3 {
+  margin: 0 0 4px;
+  font-size: 15px;
+}
+
+.organizer-profile-picture span {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 11px;
+  color: #777;
+}
+
+.organizer-profile-picture button {
+  border: 1px solid #ddd;
+  background: #fff;
+  border-radius: 5px;
+  padding: 7px 12px;
+
+  font-size: 11px;
+  cursor: pointer;
+}
+
+.organizer-profile-picture button:hover {
+  border-color: #e0005a;
+  color: #e0005a;
+}
+
+
+/* =========================================
+   FORM
+========================================= */
+
+.organizer-form-divider {
+  height: 1px;
+  background: #eeeeee;
+  margin-bottom: 24px;
+}
+
+.organizer-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.organizer-form-group {
+  margin-bottom: 18px;
+}
+
+.organizer-form-group label {
+  display: block;
+  margin-bottom: 7px;
+
+  font-size: 11px;
+  font-weight: 600;
+  color: #222;
+}
+
+.organizer-form-group input {
+  width: 100%;
+  height: 40px;
+
+  padding: 0 12px;
+
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+
+  font-size: 12px;
+  color: #222;
+
+  outline: none;
+  box-sizing: border-box;
+}
+
+.organizer-form-group input:focus {
+  border-color: #e0005a;
+}
+
+
+/* =========================================
+   SAVE BUTTON
+========================================= */
+
+.organizer-profile-actions {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 8px;
+}
+
+.organizer-profile-actions button {
+  border: none;
+  background: #e0005a;
+  color: #fff;
+
+  padding: 10px 18px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.organizer-profile-actions button:hover {
+  background: #c90050;
+}
+
+
+/* =========================================
+   SECURITY
+========================================= */
+
+.security-description {
+  margin: 20px 0;
+
+  font-size: 11px;
+  line-height: 1.6;
+  color: #777;
+}
+
+
+/* =========================================
+   PASSWORD REQUIREMENTS
+========================================= */
+
+.password-requirements {
+  background: #f7f7f9;
+  border-radius: 8px;
+
+  padding: 14px;
+
+  margin-top: 4px;
+  margin-bottom: 20px;
+}
+
+.password-requirements strong {
+  display: block;
+  margin-bottom: 7px;
+
+  font-size: 11px;
+  color: #333;
+}
+
+.password-requirements p {
+  margin: 4px 0;
+
+  font-size: 10px;
+  color: #777;
+}
+
+
+/* =========================================
+   PASSWORD BUTTON
+========================================= */
+
+.update-password-button {
+  width: 100%;
+
+  border: none;
+  background: #e0005a;
+  color: #fff;
+
+  padding: 12px;
+
+  border-radius: 6px;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.update-password-button:hover {
+  background: #c90050;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .organizer-profile-grid {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .organizer-profile-header h1 {
+    font-size: 28px;
+  }
+
+  .organizer-profile-card {
+    padding: 18px;
+  }
+
+  .organizer-form-row {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .organizer-profile-picture {
+    align-items: flex-start;
+  }
+
+}

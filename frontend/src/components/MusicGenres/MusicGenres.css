@@ -1,0 +1,415 @@
+/* =========================================
+   MUSIC GENRES - START
+========================================= */
+
+.music-genres {
+  width: 100%;
+  padding: 90px 60px;
+  background: #f8f8fa;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.genres-heading {
+  max-width: 1300px;
+  margin: 0 auto 35px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.genres-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.genres-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 38px;
+  font-weight: 750;
+
+  line-height: 1.1;
+  letter-spacing: -1px;
+}
+
+.genres-view-all {
+  color: #d4145a;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.3s ease;
+}
+
+.genres-view-all:hover {
+  color: #b50f4b;
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   GRID
+========================================= */
+
+.genres-grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+}
+
+
+/* =========================================
+   MUSIC GENRE CARD
+========================================= */
+
+.music-genre-card {
+  position: relative;
+
+  width: 100%;
+  height: 230px;
+
+  min-width: 0;
+
+  display: block;
+
+  overflow: hidden;
+
+  border-radius: 15px;
+
+  background: #111111;
+
+  text-decoration: none;
+
+  box-sizing: border-box;
+
+  isolation: isolate;
+}
+
+
+/* =========================================
+   MUSIC GENRE IMAGE
+========================================= */
+
+.music-genre-card .music-genre-image {
+  position: absolute !important;
+
+  top: 0 !important;
+  left: 0 !important;
+
+  width: 100% !important;
+  height: 100% !important;
+
+  min-width: 100% !important;
+  min-height: 100% !important;
+
+  max-width: none !important;
+  max-height: none !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+
+  display: block !important;
+
+  border: 0 !important;
+
+  object-fit: cover !important;
+  object-position: center !important;
+
+  box-sizing: border-box !important;
+
+  transform: scale(1);
+
+  transition: transform 0.6s ease;
+}
+
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.music-genre-card .music-genre-overlay {
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 1;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.08)
+    );
+
+  transition: background 0.3s ease;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.music-genre-card .music-genre-content {
+  position: absolute;
+
+  left: 20px;
+  right: 20px;
+  bottom: 20px;
+
+  z-index: 2;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.music-genre-card .music-genre-content h3 {
+  margin: 0;
+
+  color: #ffffff;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  line-height: 1.1;
+
+  transition: transform 0.3s ease;
+}
+
+.music-genre-card .music-genre-content span {
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.music-genre-card:hover .music-genre-image {
+  transform: scale(1.08);
+}
+
+.music-genre-card:hover .music-genre-overlay {
+  background:
+    linear-gradient(
+      to top,
+      rgba(212, 20, 90, 0.8),
+      rgba(0, 0, 0, 0.12)
+    );
+}
+
+.music-genre-card:hover .music-genre-content h3 {
+  transform: translateY(-3px);
+}
+
+
+/* =========================================
+   TABLET
+   601px - 1000px
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .music-genres {
+    padding: 75px 30px;
+  }
+
+  .genres-heading {
+    margin-bottom: 30px;
+  }
+
+  .genres-heading h2 {
+    font-size: 34px;
+  }
+
+  .genres-view-all {
+    font-size: 13px;
+  }
+
+  .genres-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+  }
+
+  .music-genre-card {
+    height: 220px;
+    border-radius: 14px;
+  }
+
+  .music-genre-card .music-genre-content {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+  }
+
+  .music-genre-card .music-genre-content h3 {
+    font-size: 21px;
+  }
+
+  .music-genre-card .music-genre-content span {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   0px - 600px
+========================================= */
+
+@media (max-width: 600px) {
+
+  .music-genres {
+    padding: 60px 20px;
+  }
+
+  .genres-heading {
+    margin-bottom: 25px;
+
+    align-items: flex-end;
+  }
+
+  .genres-label {
+    margin-bottom: 6px;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+  }
+
+  .genres-heading h2 {
+    font-size: 30px;
+
+    letter-spacing: -0.5px;
+  }
+
+  .genres-view-all {
+    font-size: 12px;
+  }
+
+  .genres-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+  }
+
+  .music-genre-card {
+    height: 170px;
+
+    border-radius: 12px;
+  }
+
+  .music-genre-card .music-genre-image {
+    width: 100% !important;
+    height: 100% !important;
+
+    min-width: 100% !important;
+    min-height: 100% !important;
+
+    object-fit: cover !important;
+  }
+
+  .music-genre-card .music-genre-content {
+    left: 14px;
+    right: 14px;
+    bottom: 14px;
+
+    gap: 3px;
+  }
+
+  .music-genre-card .music-genre-content h3 {
+    font-size: 18px;
+  }
+
+  .music-genre-card .music-genre-content span {
+    font-size: 10px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   0px - 400px
+========================================= */
+
+@media (max-width: 400px) {
+
+  .music-genres {
+    padding: 50px 15px;
+  }
+
+  .genres-heading {
+    margin-bottom: 20px;
+  }
+
+  .genres-heading h2 {
+    font-size: 27px;
+  }
+
+  .genres-view-all {
+    font-size: 11px;
+  }
+
+  .genres-grid {
+    gap: 10px;
+  }
+
+  .music-genre-card {
+    height: 155px;
+
+    border-radius: 10px;
+  }
+
+  .music-genre-card .music-genre-content {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .music-genre-card .music-genre-content h3 {
+    font-size: 16px;
+  }
+
+  .music-genre-card .music-genre-content span {
+    font-size: 9px;
+  }
+}
+
+
+/* =========================================
+   MUSIC GENRES - END
+========================================= */

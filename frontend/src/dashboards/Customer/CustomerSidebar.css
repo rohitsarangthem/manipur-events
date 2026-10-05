@@ -1,0 +1,278 @@
+/* =========================================
+   CUSTOMER SIDEBAR
+========================================= */
+
+.customer-sidebar {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+  bottom: 0;
+
+  width: 250px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  padding: 28px 20px;
+
+  box-sizing: border-box;
+
+  background: #111111;
+
+  color: #ffffff;
+
+  z-index: 100;
+}
+
+
+/* =========================================
+   LOGO
+========================================= */
+
+.customer-logo {
+  padding: 0 10px;
+
+  margin-bottom: 35px;
+}
+
+.customer-logo a {
+  color: #ffffff;
+
+  font-size: 19px;
+
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   USER
+========================================= */
+
+.customer-sidebar-user {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 14px;
+
+  margin-bottom: 30px;
+
+  background: rgba(255, 255, 255, 0.06);
+
+  border-radius: 10px;
+}
+
+.customer-avatar {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.customer-sidebar-user strong {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #ffffff;
+
+  font-size: 13px;
+}
+
+.customer-sidebar-user span {
+  color: #999999;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   NAVIGATION
+========================================= */
+
+.customer-nav {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.customer-nav-label {
+  margin: 0 10px 10px;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.customer-nav-label-settings {
+  margin-top: 25px;
+}
+
+.customer-nav-link {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  padding: 11px 12px;
+
+  border-radius: 7px;
+
+  color: #aaaaaa;
+
+  font-size: 12px;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.customer-nav-link span {
+  width: 18px;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+.customer-nav-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+}
+
+.customer-nav-link.active {
+  background: #d4145a;
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   LOGOUT
+========================================= */
+
+.customer-logout {
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  border: 0;
+
+  border-radius: 7px;
+
+  background: transparent;
+
+  color: #999999;
+
+  font-family: inherit;
+
+  font-size: 12px;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.customer-logout:hover {
+  background: rgba(255, 255, 255, 0.06);
+
+  color: #ffffff;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .customer-sidebar {
+    position: relative;
+
+    width: 100%;
+
+    min-height: auto;
+
+    padding: 18px 20px;
+  }
+
+  .customer-logo {
+    margin-bottom: 18px;
+  }
+
+  .customer-sidebar-user {
+    margin-bottom: 15px;
+  }
+
+  .customer-nav {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 5px;
+  }
+
+  .customer-nav-label {
+    grid-column: 1 / -1;
+  }
+
+  .customer-nav-label-settings {
+    margin-top: 15px;
+  }
+
+  .customer-logout {
+    margin-top: 15px;
+  }
+}
+
+
+@media (max-width: 400px) {
+
+  .customer-sidebar {
+    padding: 16px 15px;
+  }
+
+  .customer-nav {
+    grid-template-columns: 1fr;
+  }
+
+}

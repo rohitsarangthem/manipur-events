@@ -1,0 +1,275 @@
+/* =========================================
+   POPULAR ARTISTS - STARTS
+========================================= */
+
+.popular-artists {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #ffffff;
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.artists-heading {
+  max-width: 1300px;
+
+  margin: 0 auto 40px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.artists-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.artists-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 38px;
+
+  font-weight: 750;
+
+  letter-spacing: -1px;
+}
+
+.artists-view-all {
+  color: #d4145a;
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.artists-view-all:hover {
+  text-decoration: underline;
+}
+
+
+/* =========================================
+   ARTIST GRID
+========================================= */
+
+.artists-grid {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 35px 25px;
+}
+
+
+/* =========================================
+   ARTIST CARD
+========================================= */
+
+.artist-card {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  text-align: center;
+
+  color: #111111;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   ARTIST IMAGE
+========================================= */
+
+.artist-image-wrapper {
+  width: 170px;
+  height: 170px;
+  overflow: hidden;
+  border-radius: 50%;
+  background: #eeeeee;
+  border: 4px solid #ffffff;
+  box-shadow:0 8px 25px rgba(0, 0, 0, 0.10);
+  transition:
+  transform 0.3s ease,
+  box-shadow 0.3s ease;
+}
+
+.artist-image {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition:
+    transform 0.5s ease;
+}
+
+
+/* =========================================
+   ARTIST INFO
+========================================= */
+
+.artist-info {
+  margin-top: 18px;
+}
+
+.artist-info h3 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 17px;
+
+  font-weight: 700;
+
+  line-height: 1.3;
+}
+
+.artist-info p {
+  margin: 6px 0 5px;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+.artist-info span {
+  color: #d4145a;
+
+  font-size: 11px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   HOVER
+========================================= */
+
+.artist-card:hover .artist-image-wrapper {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.16);
+}
+
+.artist-card:hover .artist-image {
+  transform: scale(1.07);
+}
+
+.artist-card:hover .artist-info h3 {
+  color: #d4145a;
+}
+
+
+/* =========================================
+   POPULAR ARTISTS - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .popular-artists {
+    padding: 70px 30px;
+  }
+
+  .artists-grid {
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px 15px;
+  }
+
+  .artist-image-wrapper {
+    width: 140px;
+    height: 140px;
+  }
+
+}
+
+/* =========================================
+   POPULAR ARTISTS - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .popular-artists {
+    padding: 60px 20px;
+  }
+
+  .artists-heading {
+    margin-bottom: 30px;
+  }
+
+  .artists-heading h2 {
+    font-size: 30px;
+  }
+
+  .artists-label {
+    font-size: 10px;
+  }
+
+  .artists-view-all {
+    font-size: 12px;
+  }
+
+
+  .artists-grid {
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px 15px;
+  }
+
+
+  .artist-image-wrapper {
+    width: 120px;
+    height: 120px;
+  }
+
+
+  .artist-info {
+    margin-top: 14px;
+  }
+
+  .artist-info h3 {
+    font-size: 15px;
+  }
+
+  .artist-info p {
+    font-size: 11px;
+  }
+
+  .artist-info span {
+    font-size: 10px;
+  }
+
+}
+
+/* =========================================
+   POPULAR ARTISTS - ENDS
+========================================= */

@@ -1,0 +1,185 @@
+.admin-sidebar {
+  width: 208px;
+  min-height: 100vh;
+
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  background: #111111;
+  color: #ffffff;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: 24px 16px;
+
+  box-sizing: border-box;
+}
+
+
+/* LOGO */
+
+.admin-logo {
+  font-size: 17px;
+  font-weight: 700;
+
+  padding: 0 8px;
+  margin-bottom: 34px;
+}
+
+
+/* ADMIN USER */
+
+.admin-user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 10px;
+
+  background: #202020;
+  border-radius: 8px;
+
+  margin-bottom: 22px;
+}
+
+.admin-avatar {
+  width: 34px;
+  height: 34px;
+
+  border-radius: 50%;
+
+  background: #e5005a;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-user strong {
+  display: block;
+
+  font-size: 12px;
+  line-height: 1.3;
+}
+
+.admin-user span {
+  display: block;
+
+  color: #999999;
+
+  font-size: 10px;
+
+  margin-top: 2px;
+}
+
+
+/* MENU */
+
+.admin-menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-menu-label {
+  margin: 0 8px 12px;
+
+  color: #777777;
+
+  font-size: 9px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+}
+
+
+/* NAV LINKS */
+
+.admin-nav-link {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  width: 100%;
+
+  padding: 10px 12px;
+
+  margin-bottom: 4px;
+
+  box-sizing: border-box;
+
+  color: #cccccc;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  border-radius: 6px;
+
+  transition: 0.2s ease;
+}
+
+.admin-nav-link span {
+  width: 16px;
+
+  text-align: center;
+
+  font-size: 12px;
+}
+
+.admin-nav-link:hover {
+  background: #1d1d1d;
+  color: #ffffff;
+}
+
+.admin-nav-link.active {
+  background: #e5005a;
+  color: #ffffff;
+
+  font-weight: 600;
+}
+
+
+/* ACCOUNT */
+
+.admin-account {
+  margin-top: 26px;
+}
+
+
+/* LOGOUT */
+
+.admin-logout {
+  margin-top: auto;
+}
+
+.admin-logout button {
+  width: 100%;
+
+  border: none;
+  background: transparent;
+
+  color: #cccccc;
+
+  padding: 10px 12px;
+
+  text-align: left;
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.admin-logout button:hover {
+  color: #ffffff;
+}

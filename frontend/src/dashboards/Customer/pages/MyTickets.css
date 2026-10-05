@@ -1,0 +1,481 @@
+/* =========================================
+   MY TICKETS PAGE
+========================================= */
+
+.customer-page-main {
+  width: calc(100% - 250px);
+
+  margin-left: 250px;
+
+  min-height: 100vh;
+
+  padding: 45px 50px;
+
+  box-sizing: border-box;
+
+  background: #f7f7f9;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.customer-page-header {
+  max-width: 1250px;
+
+  margin: 0 auto 40px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.customer-page-label {
+  margin: 0 0 8px;
+
+  color: #d4145a;
+
+  font-size: 10px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.customer-page-header h1 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 34px;
+
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.customer-page-header > div > p:last-child {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 12px;
+}
+
+.customer-page-button {
+  flex-shrink: 0;
+
+  padding: 11px 17px;
+
+  border-radius: 7px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   SECTION
+========================================= */
+
+.tickets-section {
+  max-width: 1250px;
+
+  margin: 0 auto 40px;
+}
+
+.tickets-section-heading {
+  margin-bottom: 18px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.tickets-section-heading p {
+  margin: 0 0 5px;
+
+  color: #d4145a;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.tickets-section-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 21px;
+}
+
+.tickets-section-heading > span {
+  color: #888888;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   TICKET LIST
+========================================= */
+
+.tickets-list {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+
+/* =========================================
+   TICKET CARD
+========================================= */
+
+.ticket-card {
+  display: grid;
+
+  grid-template-columns:
+    180px
+    1.5fr
+    1fr
+    150px;
+
+  align-items: center;
+
+  gap: 22px;
+
+  padding: 15px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 12px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.03);
+
+  transition: 0.2s ease;
+}
+
+.ticket-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.ticket-image {
+  width: 180px;
+
+  height: 115px;
+
+  overflow: hidden;
+
+  border-radius: 8px;
+}
+
+.ticket-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =========================================
+   DETAILS
+========================================= */
+
+.ticket-category {
+  color: #d4145a;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+
+  text-transform: uppercase;
+}
+
+.ticket-details h3 {
+  margin: 7px 0 12px;
+
+  color: #111111;
+
+  font-size: 17px;
+}
+
+.ticket-meta {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 5px;
+
+  color: #666666;
+
+  font-size: 10px;
+}
+
+
+/* =========================================
+   TICKET INFO
+========================================= */
+
+.ticket-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 14px;
+}
+
+.ticket-info small {
+  display: block;
+
+  margin-bottom: 4px;
+
+  color: #999999;
+
+  font-size: 9px;
+}
+
+.ticket-info strong {
+  color: #222222;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.ticket-action {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: flex-end;
+
+  gap: 12px;
+}
+
+.ticket-action > strong {
+  color: #111111;
+
+  font-size: 18px;
+}
+
+.ticket-action a {
+  padding: 9px 13px;
+
+  border-radius: 6px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   PAST TICKETS
+========================================= */
+
+.ticket-card-past {
+  opacity: 0.7;
+}
+
+.ticket-completed {
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  background: #eeeeee;
+
+  color: #777777;
+
+  font-size: 9px;
+
+  font-weight: 600;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .customer-page-main {
+    width: calc(100% - 220px);
+
+    margin-left: 220px;
+
+    padding: 35px 25px;
+  }
+
+  .ticket-card {
+    grid-template-columns:
+      150px
+      1fr
+      130px;
+  }
+
+  .ticket-image {
+    width: 150px;
+    height: 100px;
+  }
+
+  .ticket-info {
+    grid-column: 2;
+  }
+
+  .ticket-action {
+    grid-column: 3;
+
+    grid-row: 1 / 3;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .customer-page-main {
+    width: 100%;
+
+    margin-left: 0;
+
+    padding: 30px 20px;
+  }
+
+  .customer-page-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    margin-bottom: 30px;
+  }
+
+  .customer-page-header h1 {
+    font-size: 28px;
+  }
+
+  .customer-page-button {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+  .tickets-section-heading h2 {
+    font-size: 19px;
+  }
+
+  .ticket-card {
+    grid-template-columns: 1fr;
+
+    gap: 15px;
+
+    padding: 14px;
+  }
+
+  .ticket-image {
+    width: 100%;
+
+    height: 180px;
+  }
+
+  .ticket-details {
+    grid-column: auto;
+  }
+
+  .ticket-info {
+    grid-column: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    padding-top: 12px;
+
+    border-top: 1px solid #eeeeee;
+  }
+
+  .ticket-action {
+    grid-column: auto;
+
+    grid-row: auto;
+
+    padding-top: 12px;
+
+    display: flex;
+
+    flex-direction: row;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    border-top: 1px solid #eeeeee;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+  .customer-page-main {
+    padding: 25px 15px;
+  }
+
+  .ticket-image {
+    height: 160px;
+  }
+
+  .tickets-section-heading h2 {
+    font-size: 17px;
+  }
+}

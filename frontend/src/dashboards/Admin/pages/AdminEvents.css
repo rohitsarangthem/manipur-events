@@ -1,0 +1,654 @@
+/* =========================================
+   ADMIN EVENTS
+========================================= */
+
+.admin-events {
+  width: 100%;
+  padding: 32px;
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.admin-events-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 28px;
+}
+
+.admin-events-label {
+  margin: 0 0 6px;
+  color: #e0005a;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.admin-events-header h1 {
+  margin: 0;
+  color: #111;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.admin-events-subtitle {
+  margin: 7px 0 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.admin-events-back {
+  padding: 9px 14px;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  color: #555;
+  font-size: 11px;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.admin-events-back:hover {
+  border-color: #e0005a;
+  color: #e0005a;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.admin-events-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-bottom: 24px;
+}
+
+.admin-events-stat {
+  padding: 18px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+.admin-events-stat span {
+  display: block;
+  margin-bottom: 6px;
+  color: #777;
+  font-size: 10px;
+}
+
+.admin-events-stat strong {
+  color: #111;
+  font-size: 22px;
+}
+
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.admin-events-card {
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 10px;
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.admin-events-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-events-toolbar p {
+  margin: 0 0 5px;
+  color: #e0005a;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.admin-events-toolbar h2 {
+  margin: 0;
+  color: #111;
+  font-size: 18px;
+}
+
+.admin-events-filters {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+
+/* =========================================
+   SEARCH
+========================================= */
+
+.admin-events-search {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  width: 190px;
+  height: 36px;
+  padding: 0 11px;
+  box-sizing: border-box;
+  background: #fafafa;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+}
+
+.admin-events-search span {
+  color: #888;
+  font-size: 16px;
+}
+
+.admin-events-search input {
+  width: 100%;
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #333;
+  font-size: 11px;
+}
+
+.admin-events-search input::placeholder {
+  color: #aaa;
+}
+
+.admin-events-filters select {
+  height: 36px;
+  padding: 0 9px;
+  border: 1px solid #e2e2e2;
+  border-radius: 6px;
+  background: #fff;
+  color: #555;
+  font-size: 10px;
+  outline: none;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.admin-events-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+.admin-events-table {
+  width: 100%;
+  min-width: 900px;
+  border-collapse: collapse;
+}
+
+.admin-events-table th {
+  padding: 14px 10px;
+  text-align: left;
+  color: #888;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-events-table td {
+  padding: 14px 10px;
+  color: #555;
+  font-size: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.admin-events-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.admin-events-table tbody tr:hover {
+  background: #fafafa;
+}
+
+
+/* =========================================
+   EVENT INFO
+========================================= */
+
+.admin-event-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-event-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 7px;
+  background: #fff0f5;
+  font-size: 13px;
+}
+
+.admin-event-info strong {
+  display: block;
+  color: #222;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.admin-event-info span {
+  display: block;
+  margin-top: 3px;
+  color: #999;
+  font-size: 9px;
+}
+
+
+/* =========================================
+   ORGANIZER
+========================================= */
+
+.admin-event-organizer {
+  color: #555;
+  font-size: 10px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.admin-event-status {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 20px;
+  font-size: 8px;
+  font-weight: 600;
+}
+
+.admin-event-status.published {
+  background: #eaf8f0;
+  color: #16844a;
+}
+
+.admin-event-status.pending {
+  background: #fff4df;
+  color: #b56a00;
+}
+
+.admin-event-status.rejected {
+  background: #ffe9ed;
+  color: #d13b55;
+}
+
+
+/* =========================================
+   ACTION
+========================================= */
+
+.admin-event-action {
+  padding: 5px 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+  color: #555;
+  font-size: 9px;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.admin-event-action:hover {
+  border-color: #e0005a;
+  color: #e0005a;
+}
+
+
+/* =========================================
+   PAGINATION
+========================================= */
+
+.admin-events-pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 18px;
+  color: #888;
+  font-size: 9px;
+}
+
+.admin-events-pagination div {
+  display: flex;
+  gap: 4px;
+}
+
+.admin-events-pagination button {
+  min-width: 28px;
+  height: 28px;
+  padding: 0 7px;
+  border: 1px solid #e2e2e2;
+  border-radius: 5px;
+  background: #fff;
+  color: #555;
+  font-size: 9px;
+  cursor: pointer;
+}
+
+.admin-events-pagination button:hover {
+  border-color: #e0005a;
+  color: #e0005a;
+}
+
+.admin-events-pagination button.active {
+  background: #e0005a;
+  border-color: #e0005a;
+  color: #fff;
+}
+
+.admin-events-pagination button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .admin-events {
+    padding: 26px;
+  }
+
+  .admin-events-toolbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-events-filters {
+    width: 100%;
+  }
+
+  .admin-events-search {
+    flex: 1;
+  }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .admin-events {
+    padding: 18px;
+  }
+
+
+  /* Header */
+
+  .admin-events-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+
+  .admin-events-header h1 {
+    font-size: 27px;
+  }
+
+  .admin-events-subtitle {
+    max-width: 310px;
+    line-height: 1.5;
+  }
+
+  .admin-events-back {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: center;
+  }
+
+
+  /* Stats */
+
+  .admin-events-stats {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    margin-bottom: 18px;
+  }
+
+  .admin-events-stat {
+    padding: 14px;
+  }
+
+  .admin-events-stat span {
+    font-size: 9px;
+  }
+
+  .admin-events-stat strong {
+    font-size: 19px;
+  }
+
+
+  /* Card */
+
+  .admin-events-card {
+    padding: 15px;
+    border-radius: 9px;
+  }
+
+
+  /* Toolbar */
+
+  .admin-events-toolbar {
+    gap: 15px;
+  }
+
+  .admin-events-toolbar h2 {
+    font-size: 17px;
+  }
+
+  .admin-events-filters {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-events-search {
+    width: 100%;
+    flex: none;
+  }
+
+  .admin-events-filters select {
+    width: 100%;
+  }
+
+
+  /* =====================================
+     MOBILE EVENT CARDS
+  ===================================== */
+
+  .admin-events-table-wrapper {
+    overflow: visible;
+  }
+
+  .admin-events-table {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .admin-events-table thead {
+    display: none;
+  }
+
+  .admin-events-table,
+  .admin-events-table tbody,
+  .admin-events-table tr,
+  .admin-events-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .admin-events-table tbody {
+    margin-top: 15px;
+  }
+
+  .admin-events-table tr {
+    margin-bottom: 12px;
+    padding: 14px;
+    background: #fafafa;
+    border: 1px solid #eee;
+    border-radius: 9px;
+  }
+
+  .admin-events-table td {
+    padding: 0;
+    border: none;
+  }
+
+
+  /* Event */
+
+  .admin-events-table td:first-child {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #eee;
+  }
+
+  .admin-event-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .admin-event-info strong {
+    font-size: 12px;
+    white-space: normal;
+  }
+
+
+  /* Other information */
+
+  .admin-events-table td:nth-child(2),
+  .admin-events-table td:nth-child(3),
+  .admin-events-table td:nth-child(4),
+  .admin-events-table td:nth-child(5),
+  .admin-events-table td:nth-child(6) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 9px 0;
+    border-bottom: 1px solid #eee;
+  }
+
+  .admin-events-table td:nth-child(2)::before {
+    content: "Organizer";
+  }
+
+  .admin-events-table td:nth-child(3)::before {
+    content: "Date";
+  }
+
+  .admin-events-table td:nth-child(4)::before {
+    content: "Location";
+  }
+
+  .admin-events-table td:nth-child(5)::before {
+    content: "Bookings";
+  }
+
+  .admin-events-table td:nth-child(6)::before {
+    content: "Status";
+  }
+
+  .admin-events-table td:nth-child(2)::before,
+  .admin-events-table td:nth-child(3)::before,
+  .admin-events-table td:nth-child(4)::before,
+  .admin-events-table td:nth-child(5)::before,
+  .admin-events-table td:nth-child(6)::before {
+    color: #888;
+    font-size: 9px;
+    font-weight: 500;
+  }
+
+
+  /* Action */
+
+  .admin-events-table td:last-child {
+    padding-top: 12px;
+  }
+
+  .admin-event-action {
+    width: 100%;
+    height: 34px;
+    font-size: 10px;
+  }
+
+
+  /* Pagination */
+
+  .admin-events-pagination {
+    align-items: center;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .admin-events-pagination > span {
+    text-align: center;
+  }
+
+  .admin-events-pagination div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .admin-events {
+    padding: 14px;
+  }
+
+  .admin-events-header h1 {
+    font-size: 25px;
+  }
+
+  .admin-events-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-events-card {
+    padding: 12px;
+  }
+
+  .admin-events-table tr {
+    padding: 12px;
+  }
+
+  .admin-events-pagination button {
+    min-width: 26px;
+  }
+}

@@ -1,0 +1,544 @@
+/* =========================================
+   REVENUE PAGE
+========================================= */
+
+.revenue-page {
+  width: 100%;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.revenue-header {
+  margin-bottom: 28px;
+}
+
+.revenue-label {
+  margin: 0 0 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  color: #df0757;
+}
+
+.revenue-header h1 {
+  margin: 0;
+
+  font-size: 32px;
+  font-weight: 700;
+
+  color: #111;
+}
+
+.revenue-subtitle {
+  margin: 7px 0 0;
+
+  color: #737373;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   STATISTICS
+========================================= */
+
+.revenue-stats {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 16px;
+
+  margin-bottom: 28px;
+}
+
+.revenue-stat-card {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  padding: 20px;
+
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 10px;
+}
+
+.revenue-stat-icon {
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 10px;
+
+  background: #fff0f5;
+
+  color: #df0757;
+
+  font-size: 17px;
+
+  font-weight: 700;
+}
+
+.revenue-stat-card span {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #777;
+
+  font-size: 11px;
+}
+
+.revenue-stat-card strong {
+  display: block;
+
+  color: #111;
+
+  font-size: 20px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.revenue-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  margin-bottom: 16px;
+}
+
+.revenue-section-heading h2 {
+  margin: 0;
+
+  font-size: 20px;
+
+  color: #111;
+}
+
+.revenue-section-heading > span {
+  color: #777;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   REVENUE BY EVENT
+========================================= */
+
+.revenue-events-section {
+  margin-bottom: 30px;
+}
+
+.revenue-event-list {
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.revenue-event-row {
+  display: grid;
+
+  grid-template-columns: 260px 1fr 150px;
+
+  align-items: center;
+
+  gap: 25px;
+
+  padding: 20px;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+.revenue-event-row:last-child {
+  border-bottom: none;
+}
+
+.revenue-event-info strong {
+  display: block;
+
+  color: #111;
+
+  font-size: 13px;
+}
+
+.revenue-event-info span {
+  display: block;
+
+  margin-top: 4px;
+
+  color: #888;
+
+  font-size: 10px;
+}
+
+.revenue-progress {
+  width: 100%;
+
+  height: 7px;
+
+  background: #eeeeee;
+
+  border-radius: 10px;
+
+  overflow: hidden;
+}
+
+.revenue-progress-bar {
+  height: 100%;
+
+  background: #df0757;
+
+  border-radius: 10px;
+}
+
+.revenue-event-amount {
+  text-align: right;
+
+  color: #111;
+
+  font-size: 14px;
+}
+
+
+/* =========================================
+   TOOLBAR
+========================================= */
+
+.revenue-toolbar {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 14px;
+
+  margin-bottom: 28px;
+
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 10px;
+}
+
+.revenue-search {
+  width: 450px;
+
+  height: 40px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 0 14px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 7px;
+}
+
+.revenue-search input {
+  width: 100%;
+
+  border: none;
+
+  outline: none;
+
+  font-size: 13px;
+}
+
+.revenue-search input::placeholder {
+  color: #999;
+}
+
+.revenue-filter {
+  min-width: 180px;
+
+  height: 40px;
+
+  padding: 0 12px;
+
+  border: 1px solid #ddd;
+
+  border-radius: 7px;
+
+  background: #fff;
+
+  font-size: 13px;
+
+  outline: none;
+}
+
+
+/* =========================================
+   TABLE
+========================================= */
+
+.revenue-transactions {
+  margin-bottom: 40px;
+}
+
+.revenue-table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+
+  background: #fff;
+
+  border: 1px solid #e8e8e8;
+
+  border-radius: 10px;
+}
+
+.revenue-table {
+  width: 100%;
+
+  min-width: 1100px;
+
+  border-collapse: collapse;
+}
+
+.revenue-table th {
+  padding: 14px;
+
+  text-align: left;
+
+  border-bottom: 1px solid #e8e8e8;
+
+  color: #777;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  white-space: nowrap;
+}
+
+.revenue-table td {
+  padding: 15px 14px;
+
+  border-bottom: 1px solid #eeeeee;
+
+  color: #555;
+
+  font-size: 12px;
+
+  vertical-align: middle;
+}
+
+.revenue-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+
+/* =========================================
+   CUSTOMER
+========================================= */
+
+.revenue-customer {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+}
+
+.revenue-avatar {
+  width: 36px;
+  height: 36px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: #df0757;
+
+  color: #fff;
+
+  font-size: 12px;
+
+  font-weight: 700;
+}
+
+.revenue-customer strong {
+  display: block;
+
+  color: #111;
+
+  font-size: 12px;
+}
+
+.revenue-customer span {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #888;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   TRANSACTION
+========================================= */
+
+.transaction-id {
+  color: #111;
+
+  font-size: 11px;
+}
+
+.revenue-event-name {
+  color: #111;
+
+  font-size: 11px;
+
+  white-space: nowrap;
+}
+
+.transaction-amount {
+  color: #111;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   STATUS
+========================================= */
+
+.transaction-status {
+  display: inline-flex;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 10px;
+
+  font-weight: 600;
+}
+
+.transaction-status.paid {
+  background: #eaf8f0;
+
+  color: #16844a;
+}
+
+.transaction-status.pending {
+  background: #fff4df;
+
+  color: #b56a00;
+}
+
+
+/* =========================================
+   EMPTY STATE
+========================================= */
+
+.no-transactions {
+  padding: 40px !important;
+
+  text-align: center;
+
+  color: #888 !important;
+}
+
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .revenue-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .revenue-event-row {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .revenue-event-amount {
+    text-align: left;
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .revenue-header h1 {
+    font-size: 28px;
+  }
+
+  .revenue-toolbar {
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .revenue-search {
+    width: auto;
+  }
+
+  .revenue-filter {
+    width: 100%;
+  }
+
+}
+
+
+@media (max-width: 500px) {
+
+  .revenue-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .revenue-header h1 {
+    font-size: 25px;
+  }
+
+  .revenue-event-row {
+    grid-template-columns: 1fr;
+  }
+
+}

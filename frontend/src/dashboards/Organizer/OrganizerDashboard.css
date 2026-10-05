@@ -1,0 +1,584 @@
+/* =========================================
+   ORGANIZER DASHBOARD
+========================================= */
+
+.organizer-dashboard {
+  min-height: 100vh;
+
+  background: #f8f8fa;
+}
+
+
+/* =========================================
+   MAIN
+========================================= */
+
+.organizer-main {
+  min-height: 100vh;
+
+  margin-left: 230px;
+
+  padding: 45px 50px;
+
+  box-sizing: border-box;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.organizer-header {
+  max-width: 1250px;
+
+  margin: 0 auto 30px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.organizer-page-label {
+  margin: 0 0 7px;
+
+  color: #d4145a;
+
+  font-size: 9px;
+
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.organizer-header h1 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 30px;
+
+  line-height: 1.15;
+}
+
+.organizer-header > div > p:last-child {
+  margin: 8px 0 0;
+
+  color: #777777;
+
+  font-size: 11px;
+}
+
+
+/* =========================================
+   CREATE BUTTON
+========================================= */
+
+.organizer-create-button {
+  padding: 11px 16px;
+
+  flex-shrink: 0;
+
+  border-radius: 7px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+
+  transition: 0.2s ease;
+}
+
+.organizer-create-button:hover {
+  background: #b90f4d;
+}
+
+
+/* =========================================
+   STATS
+========================================= */
+
+.organizer-stats {
+  max-width: 1250px;
+
+  margin: 0 auto 35px;
+
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+
+  gap: 15px;
+}
+
+.organizer-stat-card {
+  min-height: 90px;
+
+  padding: 18px;
+
+  box-sizing: border-box;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 11px;
+
+  box-shadow:
+    0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+.organizer-stat-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 8px;
+
+  background: #fff0f5;
+
+  color: #d4145a;
+
+  font-size: 14px;
+
+  font-weight: 700;
+}
+
+.organizer-stat-card div:last-child {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.organizer-stat-card span {
+  color: #777777;
+
+  font-size: 9px;
+}
+
+.organizer-stat-card strong {
+  color: #111111;
+
+  font-size: 19px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+========================================= */
+
+.organizer-section-heading {
+  max-width: 1250px;
+
+  margin: 0 auto 18px;
+
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+}
+
+.organizer-section-heading p {
+  margin: 0 0 6px;
+
+  color: #d4145a;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  letter-spacing: 1.5px;
+}
+
+.organizer-section-heading h2 {
+  margin: 0;
+
+  color: #111111;
+
+  font-size: 20px;
+}
+
+.organizer-section-heading > a {
+  color: #d4145a;
+
+  font-size: 10px;
+
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   EVENTS
+========================================= */
+
+.organizer-events {
+  max-width: 1250px;
+
+  margin: 0 auto 40px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.organizer-event-card {
+  min-height: 105px;
+
+  padding: 12px;
+
+  box-sizing: border-box;
+
+  display: grid;
+
+  grid-template-columns: 125px 1fr 180px 90px;
+
+  align-items: center;
+
+  gap: 18px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 10px;
+
+  box-shadow:
+    0 4px 15px rgba(0, 0, 0, 0.03);
+}
+
+.organizer-event-image {
+  width: 125px;
+
+  height: 80px;
+
+  overflow: hidden;
+
+  border-radius: 7px;
+}
+
+.organizer-event-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.organizer-event-info {
+  min-width: 0;
+}
+
+.organizer-event-status {
+  color: #159447;
+
+  font-size: 8px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.7px;
+}
+
+.organizer-event-info h3 {
+  margin: 5px 0 7px;
+
+  color: #111111;
+
+  font-size: 15px;
+}
+
+.organizer-event-info p {
+  margin: 3px 0;
+
+  color: #777777;
+
+  font-size: 9px;
+}
+
+
+/* =========================================
+   SALES
+========================================= */
+
+.organizer-event-sales {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 6px;
+}
+
+.organizer-event-sales span {
+  color: #888888;
+
+  font-size: 8px;
+}
+
+.organizer-event-sales strong {
+  color: #111111;
+
+  font-size: 13px;
+}
+
+.organizer-progress {
+  width: 100%;
+
+  height: 5px;
+
+  overflow: hidden;
+
+  border-radius: 10px;
+
+  background: #eeeeee;
+}
+
+.organizer-progress div {
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #d4145a;
+}
+
+
+/* =========================================
+   MANAGE BUTTON
+========================================= */
+
+.organizer-event-button {
+  padding: 8px 10px;
+
+  border-radius: 6px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-size: 9px;
+
+  font-weight: 600;
+
+  text-align: center;
+
+  text-decoration: none;
+}
+
+
+/* =========================================
+   QUICK ACTIONS
+========================================= */
+
+.organizer-quick-section {
+  max-width: 1250px;
+
+  margin: 0 auto;
+}
+
+.organizer-quick-grid {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 15px;
+}
+
+.organizer-quick-card {
+  padding: 20px;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.organizer-quick-card:hover {
+  transform: translateY(-2px);
+
+  box-shadow:
+    0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.organizer-quick-card > span {
+  width: 34px;
+  height: 34px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 7px;
+
+  background: #fff0f5;
+
+  color: #d4145a;
+
+  font-size: 14px;
+}
+
+.organizer-quick-card strong {
+  display: block;
+
+  color: #111111;
+
+  font-size: 13px;
+}
+
+.organizer-quick-card p {
+  margin: 6px 0 0;
+
+  color: #888888;
+
+  font-size: 9px;
+
+  line-height: 1.5;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+  .organizer-main {
+    padding: 35px 30px;
+  }
+
+  .organizer-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .organizer-event-card {
+    grid-template-columns: 110px 1fr 150px;
+  }
+
+  .organizer-event-image {
+    width: 110px;
+  }
+
+  .organizer-event-button {
+    grid-column: 3;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .organizer-sidebar {
+    display: none;
+  }
+
+  .organizer-main {
+    margin-left: 0;
+
+    padding: 25px 18px;
+  }
+
+  .organizer-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 15px;
+  }
+
+  .organizer-header h1 {
+    font-size: 25px;
+  }
+
+  .organizer-create-button {
+    width: 100%;
+
+    box-sizing: border-box;
+
+    text-align: center;
+  }
+
+  .organizer-stats {
+    grid-template-columns: 1fr 1fr;
+
+    gap: 10px;
+  }
+
+  .organizer-stat-card {
+    padding: 13px;
+  }
+
+  .organizer-stat-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .organizer-stat-card strong {
+    font-size: 16px;
+  }
+
+  .organizer-event-card {
+    grid-template-columns: 90px 1fr;
+
+    gap: 12px;
+
+    padding: 12px;
+  }
+
+  .organizer-event-image {
+    width: 90px;
+    height: 75px;
+  }
+
+  .organizer-event-sales {
+    grid-column: 1 / -1;
+  }
+
+  .organizer-event-button {
+    grid-column: 1 / -1;
+  }
+
+  .organizer-quick-grid {
+    grid-template-columns: 1fr;
+  }
+
+}

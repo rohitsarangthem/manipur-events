@@ -1,0 +1,379 @@
+/* =========================================
+   FEATURED CONCERT - Starts
+========================================= */
+
+.featured-concert {
+  width: 100%;
+
+  padding: 90px 60px;
+
+  background: #ffffff;
+}
+
+.featured-inner {
+  max-width: 1300px;
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns: 1.05fr 3fr;
+
+  min-height: 480px;
+
+  overflow: hidden;
+
+  background: #111111;
+
+  border-radius: 20px;
+
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.featured-image-wrapper {
+  position: relative;
+
+  min-height: 480px;
+
+  overflow: hidden;
+}
+
+.featured-image {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition: transform 0.6s ease;
+}
+
+.featured-inner:hover .featured-image {
+  transform: scale(1.04);
+}
+
+
+/* Badge */
+
+.featured-badge {
+  position: absolute;
+
+  top: 25px;
+  left: 25px;
+
+  padding: 8px 13px;
+
+  background: #d4145a;
+  color: #ffffff;
+
+  border-radius: 6px;
+
+  font-size: 10px;
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.featured-content {
+  padding: 55px 50px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.featured-label {
+  margin: 0 0 14px;
+
+  color: #d4145a;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.featured-content h2 {
+  margin: 0;
+
+  max-width: 500px;
+
+  color: #ffffff;
+
+  font-size: 42px;
+  line-height: 1.1;
+
+  letter-spacing: -1px;
+}
+
+.featured-description {
+  max-width: 500px;
+
+  margin: 22px 0 30px;
+
+  color: #b7b7b7;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================
+   EVENT DETAILS
+========================================= */
+
+.featured-details {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 17px;
+}
+
+.featured-detail {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+}
+
+.detail-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #202020;
+
+  border: 1px solid #333333;
+
+  border-radius: 8px;
+
+  font-size: 16px;
+}
+
+.featured-detail div {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.featured-detail small {
+  color: #858585;
+
+  font-size: 11px;
+}
+
+.featured-detail strong {
+  color: #ffffff;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+
+/* =========================================
+   BOTTOM
+========================================= */
+
+.featured-bottom {
+  margin-top: 35px;
+  padding-top: 25px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  border-top: 1px solid #2d2d2d;
+}
+
+
+/* Price */
+
+.featured-price {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 4px;
+}
+
+.featured-price small {
+  color: #858585;
+
+  font-size: 11px;
+}
+
+.featured-price strong {
+  color: #ffffff;
+
+  font-size: 24px;
+}
+
+
+/* Button */
+
+.featured-btn {
+  display: flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  padding: 13px 22px;
+
+  border: none;
+
+  background: #d4145a;
+  color: #ffffff;
+
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.featured-btn span {
+  font-size: 17px;
+
+  transition: transform 0.2s ease;
+}
+
+.featured-btn:hover {
+  background: #b90f4d;
+
+  transform: translateY(-2px);
+}
+
+.featured-btn:hover span {
+  transform: translateX(4px);
+}
+
+/* =========================================
+   FEATURED CONCERT - TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .featured-concert {
+    padding: 70px 30px;
+  }
+
+  .featured-inner {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .featured-content {
+    padding: 40px 30px;
+  }
+
+  .featured-content h2 {
+    font-size: 34px;
+  }
+
+}
+
+
+/* =========================================
+   FEATURED CONCERT - MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .featured-concert {
+    padding: 60px 20px;
+  }
+
+  .featured-inner {
+    display: block;
+
+    border-radius: 16px;
+  }
+
+
+  /* Image */
+
+  .featured-image-wrapper {
+    height: 250px;
+
+    min-height: 250px;
+  }
+
+
+  /* Content */
+
+  .featured-content {
+    padding: 30px 22px;
+  }
+
+  .featured-content h2 {
+    font-size: 30px;
+
+    line-height: 1.15;
+  }
+
+  .featured-description {
+    font-size: 13px;
+
+    margin: 18px 0 25px;
+  }
+
+
+  /* Details */
+
+  .featured-details {
+    gap: 14px;
+  }
+
+
+  /* Bottom */
+
+  .featured-bottom {
+    margin-top: 28px;
+
+    padding-top: 20px;
+
+    align-items: flex-end;
+  }
+
+  .featured-price strong {
+    font-size: 21px;
+  }
+
+  .featured-btn {
+    padding: 12px 17px;
+
+    font-size: 12px;
+  }
+
+}
+
+
+/* =========================================
+   FEATURED CONCERT - Ends
+========================================= */
