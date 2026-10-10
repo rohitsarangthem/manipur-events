@@ -233,6 +233,349 @@ const getAllEventsForAdmin = async (req, res) => {
   }
 };
 
+// =====================================
+// GET ORGANIZER'S EVENTS
+// =====================================
+
+const getMyEvents = async (req, res) => {
+  try {
+    const events = await Event.find({
+      organizer: req.user.userId
+    })
+      .populate("organizer", "name email")
+      .sort({ createdAt: -1 });
+
+    res.status(200).json({
+      count: events.length,
+      events
+    });
+
+  } catch (error) {
+    console.error("Get organizer events error:", error);
+
+    res.status(500).json({
+      message: "Server error"
+    });
+  }
+};
+
+
+// =====================================
+// GET ORGANIZER DASHBOARD
+// =====================================
+
+// =====================================
+// GET ORGANIZER DASHBOARD
+// =====================================
+
+// =====================================
+// GET ORGANIZER DASHBOARD
+// =====================================
+
+const getOrganizerDashboard = async (req, res) => {
+  try {
+
+    // =====================================
+    // ORGANIZER ID
+    // =====================================
+
+    const organizerId = req.user.userId;
+
+    const now = new Date();
+
+
+    // =====================================
+    // GET ALL ORGANIZER EVENTS
+    // =====================================
+
+    const allEvents = await Event.find({
+      organizer: organizerId
+    })
+      .sort({ eventDate: 1 })
+      .lean();
+
+
+    // =====================================
+    // GET UPCOMING APPROVED EVENTS
+    // =====================================
+
+    const upcomingEvents = await Event.find({
+      organizer: organizerId,
+      status: "approved",
+      eventDate: {
+        $gte: now
+      }
+    })
+      .sort({ eventDate: 1 })
+      .limit(5)
+      .lean();
+
+
+    // =====================================
+    // TOTAL EVENTS
+    // =====================================
+
+    const totalEvents = allEvents.length;
+
+
+    // =====================================
+    // TICKETS SOLD
+    // =====================================
+
+    const ticketsSold = allEvents.reduce(
+      (total, event) => {
+
+        const totalTickets =
+          Number(event.totalTickets || 0);
+
+        const availableTickets =
+          Number(event.availableTickets || 0);
+
+        const sold =
+          Math.max(
+            totalTickets - availableTickets,
+            0
+          );
+
+        return total + sold;
+
+      },
+      0
+    );
+
+
+    // =====================================
+    // TOTAL REVENUE
+    // =====================================
+
+    const totalRevenue = allEvents.reduce(
+      (total, event) => {
+
+        const totalTickets =
+          Number(event.totalTickets || 0);
+
+        const availableTickets =
+          Number(event.availableTickets || 0);
+
+        const sold =
+          Math.max(
+            totalTickets - availableTickets,
+            0
+          );
+
+        const ticketPrice =
+          Number(event.ticketPrice || 0);
+
+        return total + (
+          sold * ticketPrice
+        );
+
+      },
+      0
+    );
+
+
+    // =====================================
+    // DEBUG
+    // =====================================
+
+    console.log(
+      "Organizer ID:",
+      organizerId
+    );
+
+    console.log(
+      "Current date:",
+      now
+    );
+
+    console.log(
+      "Total organizer events:",
+      allEvents.length
+    );
+
+    console.log(
+      "Upcoming events:",
+      upcomingEvents
+    );
+
+
+    // =====================================
+    // SEND RESPONSE
+    // =====================================
+
+    res.status(200).json({
+
+      stats: {
+        totalEvents: totalEvents,
+
+        ticketsSold: ticketsSold,
+
+        totalRevenue: totalRevenue,
+
+        upcomingEvents:
+          upcomingEvents.length
+      },
+
+      upcomingEvents: upcomingEvents
+
+    });
+
+
+  } catch (error) {
+
+    console.error(
+      "Get organizer dashboard error:",
+      error
+    );
+
+    res.status(500).json({
+      message: "Server error"
+    });
+
+  }
+};
+
+
+
+// GET ORGANIZER'S SINGLE EVENT
+const getMyEventById = async (req, res) => {
+  try {
+    const event = await Event.findOne({
+      _id: req.params.id,
+      organizer: req.user.userId
+    }).populate("organizer", "name email");
+
+    if (!event) {
+      return res.status(404).json({
+        message: "Event not found or you do not have permission to access it"
+      });
+    }
+
+    res.status(200).json({
+      event
+    });
+
+  } catch (error) {
+    console.error("Get organizer event error:", error);
+
+    res.status(500).json({
+      message: "Server error"
+    });
+  }
+};
+
+// UPDATE ORGANIZER'S EVENT
+const updateMyEvent = async (req, res) => {
+  try {
+    const {
+      title,
+      description,
+      category,
+      image,
+      venue,
+      address,
+      city,
+      eventDate,
+      startTime,
+      endTime,
+      ticketPrice,
+      totalTickets
+    } = req.body;
+
+    const event = await Event.findOne({
+      _id: req.params.id,
+      organizer: req.user.userId
+    });
+
+    if (!event) {
+      return res.status(404).json({
+        message:
+          "Event not found or you do not have permission to edit it"
+      });
+    }
+
+    // Update basic information
+    if (title !== undefined) {
+      event.title = title;
+    }
+
+    if (description !== undefined) {
+      event.description = description;
+    }
+
+    if (category !== undefined) {
+      event.category = category;
+    }
+
+    if (image !== undefined) {
+      event.image = image;
+    }
+
+    if (venue !== undefined) {
+      event.venue = venue;
+    }
+
+    if (address !== undefined) {
+      event.address = address;
+    }
+
+    if (city !== undefined) {
+      event.city = city;
+    }
+
+    if (eventDate !== undefined) {
+      event.eventDate = eventDate;
+    }
+
+    if (startTime !== undefined) {
+      event.startTime = startTime;
+    }
+
+    if (endTime !== undefined) {
+      event.endTime = endTime;
+    }
+
+    if (ticketPrice !== undefined) {
+      event.ticketPrice = ticketPrice;
+    }
+
+    // Handle ticket quantity carefully
+    if (totalTickets !== undefined) {
+      const ticketsSold =
+        event.totalTickets -
+        event.availableTickets;
+
+      if (Number(totalTickets) < ticketsSold) {
+        return res.status(400).json({
+          message:
+            `Total tickets cannot be less than tickets already sold (${ticketsSold})`
+        });
+      }
+
+      event.totalTickets = Number(totalTickets);
+
+      event.availableTickets =
+        Number(totalTickets) - ticketsSold;
+    }
+
+    await event.save();
+
+    res.status(200).json({
+      message: "Event updated successfully",
+      event
+    });
+
+  } catch (error) {
+    console.error("Update event error:", error);
+
+    res.status(500).json({
+      message: "Server error"
+    });
+  }
+};
+
+
 
 module.exports = {
   createEvent,
@@ -240,5 +583,9 @@ module.exports = {
   getEventById,
   approveEvent,
   rejectEvent,
-  getAllEventsForAdmin
+  getAllEventsForAdmin,
+  getMyEvents,
+  getOrganizerDashboard,
+  getMyEventById,
+  updateMyEvent
 };

@@ -1,4 +1,5 @@
-import OrganizerSidebar from "./OrganizerSidebar";
+import { Link } from "react-router-dom";
+
 
 import "./OrganizerDashboard.css";
 
@@ -71,7 +72,7 @@ function OrganizerDashboard() {
           SIDEBAR
       ========================================= */}
 
-      
+
 
 
       {/* =========================================
@@ -104,12 +105,12 @@ function OrganizerDashboard() {
           </div>
 
 
-          <a
-            href="/organizer/events/create"
+          <Link
+            to="/organizer/events/create"
             className="organizer-create-button"
           >
             + Create Event
-          </a>
+          </Link>
 
         </header>
 
@@ -156,7 +157,7 @@ function OrganizerDashboard() {
 
         <div className="organizer-section-heading">
 
-          <div>
+          {/* <div>
 
             <p>
               YOUR EVENTS
@@ -166,11 +167,11 @@ function OrganizerDashboard() {
               Upcoming Events
             </h2>
 
-          </div>
+          </div> */}
 
-          <a href="/organizer/events">
+          {/* <Link to="/organizer/events">
             View All →
-          </a>
+          </Link> */}
 
         </div>
 
@@ -179,7 +180,7 @@ function OrganizerDashboard() {
             EVENT LIST
         ========================================= */}
 
-        <section className="organizer-events">
+        {/* <section className="organizer-events">
 
           {upcomingEvents.map((event) => (
 
@@ -253,7 +254,7 @@ function OrganizerDashboard() {
 
           ))}
 
-        </section>
+        </section> */}
 
 
         {/* =========================================

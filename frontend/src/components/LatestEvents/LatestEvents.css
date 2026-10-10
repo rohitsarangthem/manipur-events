@@ -133,3 +133,64 @@
 /* =========================================
    LATEST EVENTS - ENDS
 ========================================= */
+
+.latest-events-message {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 24px 20px;
+  border: 1px solid #eeeeee;
+  border-radius: 12px;
+  background: #ffffff;
+  color: #777777;
+  font-size: 13px;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.latest-events-error {
+  color: #c62828;
+}
+
+
+/* =========================================
+   ALIGN LATEST EVENT CARDS
+========================================= */
+
+/* Make all cards in the grid stretch equally */
+.latest-events .events-grid {
+  align-items: stretch;
+}
+
+/* Let each card use the full grid-row height */
+.latest-events .event-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* Keep card content flexible */
+.latest-events .event-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Push price, quantity and action area down */
+.latest-events .event-bottom {
+  margin-top: auto;
+}
+
+/* Keep View Event buttons aligned */
+.latest-events .view-event-btn {
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+  .latest-events .event-card {
+    height: auto;
+  }
+}

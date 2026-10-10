@@ -425,3 +425,101 @@
 /* =========================================
    EVENTS PAGE - ENDS
 ========================================= */
+
+
+/* =========================================
+   EVENTS MESSAGE
+========================================= */
+
+.events-message {
+  padding: 70px 20px;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px solid #eeeeee;
+
+  border-radius: 15px;
+}
+
+.events-message h3 {
+  margin: 0 0 8px;
+
+  color: #111111;
+
+  font-size: 20px;
+}
+
+.events-message p {
+  margin: 0;
+
+  color: #777777;
+
+  font-size: 13px;
+}
+
+
+/* =========================================
+   ERROR
+========================================= */
+
+.events-error p {
+  margin-bottom: 18px;
+}
+
+.events-error button {
+  padding: 10px 16px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #d4145a;
+
+  color: #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 600;
+
+  cursor: pointer;
+}
+
+.events-error button:hover {
+  background: #b90f4d;
+}
+
+
+/* =========================================
+   IMAGE PLACEHOLDER
+========================================= */
+
+.event-page-image-placeholder {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  background: #f0f0f2;
+
+  color: #999999;
+
+  font-size: 12px;
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+  .events-message {
+    padding: 50px 15px;
+  }
+
+}

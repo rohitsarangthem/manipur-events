@@ -267,3 +267,23 @@
   }
 
 }
+
+.dashboard-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 18px;
+  border: 1px solid #e50958;
+  border-radius: 8px;
+  color: #e50958;
+  background: #fff;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.dashboard-nav-btn:hover {
+  background: #e50958;
+  color: #fff;
+}

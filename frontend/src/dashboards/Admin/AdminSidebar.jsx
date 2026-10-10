@@ -1,9 +1,24 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext.jsx";
 
 import "./AdminSidebar.css";
 
 function AdminSidebar() {
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const { logout } = useAuth();
+
+  const handleLogout = () => {
+    const confirmed = window.confirm(
+      "Are you sure you want to logout?"
+    );
+
+    if (!confirmed) return;
+
+    logout();
+    navigate("/login");
+  };
 
   return (
     <aside className="admin-sidebar">
@@ -134,7 +149,7 @@ function AdminSidebar() {
           ACCOUNT
         </p>
 
-{/* 
+        {/* 
         <Link
           to="/admin/profile"
           className={`admin-nav-link ${
@@ -143,7 +158,8 @@ function AdminSidebar() {
         >
           <span>◯</span>
           Profile
-        </Link> */}
+        </Link>
+        */}
 
 
         <Link
@@ -160,7 +176,10 @@ function AdminSidebar() {
       {/* LOGOUT */}
       <div className="admin-logout">
 
-        <button>
+        <button
+          type="button"
+          onClick={handleLogout}
+        >
           <span>↪</span>
           Logout
         </button>
@@ -171,4 +190,4 @@ function AdminSidebar() {
   );
 }
 
-export default AdminSidebar;
+export default AdminSidebar;  

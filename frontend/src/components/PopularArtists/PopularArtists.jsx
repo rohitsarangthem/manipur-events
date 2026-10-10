@@ -75,16 +75,16 @@ function PopularArtists() {
           </p>
 
           <h2>
-            Popular Artists
+            Popular Artists This Week
           </h2>
         </div>
 
-        <a
+        {/* <a
           href="/artists"
           className="artists-view-all"
         >
           View All →
-        </a>
+        </a> */}
 
       </div>
 
@@ -96,9 +96,9 @@ function PopularArtists() {
 
           <a
             key={artist.id}
-            href={`/artists/${artist.name
-              .toLowerCase()
-              .replaceAll(" ", "-")}`}
+            // href={`/artists/${artist.name
+            //   .toLowerCase()
+            //   .replaceAll(" ", "-")}`}
             className="artist-card"
           >
 

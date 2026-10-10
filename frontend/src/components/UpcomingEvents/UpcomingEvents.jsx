@@ -1,184 +1,225 @@
-import './UpcomingEvents.css';
 
+import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+import "./UpcomingEvents.css";
 
-const upcomingEvents = [
-  {
-    id: 1,
-    day: "18",
-    month: "OCT",
-    title: "Summer Beats 2026",
-    category: "Live Music",
-    date: "October 18, 2026",
-    time: "7:00 PM",
-    location: "Imphal, Manipur",
-    price: 499,
-    image: "/events/summer-beats.jpg",
-  },
-
-  {
-    id: 2,
-    day: "25",
-    month: "OCT",
-    title: "Neon Nights",
-    category: "DJ Night",
-    date: "October 25, 2026",
-    time: "8:00 PM",
-    location: "Imphal, Manipur",
-    price: 799,
-    image: "/events/neon-nights.jpg",
-  },
-
-  {
-    id: 3,
-    day: "02",
-    month: "NOV",
-    title: "Hills Music Festival",
-    category: "Music Festival",
-    date: "November 2, 2026",
-    time: "5:00 PM",
-    location: "Imphal, Manipur",
-    price: 999,
-    image: "/events/hills-music.jpg",
-  },
-
-  {
-    id: 4,
-    day: "15",
-    month: "NOV",
-    title: "Imphal Indie Night",
-    category: "Indie Music",
-    date: "November 15, 2026",
-    time: "6:30 PM",
-    location: "Imphal, Manipur",
-    price: 599,
-    image: "/events/summer-beats.jpg",
-  },
-];
-
+const API_URL =
+  import.meta.env.VITE_API_URL || "http://localhost:5000";
 
 function UpcomingEvents() {
+  const [events, setEvents] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState("");
+
+  useEffect(() => {
+    const controller = new AbortController();
+
+    const fetchUpcomingEvents = async () => {
+      try {
+        setLoading(true);
+        setError("");
+
+        const response = await fetch(
+          `${API_URL}/api/events`,
+          { signal: controller.signal }
+        );
+
+        if (!response.ok) {
+          throw new Error("Unable to load events.");
+        }
+
+        const data = await response.json();
+
+        const approvedEvents = Array.isArray(data.events)
+          ? data.events
+          : [];
+
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+
+        const upcoming = approvedEvents
+          .filter((event) => {
+            const eventDate = new Date(event.eventDate);
+
+            return (
+              !Number.isNaN(eventDate.getTime()) &&
+              eventDate >= today &&
+              event.status === "approved"
+            );
+          })
+          .sort(
+            (a, b) =>
+              new Date(a.eventDate) - new Date(b.eventDate)
+          )
+          .slice(0, 4);
+
+        setEvents(upcoming);
+      } catch (err) {
+        if (err.name !== "AbortError") {
+          console.error("Upcoming events error:", err);
+          setError("Unable to load events. Please try again later.");
+        }
+      } finally {
+        if (!controller.signal.aborted) {
+          setLoading(false);
+        }
+      }
+    };
+
+    fetchUpcomingEvents();
+
+    return () => controller.abort();
+  }, []);
+
+  const formatDate = (dateValue) => {
+    const date = new Date(dateValue);
+
+    return date.toLocaleDateString("en-IN", {
+      day: "2-digit",
+      month: "long",
+      year: "numeric",
+    });
+  };
+
+  const formatTime = (time) => {
+    if (!time) return "Time to be announced";
+
+    const match = time.match(/^(\d{1,2}):(\d{2})$/);
+
+    if (!match) return time;
+
+    const hours = Number(match[1]);
+    const minutes = Number(match[2]);
+
+    const date = new Date();
+    date.setHours(hours, minutes, 0, 0);
+
+    return date.toLocaleTimeString("en-IN", {
+      hour: "numeric",
+      minute: "2-digit",
+      hour12: true,
+    });
+  };
+
   return (
     <section className="upcoming-events">
-
-      {/* Heading */}
       <div className="upcoming-heading">
-
         <div>
           <p className="upcoming-label">
             MARK YOUR CALENDAR
           </p>
 
-          <h2>
-            Upcoming Events
-          </h2>
+          <h2>Upcoming Events</h2>
         </div>
 
-        <a
-          href="/events"
+        <Link
+          to="/events"
           className="upcoming-view-all"
         >
           View All →
-        </a>
-
+        </Link>
       </div>
 
+      {loading && (
+        <p className="upcoming-message">
+          Loading upcoming events...
+        </p>
+      )}
 
-      {/* Events */}
-      <div className="upcoming-list">
+      {!loading && error && (
+        <p className="upcoming-message upcoming-error">
+          {error}
+        </p>
+      )}
 
-        {upcomingEvents.map((event) => (
+      {!loading && !error && events.length === 0 && (
+        <p className="upcoming-message">
+          No upcoming events available right now. Please check back soon!
+        </p>
+      )}
 
-          <article
-            className="upcoming-card"
-            key={event.id}
-          >
+      {!loading && !error && events.length > 0 && (
+        <div className="upcoming-list">
+          {events.map((event) => {
+            const date = new Date(event.eventDate);
 
-            {/* Date */}
-            <div className="upcoming-date">
-
-              <span>
-                {event.month}
-              </span>
-
-              <strong>
-                {event.day}
-              </strong>
-
-            </div>
-
-
-            {/* Image */}
-            <div className="upcoming-image-wrapper">
-
-              <img
-                src={event.image}
-                alt={event.title}
-                className="upcoming-image"
-              />
-
-            </div>
-
-
-            {/* Event Details */}
-            <div className="upcoming-info">
-
-              <span className="upcoming-category">
-                {event.category}
-              </span>
-
-              <h3>
-                {event.title}
-              </h3>
-
-              <div className="upcoming-meta">
-
-                <span>
-                  📅 {event.date}
-                </span>
-
-                <span>
-                  ⏰ {event.time}
-                </span>
-
-              </div>
-
-              <div className="upcoming-location">
-                📍 {event.location}
-              </div>
-
-            </div>
-
-
-            {/* Price + Button */}
-            <div className="upcoming-action">
-
-              <div className="upcoming-price">
-
-                <small>
-                  From
-                </small>
-
-                <strong>
-                  ₹{event.price}
-                </strong>
-
-              </div>
-
-              <a
-                href={`/events/${event.id}`}
-                className="upcoming-btn"
+            return (
+              <article
+                className="upcoming-card"
+                key={event._id}
               >
-                View Event →
-              </a>
+                <div className="upcoming-date">
+                  <span>
+                    {date
+                      .toLocaleDateString("en-US", {
+                        month: "short",
+                      })
+                      .toUpperCase()}
+                  </span>
 
-            </div>
+                  <strong>
+                    {date.getDate()}
+                  </strong>
+                </div>
 
-          </article>
+                <div className="upcoming-image-wrapper">
+                  <img
+                    src={
+                      event.image ||
+                      "/events/event-placeholder.jpg"
+                    }
+                    alt={event.title}
+                    className="upcoming-image"
+                    loading="lazy"
+                  />
+                </div>
 
-        ))}
+                <div className="upcoming-info">
+                  <span className="upcoming-category">
+                    {event.category}
+                  </span>
 
-      </div>
+                  <h3>{event.title}</h3>
 
+                  <div className="upcoming-meta">
+                    <span>
+                      📅 {formatDate(event.eventDate)}
+                    </span>
+
+                    <span>
+                      ⏰ {formatTime(event.startTime)}
+                    </span>
+                  </div>
+
+                  <div className="upcoming-location">
+                    📍{" "}
+                    {[event.venue, event.city]
+                      .filter(Boolean)
+                      .join(", ")}
+                  </div>
+                </div>
+
+                <div className="upcoming-action">
+                  <div className="upcoming-price">
+                    <small>From</small>
+
+                    <strong>
+                      ₹{Number(event.ticketPrice).toLocaleString("en-IN")}
+                    </strong>
+                  </div>
+
+                  <Link
+                    to={`/events/${event._id}`}
+                    className="upcoming-btn"
+                  >
+                    View Event →
+                  </Link>
+                </div>
+              </article>
+            );
+          })}
+        </div>
+      )}
     </section>
   );
 }

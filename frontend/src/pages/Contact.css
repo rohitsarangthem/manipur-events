@@ -1,0 +1,255 @@
+/* =========================================
+   CONTACT PAGE
+========================================= */
+
+.contact-page {
+  width: 100%;
+  background: #f8f8fa;
+  color: #111;
+}
+
+/* HERO */
+
+.contact-hero {
+  padding: 85px 20px 75px;
+  text-align: center;
+  background: #fff;
+}
+
+.contact-label {
+  margin: 0 0 12px;
+  color: #d4145a;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+.contact-hero h1 {
+  margin: 0;
+  font-size: 48px;
+  letter-spacing: -1.5px;
+}
+
+.contact-hero > p:last-child {
+  max-width: 550px;
+  margin: 16px auto 0;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* MAIN CONTENT */
+
+.contact-content {
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 75px 30px 90px;
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 55px;
+  align-items: start;
+}
+
+/* LEFT SIDE */
+
+.contact-info {
+  padding-top: 10px;
+}
+
+.contact-info h2 {
+  max-width: 440px;
+  margin: 0;
+  font-size: 34px;
+  line-height: 1.25;
+  letter-spacing: -0.8px;
+}
+
+.contact-description {
+  margin: 18px 0 30px;
+  color: #777;
+  font-size: 14px;
+  line-height: 1.8;
+}
+
+.contact-info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-top: 18px;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 12px;
+}
+
+.contact-icon {
+  width: 42px;
+  height: 42px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: #fff0f5;
+  color: #d4145a;
+  font-size: 19px;
+}
+
+.contact-info-card h3 {
+  margin: 0 0 7px;
+  font-size: 15px;
+}
+
+.contact-info-card p {
+  margin: 0;
+  color: #777;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+/* FORM CARD */
+
+.contact-form-card {
+  padding: 30px;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 14px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.035);
+}
+
+.contact-form-card h2 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.contact-form-description {
+  margin: 9px 0 25px;
+  color: #777;
+  font-size: 13px;
+}
+
+.contact-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 19px;
+}
+
+.contact-field label {
+  color: #222;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.contact-field input,
+.contact-field textarea {
+  width: 100%;
+  padding: 13px 14px;
+  box-sizing: border-box;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  color: #222;
+  font: inherit;
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.contact-field input {
+  height: 45px;
+}
+
+.contact-field textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.contact-field input:focus,
+.contact-field textarea:focus {
+  border-color: #d4145a;
+}
+
+.contact-field input::placeholder,
+.contact-field textarea::placeholder {
+  color: #999;
+}
+
+.contact-submit-btn {
+  width: 100%;
+  min-height: 47px;
+  padding: 13px 18px;
+  border: none;
+  border-radius: 7px;
+  background: #d4145a;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.contact-submit-btn:hover {
+  background: #b90f4d;
+}
+
+.contact-success {
+  margin: 0 0 20px;
+  padding: 13px;
+  border-radius: 8px;
+  background: #eaf8ef;
+  color: #198754;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* TABLET */
+
+@media (max-width: 850px) {
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 35px;
+    max-width: 650px;
+    padding-top: 55px;
+    padding-bottom: 65px;
+  }
+
+  .contact-info h2 {
+    max-width: 550px;
+    font-size: 30px;
+  }
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  .contact-hero {
+    padding: 65px 20px 50px;
+  }
+
+  .contact-hero h1 {
+    font-size: 36px;
+    letter-spacing: -1px;
+  }
+
+  .contact-hero > p:last-child {
+    font-size: 13px;
+  }
+
+  .contact-content {
+    padding: 45px 18px 55px;
+    gap: 30px;
+  }
+
+  .contact-info h2 {
+    font-size: 27px;
+  }
+
+  .contact-form-card {
+    padding: 22px 18px;
+  }
+
+  .contact-form-card h2 {
+    font-size: 21px;
+  }
+}

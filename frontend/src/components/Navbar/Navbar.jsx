@@ -1,36 +1,41 @@
 import { useState, useRef, useEffect } from "react";
-import gsap from "gsap";
-import "./Navbar.css";
 import { Link } from "react-router-dom";
+import gsap from "gsap";
+import { useAuth } from "../../context/AuthContext.jsx";
+import "./Navbar.css";
 
 function Navbar() {
-
   const [menuOpen, setMenuOpen] = useState(false);
+  const { isAuthenticated, user, token } = useAuth();
+
+  const dashboardPath = {
+    admin: "/admin",
+    organizer: "/organizer",
+    customer: "/customer",
+  }[user?.role?.toLowerCase()];
+
+  console.log("Navbar authentication:", {
+    isAuthenticated,
+    user,
+    tokenExists: !!token,
+  });
+
+
 
   const mobileMenuRef = useRef(null);
   const menuLinksRef = useRef([]);
-
   const line1Ref = useRef(null);
   const line2Ref = useRef(null);
   const line3Ref = useRef(null);
 
-
-  /* =========================================
-     MOBILE MENU ANIMATION
-  ========================================= */
-
   useEffect(() => {
-
     const menu = mobileMenuRef.current;
-    const links = menuLinksRef.current;
 
     if (!menu) return;
 
+    const links = menuLinksRef.current.filter(Boolean);
 
     if (menuOpen) {
-
-      /* Open menu */
-
       gsap.to(menu, {
         height: "auto",
         opacity: 1,
@@ -38,15 +43,9 @@ function Navbar() {
         ease: "power3.out",
       });
 
-
-      /* Animate links */
-
       gsap.fromTo(
         links,
-        {
-          y: 20,
-          opacity: 0,
-        },
+        { y: 20, opacity: 0 },
         {
           y: 0,
           opacity: 1,
@@ -56,9 +55,6 @@ function Navbar() {
           ease: "power3.out",
         }
       );
-
-
-      /* Hamburger → X */
 
       gsap.to(line1Ref.current, {
         rotate: 45,
@@ -78,20 +74,13 @@ function Navbar() {
         duration: 0.3,
         ease: "power2.out",
       });
-
     } else {
-
-      /* Close menu */
-
       gsap.to(menu, {
         height: 0,
         opacity: 0,
         duration: 0.3,
         ease: "power2.inOut",
       });
-
-
-      /* Reset hamburger */
 
       gsap.to(line1Ref.current, {
         rotate: 0,
@@ -109,202 +98,148 @@ function Navbar() {
         y: 0,
         duration: 0.3,
       });
-
     }
-
-  }, [menuOpen]);
-
-
-  /* =========================================
-     CLOSE MOBILE MENU
-  ========================================= */
+  }, [menuOpen, isAuthenticated]);
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
+  const setMenuLinkRef = (index) => (element) => {
+    menuLinksRef.current[index] = element;
+  };
 
   return (
-
     <header className="navbar">
-
-
-      {/* =====================================
-          LOGO
-      ===================================== */}
-
-      <Link
-        to="/"
-        className="navbar-logo"
-        onClick={closeMenu}
-      >
-        <span>
-          Manipur Events
-        </span>
+      {/* Logo */}
+      <Link to="/" className="navbar-logo" onClick={closeMenu}>
+        <span>Manipur Events</span>
       </Link>
 
-
-
-      {/* =====================================
-          DESKTOP NAVIGATION
-      ===================================== */}
-
+      {/* Desktop Navigation */}
       <nav className="nav-links">
-
-        <Link to="/">
+        <Link to="/" onClick={closeMenu}>
           Home
         </Link>
 
-        <Link to="/events">
+        <Link to="/events" onClick={closeMenu}>
           Events
         </Link>
 
-        <Link to="/categories">
+        <Link to="/categories" onClick={closeMenu}>
           Categories
         </Link>
-
-        {/* <Link to="/about">
-          About
-        </Link> */}
-
-
       </nav>
 
+      {/* Desktop Actions */}
 
-
-      {/* =====================================
-          RIGHT SIDE
-      ===================================== */}
-
+      {/* Desktop Actions */}
       <div className="nav-actions">
+        {!isAuthenticated ? (
+          <>
+            <Link
+              to="/login"
+              className="login-link"
+              onClick={closeMenu}
+            >
+              Login
+            </Link>
 
-        <Link
-          to="/login"
-          className="login-link"
-        >
-          Login
-        </Link>
+            <Link
+              to="/signup"
+              className="signup-btn"
+              onClick={closeMenu}
+            >
+              Sign Up
+            </Link>
+          </>
+        ) : (
+          <>
+            {dashboardPath && (
+              <Link
+                to={dashboardPath}
+                className="dashboard-nav-btn"
+                onClick={closeMenu}
+              >
+                Dashboard
+              </Link>
+            )}
 
+            <Link
+              to="/contact"
+              className="signup-btn contact-nav-btn"
+              onClick={closeMenu}
+            >
+              Contact Us
+            </Link>
+          </>
+        )}
 
-        <Link
-          to="/register"
-          className="signup-btn"
-        >
-          Sign Up
-        </Link>
-
-
-
-        {/* =================================
-            MOBILE MENU BUTTON
-        ================================= */}
-
+        {/* Mobile Menu Toggle */}
         <button
           className="mobile-menu-btn"
-          onClick={() => setMenuOpen(!menuOpen)}
+          onClick={() => setMenuOpen((open) => !open)}
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           type="button"
         >
-
           <span ref={line1Ref}></span>
-
           <span ref={line2Ref}></span>
-
           <span ref={line3Ref}></span>
-
         </button>
-
       </div>
 
 
-
-      {/* =====================================
-          MOBILE MENU
-      ===================================== */}
-
+      {/* Mobile Navigation */}
       <div
         ref={mobileMenuRef}
         className="mobile-menu"
+        aria-hidden={!menuOpen}
       >
+        {!isAuthenticated ? (
+          <>
+            <Link
+              to="/login"
+              ref={setMenuLinkRef(3)}
+              onClick={closeMenu}
+            >
+              Login
+            </Link>
 
-        <nav className="mobile-nav-links">
+            <Link
+              to="/signup"
+              ref={setMenuLinkRef(4)}
+              className="mobile-signup"
+              onClick={closeMenu}
+            >
+              Sign Up
+            </Link>
+          </>
+        ) : (
+          <>
+            {dashboardPath && (
+              <Link
+                to={dashboardPath}
+                ref={setMenuLinkRef(3)}
+                onClick={closeMenu}
+              >
+                Dashboard
+              </Link>
+            )}
 
-
-          {/* Home */}
-
-          <Link
-            to="/"
-            ref={(el) => (menuLinksRef.current[0] = el)}
-            onClick={closeMenu}
-          >
-            Home
-          </Link>
-
-
-          {/* Events */}
-
-          <Link
-            to="/events"
-            ref={(el) => (menuLinksRef.current[1] = el)}
-            onClick={closeMenu}
-          >
-            Events
-          </Link>
-
-
-          {/* Categories */}
-
-          <Link
-            to="/categories"
-            ref={(el) => (menuLinksRef.current[2] = el)}
-            onClick={closeMenu}
-          >
-            Categories
-          </Link>
-
-
-          {/* About */}
-
-          {/* <Link
-            to="/about"
-            ref={(el) => (menuLinksRef.current[3] = el)}
-            onClick={closeMenu}
-          >
-            About
-          </Link> */}
-
-
-          {/* Login */}
-
-          <Link
-            to="/login"
-            ref={(el) => (menuLinksRef.current[4] = el)}
-            onClick={closeMenu}
-          >
-            Login
-          </Link>
-
-
-          {/* Sign Up */}
-
-          <Link
-            to="/register"
-            ref={(el) => (menuLinksRef.current[5] = el)}
-            onClick={closeMenu}
-            className="mobile-signup"
-          >
-            Sign Up
-          </Link>
-
-        </nav>
-
+            <Link
+              to="/contact"
+              ref={setMenuLinkRef(4)}
+              className="mobile-signup"
+              onClick={closeMenu}
+            >
+              Contact Us
+            </Link>
+          </>
+        )}
       </div>
-
     </header>
-
   );
-
 }
 
 export default Navbar;

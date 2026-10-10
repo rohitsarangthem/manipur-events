@@ -1,10 +1,33 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useAuth } from "../../context/AuthContext.jsx";
 import "./OrganizerSidebar.css";
 
 
 function OrganizerSidebar() {
 
   const location = useLocation();
+  const navigate = useNavigate();
+
+  const { logout } = useAuth();
+
+
+  // =========================================
+  // LOGOUT
+  // =========================================
+
+  const handleLogout = () => {
+
+    const confirmed = window.confirm(
+      "Are you sure you want to logout?"
+    );
+
+    if (!confirmed) return;
+
+    logout();
+
+    navigate("/login");
+
+  };
 
 
   return (
@@ -177,7 +200,10 @@ function OrganizerSidebar() {
 
       <div className="organizer-logout">
 
-        <button>
+        <button
+          type="button"
+          onClick={handleLogout}
+        >
           <span>↪</span>
           Logout
         </button>

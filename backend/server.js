@@ -1,9 +1,6 @@
 const dns = require("dns");
 
-dns.setServers([
-  "8.8.8.8",
-  "8.8.4.4"
-]);
+dns.setServers(["8.8.8.8", "8.8.4.4"]);
 
 const express = require("express");
 const cors = require("cors");
@@ -12,6 +9,8 @@ require("dotenv").config();
 
 const authRoutes = require("./routes/authRoutes");
 const eventRoutes = require("./routes/eventRoutes");
+
+const bookingRoutes = require("./routes/bookingRoutes");
 
 const app = express();
 
@@ -26,26 +25,12 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // ================================
-// MongoDB Connection
-// ================================
-
-mongoose
-  .connect(process.env.MONGO_URI)
-  .then(() => {
-    console.log("Successfully connected to MongoDB!");
-  })
-  .catch((error) => {
-    console.error("MongoDB connection error:", error.message);
-  });
-
-// ================================
-// Authentication Routes
+// API Routes
 // ================================
 
 app.use("/api/auth", authRoutes);
-
-// Event routes
 app.use("/api/events", eventRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 // ================================
 // Test Route
@@ -53,14 +38,33 @@ app.use("/api/events", eventRoutes);
 
 app.get("/", (req, res) => {
   res.json({
-    message: "Manipur Events API is running!"
+    message: "Manipur Events API is running!",
   });
 });
 
 // ================================
-// Start Server
+// Start Server After MongoDB Connects
 // ================================
 
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+async function startServer() {
+  try {
+    if (!process.env.MONGO_URI) {
+      throw new Error("MONGO_URI is missing from your backend .env file");
+    }
+
+    await mongoose.connect(process.env.MONGO_URI, {
+      serverSelectionTimeoutMS: 10000,
+    });
+
+    console.log("Successfully connected to MongoDB!");
+
+    app.listen(PORT, () => {
+      console.log(`Server running on http://localhost:${PORT}`);
+    });
+  } catch (error) {
+    console.error("Database connection failed:", error.message);
+    process.exit(1);
+  }
+}
+
+startServer();

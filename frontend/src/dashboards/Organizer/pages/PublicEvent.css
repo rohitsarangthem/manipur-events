@@ -1,0 +1,786 @@
+/* ========================================
+   PUBLIC EVENT PAGE
+======================================== */
+
+.public-event-page {
+  min-height: 100vh;
+  background: #f7f7f8;
+  color: #111;
+  padding-bottom: 70px;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.public-event-header {
+  height: 72px;
+  padding: 0 6%;
+  background: #111;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.public-brand {
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.public-back-btn {
+  border: 1px solid #444;
+  background: transparent;
+  color: #fff;
+
+  padding: 9px 16px;
+  border-radius: 7px;
+
+  font-size: 14px;
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.public-back-btn:hover {
+  background: #fff;
+  color: #111;
+}
+
+
+/* ========================================
+   HERO
+======================================== */
+
+.public-event-hero {
+  max-width: 1250px;
+  margin: 45px auto 0;
+
+  padding: 0 30px;
+
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+
+  gap: 55px;
+  align-items: center;
+}
+
+
+/* IMAGE */
+
+.public-event-image-wrapper {
+  width: 100%;
+}
+
+.public-event-image {
+  display: block;
+
+  width: 100%;
+  height: 520px;
+
+  object-fit: cover;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.08);
+}
+
+.public-event-no-image {
+  width: 100%;
+  height: 520px;
+
+  border-radius: 18px;
+
+  background: #e8e8e8;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #777;
+}
+
+
+/* CONTENT */
+
+.public-event-content {
+  min-width: 0;
+}
+
+.public-event-top {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  margin-bottom: 15px;
+}
+
+.public-event-category {
+  display: inline-flex;
+
+  padding: 6px 11px;
+
+  background: #111;
+  color: #fff;
+
+  border-radius: 5px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+
+.public-event-status {
+  display: inline-flex;
+
+  padding: 6px 11px;
+
+  background: #e9f7ef;
+  color: #198754;
+
+  border-radius: 5px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  text-transform: capitalize;
+}
+
+.public-event-content h1 {
+  margin: 0 0 30px;
+
+  font-size: 48px;
+  line-height: 1.08;
+  letter-spacing: -1.5px;
+}
+
+
+/* ========================================
+   META
+======================================== */
+
+.public-event-meta {
+  display: flex;
+  flex-direction: column;
+
+  gap: 18px;
+
+  margin-bottom: 28px;
+}
+
+.public-meta-item {
+  display: flex;
+  align-items: flex-start;
+
+  gap: 14px;
+}
+
+.meta-icon {
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  background: #fff;
+
+  border: 1px solid #e5e5e5;
+
+  border-radius: 9px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 17px;
+}
+
+.public-meta-item div {
+  display: flex;
+  flex-direction: column;
+
+  gap: 3px;
+}
+
+.public-meta-item small {
+  color: #888;
+  font-size: 12px;
+}
+
+.public-meta-item strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.public-meta-item span {
+  color: #777;
+  font-size: 13px;
+}
+
+
+/* ========================================
+   TICKET CARD
+======================================== */
+
+.public-ticket-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  background: #fff;
+
+  border: 1px solid #e6e6e6;
+
+  border-radius: 12px;
+
+  margin-bottom: 14px;
+
+  overflow: hidden;
+}
+
+.ticket-price,
+.ticket-available {
+  padding: 18px 20px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+}
+
+.ticket-price {
+  border-right: 1px solid #e8e8e8;
+}
+
+.public-ticket-card small {
+  color: #888;
+  font-size: 12px;
+}
+
+.public-ticket-card strong {
+  font-size: 24px;
+}
+
+
+/* ========================================
+   BUY BUTTON
+======================================== */
+
+.buy-ticket-btn {
+  width: 100%;
+
+  border: none;
+
+  background: #111;
+  color: #fff;
+
+  padding: 15px 20px;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.buy-ticket-btn:hover {
+  background: #2c2c2c;
+  transform: translateY(-1px);
+}
+
+.buy-ticket-btn:disabled {
+  background: #aaa;
+  cursor: not-allowed;
+  transform: none;
+}
+
+
+/* ========================================
+   CONTENT SECTIONS
+======================================== */
+
+.public-content-section {
+  max-width: 1250px;
+
+  margin: 75px auto 0;
+
+  padding: 0 30px;
+}
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+.section-heading > span {
+  display: block;
+
+  margin-bottom: 7px;
+
+  color: #888;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  font-size: 28px;
+  letter-spacing: -0.5px;
+}
+
+
+/* ========================================
+   DESCRIPTION
+======================================== */
+
+.description-card {
+  background: #fff;
+
+  border: 1px solid #e7e7e7;
+
+  border-radius: 13px;
+
+  padding: 25px 28px;
+}
+
+.description-card p {
+  margin: 0;
+
+  color: #555;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+
+/* ========================================
+   DETAILS
+======================================== */
+
+.event-details-card {
+  display: grid;
+
+  grid-template-columns: repeat(3, 1fr);
+
+  background: #fff;
+
+  border: 1px solid #e7e7e7;
+
+  border-radius: 13px;
+
+  overflow: hidden;
+}
+
+.public-detail {
+  padding: 22px;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 7px;
+
+  border-right: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.public-detail span {
+  color: #888;
+
+  font-size: 12px;
+}
+
+.public-detail strong {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+
+/* ========================================
+   LOCATION
+======================================== */
+
+.location-card {
+  background: #fff;
+
+  border: 1px solid #e7e7e7;
+
+  border-radius: 13px;
+
+  padding: 25px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+}
+
+.location-icon {
+  width: 48px;
+  height: 48px;
+
+  flex-shrink: 0;
+
+  background: #111;
+
+  color: #fff;
+
+  border-radius: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 20px;
+}
+
+.location-card h3 {
+  margin: 0 0 5px;
+
+  font-size: 17px;
+}
+
+.location-card p {
+  margin: 0;
+
+  color: #777;
+
+  font-size: 14px;
+}
+
+
+/* ========================================
+   BOTTOM CTA
+======================================== */
+
+.public-bottom-cta {
+  max-width: 1190px;
+
+  margin: 75px auto 0;
+
+  padding: 35px 40px;
+
+  background: #111;
+
+  color: #fff;
+
+  border-radius: 16px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 30px;
+}
+
+.public-bottom-cta span {
+  color: #aaa;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 1.2px;
+}
+
+.public-bottom-cta h2 {
+  margin: 8px 0 5px;
+
+  font-size: 28px;
+}
+
+.public-bottom-cta p {
+  margin: 0;
+
+  color: #aaa;
+
+  font-size: 14px;
+}
+
+.cta-buy-btn {
+  flex-shrink: 0;
+
+  padding: 14px 24px;
+
+  background: #fff;
+  color: #111;
+
+  border: none;
+
+  border-radius: 8px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition: 0.2s ease;
+}
+
+.cta-buy-btn:hover {
+  background: #eee;
+}
+
+.cta-buy-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+
+/* ========================================
+   LOADING
+======================================== */
+
+.public-event-loading {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  color: #666;
+}
+
+.loading-spinner {
+  width: 32px;
+  height: 32px;
+
+  border: 3px solid #ddd;
+
+  border-top-color: #111;
+
+  border-radius: 50%;
+
+  animation: publicSpinner 0.8s linear infinite;
+
+  margin-bottom: 12px;
+}
+
+@keyframes publicSpinner {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* ========================================
+   ERROR
+======================================== */
+
+.public-event-error {
+  min-height: 60vh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 30px;
+}
+
+.error-icon {
+  width: 50px;
+  height: 50px;
+
+  background: #111;
+  color: #fff;
+
+  border-radius: 50%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 22px;
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+.public-event-error h2 {
+  margin: 0 0 8px;
+}
+
+.public-event-error p {
+  color: #777;
+  margin-bottom: 20px;
+}
+
+.public-secondary-btn {
+  background: #111;
+  color: #fff;
+
+  border: none;
+
+  padding: 11px 18px;
+
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  font-weight: 600;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 950px) {
+
+  .public-event-hero {
+    grid-template-columns: 1fr;
+
+    max-width: 750px;
+
+    gap: 35px;
+  }
+
+  .public-event-image {
+    height: 420px;
+  }
+
+  .public-event-content h1 {
+    font-size: 40px;
+  }
+
+  .event-details-card {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .public-detail:nth-child(2n) {
+    border-right: none;
+  }
+
+  .public-bottom-cta {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 600px) {
+
+  .public-event-header {
+    height: 64px;
+
+    padding: 0 18px;
+  }
+
+  .public-brand {
+    font-size: 17px;
+  }
+
+  .public-back-btn {
+    padding: 8px 11px;
+
+    font-size: 12px;
+  }
+
+  .public-event-hero {
+    margin-top: 25px;
+
+    padding: 0 16px;
+
+    gap: 25px;
+  }
+
+  .public-event-image {
+    height: 280px;
+
+    border-radius: 13px;
+  }
+
+  .public-event-no-image {
+    height: 280px;
+
+    border-radius: 13px;
+  }
+
+  .public-event-content h1 {
+    font-size: 32px;
+
+    letter-spacing: -0.8px;
+
+    margin-bottom: 24px;
+  }
+
+  .public-event-top {
+    flex-wrap: wrap;
+  }
+
+  .public-ticket-card {
+    grid-template-columns: 1fr;
+  }
+
+  .ticket-price {
+    border-right: none;
+
+    border-bottom: 1px solid #e8e8e8;
+  }
+
+  .public-content-section {
+    margin-top: 50px;
+
+    padding: 0 16px;
+  }
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+  .event-details-card {
+    grid-template-columns: 1fr;
+  }
+
+  .public-detail {
+    border-right: none;
+  }
+
+  .location-card {
+    align-items: flex-start;
+
+    padding: 20px;
+  }
+
+  .public-bottom-cta {
+    margin: 50px 16px 0;
+
+    padding: 25px 22px;
+
+    flex-direction: column;
+
+    align-items: stretch;
+  }
+
+  .public-bottom-cta h2 {
+    font-size: 24px;
+  }
+
+  .cta-buy-btn {
+    width: 100%;
+  }
+}

@@ -4,8 +4,8 @@
 
 .organizer-dashboard {
   min-height: 100vh;
-
   background: #f8f8fa;
+  color: #111;
 }
 
 
@@ -18,9 +18,11 @@
 
   margin-left: 230px;
 
-  padding: 45px 50px;
+  padding: 40px 42px 60px;
 
   box-sizing: border-box;
+
+  overflow-x: hidden;
 }
 
 
@@ -29,47 +31,56 @@
 ========================================= */
 
 .organizer-header {
-  max-width: 1250px;
+  width: 100%;
+  max-width: 1180px;
 
-  margin: 0 auto 30px;
+  margin: 0 auto 32px;
 
   display: flex;
-
   align-items: flex-end;
-
   justify-content: space-between;
 
   gap: 30px;
 }
 
+.organizer-header > div {
+  min-width: 0;
+}
+
 .organizer-page-label {
-  margin: 0 0 7px;
+  margin: 0 0 8px;
 
   color: #d4145a;
 
-  font-size: 9px;
-
+  font-size: 10px;
   font-weight: 700;
 
-  letter-spacing: 2px;
+  letter-spacing: 1.8px;
+
+  line-height: 1.2;
 }
 
 .organizer-header h1 {
   margin: 0;
 
-  color: #111111;
+  color: #111;
 
   font-size: 30px;
+  line-height: 1.2;
 
-  line-height: 1.15;
+  font-weight: 700;
+
+  letter-spacing: -0.6px;
 }
 
 .organizer-header > div > p:last-child {
-  margin: 8px 0 0;
+  margin: 9px 0 0;
 
-  color: #777777;
+  color: #777;
 
-  font-size: 11px;
+  font-size: 12px;
+
+  line-height: 1.5;
 }
 
 
@@ -78,27 +89,37 @@
 ========================================= */
 
 .organizer-create-button {
-  padding: 11px 16px;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
 
   flex-shrink: 0;
+
+  min-height: 40px;
+
+  padding: 0 17px;
 
   border-radius: 7px;
 
   background: #d4145a;
 
-  color: #ffffff;
+  color: #fff;
 
-  font-size: 10px;
-
+  font-size: 12px;
   font-weight: 600;
 
   text-decoration: none;
 
-  transition: 0.2s ease;
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
 }
 
 .organizer-create-button:hover {
   background: #b90f4d;
+
+  transform: translateY(-1px);
 }
 
 
@@ -107,21 +128,25 @@
 ========================================= */
 
 .organizer-stats {
-  max-width: 1250px;
+  width: 100%;
+  max-width: 1180px;
 
-  margin: 0 auto 35px;
+  margin: 0 auto 38px;
 
   display: grid;
 
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
 
-  gap: 15px;
+  gap: 14px;
 }
 
 .organizer-stat-card {
-  min-height: 90px;
+  min-width: 0;
 
-  padding: 18px;
+  min-height: 92px;
+
+  padding: 17px;
 
   box-sizing: border-box;
 
@@ -131,14 +156,14 @@
 
   gap: 13px;
 
-  background: #ffffff;
+  background: #fff;
 
-  border: 1px solid #eeeeee;
+  border: 1px solid #e8e8e8;
 
   border-radius: 11px;
 
   box-shadow:
-    0 5px 20px rgba(0, 0, 0, 0.03);
+    0 4px 16px rgba(0, 0, 0, 0.025);
 }
 
 .organizer-stat-icon {
@@ -164,6 +189,8 @@
 }
 
 .organizer-stat-card div:last-child {
+  min-width: 0;
+
   display: flex;
 
   flex-direction: column;
@@ -172,15 +199,23 @@
 }
 
 .organizer-stat-card span {
-  color: #777777;
+  color: #777;
 
-  font-size: 9px;
+  font-size: 11px;
+
+  line-height: 1.3;
 }
 
 .organizer-stat-card strong {
-  color: #111111;
+  color: #111;
 
   font-size: 19px;
+
+  line-height: 1.2;
+
+  font-weight: 700;
+
+  white-space: nowrap;
 }
 
 
@@ -189,15 +224,17 @@
 ========================================= */
 
 .organizer-section-heading {
-  max-width: 1250px;
+  width: 100%;
+  max-width: 1180px;
 
-  margin: 0 auto 18px;
+  margin: 0 auto 16px;
 
   display: flex;
 
   align-items: flex-end;
-
   justify-content: space-between;
+
+  gap: 20px;
 }
 
 .organizer-section-heading p {
@@ -205,7 +242,7 @@
 
   color: #d4145a;
 
-  font-size: 8px;
+  font-size: 9px;
 
   font-weight: 700;
 
@@ -215,19 +252,29 @@
 .organizer-section-heading h2 {
   margin: 0;
 
-  color: #111111;
+  color: #111;
 
-  font-size: 20px;
+  font-size: 21px;
+
+  line-height: 1.25;
+
+  font-weight: 700;
 }
 
 .organizer-section-heading > a {
+  flex-shrink: 0;
+
   color: #d4145a;
 
-  font-size: 10px;
+  font-size: 12px;
 
   font-weight: 600;
 
   text-decoration: none;
+}
+
+.organizer-section-heading > a:hover {
+  text-decoration: underline;
 }
 
 
@@ -236,9 +283,10 @@
 ========================================= */
 
 .organizer-events {
-  max-width: 1250px;
+  width: 100%;
+  max-width: 1180px;
 
-  margin: 0 auto 40px;
+  margin: 0 auto 48px;
 
   display: flex;
 
@@ -248,79 +296,121 @@
 }
 
 .organizer-event-card {
-  min-height: 105px;
+  min-width: 0;
 
-  padding: 12px;
+  min-height: 108px;
+
+  padding: 13px;
 
   box-sizing: border-box;
 
   display: grid;
 
-  grid-template-columns: 125px 1fr 180px 90px;
+  grid-template-columns:
+    130px
+    minmax(0, 1fr)
+    165px
+    100px;
 
   align-items: center;
 
   gap: 18px;
 
-  background: #ffffff;
+  background: #fff;
 
-  border: 1px solid #eeeeee;
+  border: 1px solid #e8e8e8;
 
-  border-radius: 10px;
+  border-radius: 11px;
 
   box-shadow:
-    0 4px 15px rgba(0, 0, 0, 0.03);
+    0 4px 16px rgba(0, 0, 0, 0.025);
+
+  transition:
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
 }
 
-.organizer-event-image {
-  width: 125px;
+.organizer-event-card:hover {
+  transform: translateY(-1px);
 
-  height: 80px;
+  box-shadow:
+    0 8px 22px rgba(0, 0, 0, 0.05);
+}
+
+
+/* =========================================
+   EVENT IMAGE
+========================================= */
+
+.organizer-event-image {
+  width: 130px;
+  height: 82px;
 
   overflow: hidden;
 
-  border-radius: 7px;
+  border-radius: 8px;
+
+  background: #eee;
 }
 
 .organizer-event-image img {
+  display: block;
+
   width: 100%;
   height: 100%;
 
-  display: block;
-
   object-fit: cover;
 }
+
+
+/* =========================================
+   EVENT INFORMATION
+========================================= */
 
 .organizer-event-info {
   min-width: 0;
 }
 
 .organizer-event-status {
+  display: inline-block;
+
   color: #159447;
 
-  font-size: 8px;
+  font-size: 9px;
 
   font-weight: 700;
 
-  text-transform: uppercase;
-
   letter-spacing: 0.7px;
+
+  text-transform: uppercase;
 }
 
 .organizer-event-info h3 {
   margin: 5px 0 7px;
 
-  color: #111111;
+  color: #111;
 
   font-size: 15px;
+
+  line-height: 1.3;
+
+  font-weight: 700;
+
+  white-space: nowrap;
+
+  overflow: hidden;
+
+  text-overflow: ellipsis;
 }
 
 .organizer-event-info p {
   margin: 3px 0;
 
-  color: #777777;
+  color: #777;
 
-  font-size: 9px;
+  font-size: 11px;
+
+  line-height: 1.4;
 }
 
 
@@ -329,6 +419,8 @@
 ========================================= */
 
 .organizer-event-sales {
+  min-width: 0;
+
   display: flex;
 
   flex-direction: column;
@@ -337,15 +429,17 @@
 }
 
 .organizer-event-sales span {
-  color: #888888;
+  color: #888;
 
-  font-size: 8px;
+  font-size: 10px;
 }
 
 .organizer-event-sales strong {
-  color: #111111;
+  color: #111;
 
   font-size: 13px;
+
+  line-height: 1.2;
 }
 
 .organizer-progress {
@@ -355,9 +449,9 @@
 
   overflow: hidden;
 
-  border-radius: 10px;
+  border-radius: 20px;
 
-  background: #eeeeee;
+  background: #ededed;
 }
 
 .organizer-progress div {
@@ -374,21 +468,40 @@
 ========================================= */
 
 .organizer-event-button {
-  padding: 8px 10px;
+  display: inline-flex;
 
-  border-radius: 6px;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+
+  min-height: 36px;
+
+  padding: 0 10px;
+
+  box-sizing: border-box;
+
+  border-radius: 7px;
 
   background: #d4145a;
 
-  color: #ffffff;
+  color: #fff;
 
-  font-size: 9px;
+  font-size: 11px;
 
   font-weight: 600;
 
-  text-align: center;
-
   text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.organizer-event-button:hover {
+  background: #b90f4d;
+
+  transform: translateY(-1px);
 }
 
 
@@ -397,7 +510,8 @@
 ========================================= */
 
 .organizer-quick-section {
-  max-width: 1250px;
+  width: 100%;
+  max-width: 1180px;
 
   margin: 0 auto;
 }
@@ -405,19 +519,22 @@
 .organizer-quick-grid {
   display: grid;
 
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
 
-  gap: 15px;
+  gap: 14px;
 }
 
 .organizer-quick-card {
+  min-width: 0;
+
   padding: 20px;
 
-  background: #ffffff;
+  background: #fff;
 
-  border: 1px solid #eeeeee;
+  border: 1px solid #e8e8e8;
 
-  border-radius: 10px;
+  border-radius: 11px;
 
   text-decoration: none;
 
@@ -430,7 +547,7 @@
   transform: translateY(-2px);
 
   box-shadow:
-    0 10px 25px rgba(0, 0, 0, 0.06);
+    0 8px 22px rgba(0, 0, 0, 0.05);
 }
 
 .organizer-quick-card > span {
@@ -456,19 +573,57 @@
 .organizer-quick-card strong {
   display: block;
 
-  color: #111111;
+  color: #111;
 
   font-size: 13px;
+
+  line-height: 1.3;
 }
 
 .organizer-quick-card p {
   margin: 6px 0 0;
 
-  color: #888888;
+  color: #888;
 
-  font-size: 9px;
+  font-size: 11px;
 
   line-height: 1.5;
+}
+
+
+/* =========================================
+   1200px
+========================================= */
+
+@media (max-width: 1200px) {
+
+  .organizer-main {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .organizer-stats,
+  .organizer-header,
+  .organizer-section-heading,
+  .organizer-events,
+  .organizer-quick-section {
+    max-width: 100%;
+  }
+
+  .organizer-event-card {
+    grid-template-columns:
+      115px
+      minmax(0, 1fr)
+      150px
+      90px;
+
+    gap: 14px;
+  }
+
+  .organizer-event-image {
+    width: 115px;
+    height: 78px;
+  }
 }
 
 
@@ -476,28 +631,46 @@
    TABLET
 ========================================= */
 
-@media (max-width: 1100px) {
+@media (max-width: 950px) {
 
   .organizer-main {
-    padding: 35px 30px;
+    margin-left: 230px;
+
+    padding: 30px 24px 50px;
   }
 
   .organizer-stats {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
   }
 
   .organizer-event-card {
-    grid-template-columns: 110px 1fr 150px;
+    grid-template-columns:
+      105px
+      minmax(0, 1fr);
+
+    gap: 14px;
   }
 
   .organizer-event-image {
-    width: 110px;
+    width: 105px;
+    height: 76px;
+  }
+
+  .organizer-event-sales {
+    grid-column: 1 / -1;
+
+    padding-top: 3px;
   }
 
   .organizer-event-button {
-    grid-column: 3;
+    grid-column: 1 / -1;
   }
 
+  .organizer-quick-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
 }
 
 
@@ -507,78 +680,275 @@
 
 @media (max-width: 700px) {
 
-  .organizer-sidebar {
-    display: none;
-  }
-
   .organizer-main {
     margin-left: 0;
 
-    padding: 25px 18px;
+    padding: 24px 16px 45px;
   }
 
+
+  /* HEADER */
+
   .organizer-header {
-    align-items: flex-start;
+    margin-bottom: 28px;
+
+    align-items: stretch;
 
     flex-direction: column;
 
-    gap: 15px;
+    gap: 16px;
+  }
+
+  .organizer-page-label {
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
   }
 
   .organizer-header h1 {
-    font-size: 25px;
+    font-size: 24px;
+
+    line-height: 1.25;
+  }
+
+  .organizer-header > div > p:last-child {
+    margin-top: 8px;
+
+    font-size: 12px;
+
+    line-height: 1.5;
   }
 
   .organizer-create-button {
     width: 100%;
 
-    box-sizing: border-box;
+    min-height: 42px;
 
-    text-align: center;
+    box-sizing: border-box;
   }
 
+
+  /* STATS */
+
   .organizer-stats {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
 
     gap: 10px;
+
+    margin-bottom: 34px;
   }
 
   .organizer-stat-card {
+    min-height: 88px;
+
     padding: 13px;
+
+    gap: 9px;
+
+    border-radius: 10px;
   }
 
   .organizer-stat-icon {
-    width: 32px;
-    height: 32px;
+    width: 31px;
+    height: 31px;
+
+    font-size: 12px;
+  }
+
+  .organizer-stat-card span {
+    font-size: 9px;
   }
 
   .organizer-stat-card strong {
     font-size: 16px;
   }
 
+
+  /* SECTION HEADING */
+
+  .organizer-section-heading {
+    align-items: flex-end;
+
+    margin-bottom: 14px;
+  }
+
+  .organizer-section-heading p {
+    font-size: 8px;
+  }
+
+  .organizer-section-heading h2 {
+    font-size: 19px;
+  }
+
+  .organizer-section-heading > a {
+    font-size: 11px;
+  }
+
+
+  /* EVENT */
+
+  .organizer-events {
+    gap: 11px;
+
+    margin-bottom: 40px;
+  }
+
   .organizer-event-card {
-    grid-template-columns: 90px 1fr;
+    grid-template-columns:
+      88px
+      minmax(0, 1fr);
 
     gap: 12px;
 
     padding: 12px;
+
+    border-radius: 10px;
   }
 
   .organizer-event-image {
-    width: 90px;
-    height: 75px;
+    width: 88px;
+    height: 76px;
+
+    border-radius: 7px;
   }
+
+  .organizer-event-status {
+    font-size: 8px;
+  }
+
+  .organizer-event-info h3 {
+    margin: 5px 0 6px;
+
+    font-size: 14px;
+
+    line-height: 1.3;
+
+    white-space: normal;
+
+    display: -webkit-box;
+
+    -webkit-line-clamp: 2;
+
+    -webkit-box-orient: vertical;
+
+    overflow: hidden;
+  }
+
+  .organizer-event-info p {
+    margin: 3px 0;
+
+    font-size: 10px;
+  }
+
+
+  /* SALES */
 
   .organizer-event-sales {
     grid-column: 1 / -1;
+
+    padding-top: 3px;
+
+    gap: 5px;
   }
+
+  .organizer-event-sales span {
+    font-size: 9px;
+  }
+
+  .organizer-event-sales strong {
+    font-size: 12px;
+  }
+
+
+  /* MANAGE */
 
   .organizer-event-button {
     grid-column: 1 / -1;
+
+    min-height: 38px;
+
+    font-size: 11px;
   }
+
+
+  /* QUICK ACTIONS */
 
   .organizer-quick-grid {
     grid-template-columns: 1fr;
+
+    gap: 10px;
   }
 
+  .organizer-quick-card {
+    padding: 17px;
+
+    border-radius: 10px;
+  }
+
+  .organizer-quick-card > span {
+    width: 33px;
+    height: 33px;
+
+    margin-bottom: 10px;
+  }
+
+  .organizer-quick-card strong {
+    font-size: 13px;
+  }
+
+  .organizer-quick-card p {
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 380px) {
+
+  .organizer-main {
+    padding-left: 12px;
+    padding-right: 12px;
+  }
+
+  .organizer-header h1 {
+    font-size: 22px;
+  }
+
+  .organizer-stat-card {
+    padding: 11px;
+
+    gap: 7px;
+  }
+
+  .organizer-stat-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .organizer-stat-card span {
+    font-size: 8px;
+  }
+
+  .organizer-stat-card strong {
+    font-size: 14px;
+  }
+
+  .organizer-event-card {
+    grid-template-columns:
+      78px
+      minmax(0, 1fr);
+
+    gap: 10px;
+
+    padding: 10px;
+  }
+
+  .organizer-event-image {
+    width: 78px;
+    height: 68px;
+  }
 }

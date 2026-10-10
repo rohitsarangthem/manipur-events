@@ -6,7 +6,11 @@ const {
   getEventById,
   approveEvent,
   rejectEvent,
-  getAllEventsForAdmin
+  getAllEventsForAdmin,
+  getMyEvents,
+  getOrganizerDashboard,
+  getMyEventById,
+  updateMyEvent
 } = require("../controllers/eventController");
 
 const {
@@ -42,6 +46,34 @@ router.get(
 );
 
 
+router.get(
+  "/organizer/my-events",
+  protect,
+  authorize("organizer"),
+  getMyEvents
+);
+
+// Organizer - get single event
+router.get(
+  "/organizer/my-events/:id",
+  protect,
+  authorize("organizer"),
+  getMyEventById
+);
+
+
+// =====================================
+// ORGANIZER DASHBOARD
+// =====================================
+
+router.get(
+  "/organizer/dashboard",
+  protect,
+  authorize("organizer"),
+  getOrganizerDashboard
+);
+
+
 // Get single event
 router.get("/:id", getEventById);
 
@@ -56,6 +88,14 @@ router.post(
   protect,
   authorize("organizer"),
   createEvent
+);
+
+// Organizer - update own event
+router.put(
+  "/organizer/my-events/:id",
+  protect,
+  authorize("organizer"),
+  updateMyEvent
 );
 
 // =====================================

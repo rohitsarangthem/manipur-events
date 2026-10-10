@@ -15,6 +15,7 @@ import Category from "./pages/Category";
 import Events from "./pages/Events";
 import Login from "./pages/Login";
 import Signup from "./pages/Signup";
+import Contact from "./pages/Contact.jsx";
 
 import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
@@ -41,6 +42,10 @@ import Bookings from "./dashboards/Organizer/pages/Bookings";
 import Attendees from "./dashboards/Organizer/pages/Attendees";
 import Revenue from "./dashboards/Organizer/pages/Revenue";
 import OrganizerProfile from "./dashboards/Organizer/pages/OrganizerProfile";
+import ManageEvent from "./dashboards/Organizer/pages/ManageEvent.jsx";
+import EditEvent from "./dashboards/Organizer/pages/EditEvent.jsx";
+import PublicEvent from "./pages/PublicEvent.jsx";
+import BookingDetails from "./dashboards/Organizer/pages/BookingDetails.jsx";
 
 
 /* =========================================
@@ -73,7 +78,7 @@ function Home() {
       <main>
         <HeroSection />
 
-        <FeaturedConcert />
+        {/* <FeaturedConcert /> */}
 
         <LatestEvents />
 
@@ -146,6 +151,15 @@ function App() {
           element={<Signup />}
         />
 
+        {/* NavBar */}
+        <Route
+          path="/contact"
+          element={<Contact />}
+        />
+
+        {/* /organizer > button > public event */}
+        <Route path="/events/:eventId" element={<PublicEvent />} />
+
 
         {/* =========================================
             CUSTOMER DASHBOARD
@@ -207,33 +221,29 @@ function App() {
           }
         >
 
-          <Route
-            path="/organizer"
-            element={<OrganizerLayout />}
-          >
+          <Route path="/organizer" element={<OrganizerLayout />}>
 
             {/* /organizer */}
 
-            <Route
-              index
-              element={<OrganizerDashboard />}
-            />
+            <Route index element={<OrganizerDashboard />} />
 
 
             {/* /organizer/events */}
 
-            <Route
-              path="events"
-              element={<MyEvents />}
-            />
+            <Route path="events" element={<MyEvents />} />
 
 
             {/* /organizer/events/create */}
 
-            <Route
-              path="events/create"
-              element={<CreateEvent />}
-            />
+            <Route path="events/create" element={<CreateEvent />} />
+
+            {/* /organizer/events/editevent */}
+            <Route path="events/:eventId/edit" element={<EditEvent />} />
+
+            {/* /organizer/Manage Event Button */}
+            <Route path="events/:eventId" element={<ManageEvent />} />
+
+
 
 
             {/* /organizer/bookings */}
@@ -266,6 +276,11 @@ function App() {
               path="profile"
               element={<OrganizerProfile />}
             />
+
+            <Route path="bookings" element={<Bookings />} />
+            <Route path="bookings/:id" element={<BookingDetails />} />
+
+
 
           </Route>
 
