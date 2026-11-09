@@ -26,7 +26,7 @@ function AdminEvents() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/events/admin/all",
+        "/api/events/admin/all",
         {
           method: "GET",
 
@@ -203,7 +203,7 @@ function AdminEvents() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/events/${eventId}/approve`,
+        `/api/events/${eventId}/approve`,
         {
           method: "PUT",
 
@@ -255,7 +255,7 @@ function AdminEvents() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/events/${eventId}/reject`,
+        `/api/events/${eventId}/reject`,
         {
           method: "PUT",
 
