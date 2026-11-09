@@ -315,7 +315,7 @@ function CreateEvent() {
       // ---------------------------------------
 
       const response = await fetch(
-        "http://localhost:5000/api/events",
+        "/api/events",
         {
 
           method: "POST",
