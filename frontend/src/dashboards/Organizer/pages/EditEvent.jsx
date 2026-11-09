@@ -46,7 +46,7 @@ function EditEvent() {
         setLoading(true);
 
         const response = await fetch(
-          `http://localhost:5000/api/events/organizer/my-events/${eventId}`,
+          `/api/events/organizer/my-events/${eventId}`,
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -226,7 +226,7 @@ function EditEvent() {
       setError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/events/organizer/my-events/${eventId}`,
+        `/api/events/organizer/my-events/${eventId}`,
         {
           method: "PUT",
 
