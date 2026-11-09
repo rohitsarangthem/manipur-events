@@ -31,7 +31,7 @@ function MyEvents() {
         }
 
         const response = await fetch(
-          "http://localhost:5000/api/events/organizer/my-events",
+          "/api/events/organizer/my-events",
           {
             method: "GET",
             headers: {
