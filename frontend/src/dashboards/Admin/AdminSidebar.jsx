@@ -25,7 +25,7 @@ function AdminSidebar() {
 
       {/* LOGO */}
       <div className="admin-logo">
-        Manipur Events
+        Events
       </div>
 
 

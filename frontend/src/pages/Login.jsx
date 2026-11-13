@@ -294,12 +294,13 @@ function Login() {
 
             <p>
               Don't have an account?
-
               <Link to="/signup">
                 Sign Up
+              </Link> or Visit
+              <Link to="/">
+                Home
               </Link>
             </p>
-
           </div>
 
         </div>

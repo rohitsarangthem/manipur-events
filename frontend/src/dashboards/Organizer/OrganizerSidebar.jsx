@@ -39,7 +39,7 @@ function OrganizerSidebar() {
       ========================================= */}
 
       <div className="organizer-logo">
-        Manipur Events
+        Organizer Dashboard
       </div>
 
 
@@ -79,8 +79,7 @@ function OrganizerSidebar() {
         </p>
 
 
-        <Link
-          to="/organizer"
+        <Link to="/organizer"
           className={`organizer-nav-link ${
             location.pathname === "/organizer"
               ? "active"
