@@ -29,7 +29,7 @@ function Events() {
         setError("");
 
         const response = await fetch(
-          "http://localhost:5000/api/events"
+          "/api/events"
         );
 
         const data = await response.json();
